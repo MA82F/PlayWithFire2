@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="box">resources/images/box.png</file>
+        <file alias="button">resources/images/box.png</file>
+        <file alias="input">resources/images/box.png</file>
+        <file alias="wall">resources/images/box.png</file>
+    </qresource>
+</RCC>

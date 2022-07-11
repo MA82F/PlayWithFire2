@@ -1,0 +1,14 @@
+# ninja log v5
+403	830	6792427612037282	D:/PlayWithFire2/cmake-build-debug/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp	81519399283bc455
+403	830	6792427612037282	PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp	81519399283bc455
+13	400	6792427607337236	PlayWithFire2_autogen/mocs_compilation.cpp	2f580d66ed1159c7
+1663	6948	6792336758276264	CMakeFiles/PlayWithFire2.dir/src/windows/Home.cpp.obj	565d8ad6e92b9482
+13	400	6792427607337236	PlayWithFire2_autogen/timestamp	2f580d66ed1159c7
+13	400	6792427607337236	D:/PlayWithFire2/cmake-build-debug/PlayWithFire2_autogen/timestamp	2f580d66ed1159c7
+13	400	6792427607337236	D:/PlayWithFire2/cmake-build-debug/PlayWithFire2_autogen/mocs_compilation.cpp	2f580d66ed1159c7
+390	4910	6792309930640071	CMakeFiles/PlayWithFire2.dir/main.cpp.obj	4f7949ff3b28632a
+5204	5364	6792249032559253	CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/mocs_compilation.cpp.obj	57e130664dc4c138
+6104	8535	6792427678808628	PlayWithFire2.exe	e4d23d9f418d36f6
+568	4192	6792349673989094	CMakeFiles/PlayWithFire2.dir/src/views/TextField.cpp.obj	4b012c7984ad5d91
+3	1643	6792497195603355	build.ninja	927bae2ebc675304
+830	6103	6792427664874670	CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj	891a5c4193fb3e8e

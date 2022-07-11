@@ -1,0 +1,10 @@
+#ifndef PLAYWITHFIRE2_CONTROLLER_H
+#define PLAYWITHFIRE2_CONTROLLER_H
+
+
+class Controller {
+
+};
+
+
+#endif //PLAYWITHFIRE2_CONTROLLER_H
