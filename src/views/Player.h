@@ -11,7 +11,7 @@ private:
     int score{0};
     int bombCount{10};
     int lifeCount{3};
-//    int speed;
+    int speed;
     int bombRadius{3};
 public:
     Player(QString name,int width, int height);
