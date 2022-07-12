@@ -51,7 +51,7 @@ Home::Home() {
 
 void Home::onGameStart() {
     auto name1 = textField1->toPlainText();
-    auto name2 = textField2->toPlainText();
+    auto name2=textField2->toPlainText();
     close();
     (new Game(name1,name2))->show();
 }
