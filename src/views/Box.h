@@ -1,9 +1,9 @@
 #ifndef PLAYWITHFIRE2_BOX_H
 #define PLAYWITHFIRE2_BOX_H
 
-#include <QGraphicsPixmapItem>
+#include "Block.h"
 
-class Box: public QGraphicsPixmapItem{
+class Box: public Block{
 public:
     Box(int width,int height);
 };

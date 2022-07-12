@@ -5,7 +5,7 @@
 
 class Block: public QGraphicsPixmapItem{
 public:
-    Block(int width,int height);
+    Block();
 };
 
 

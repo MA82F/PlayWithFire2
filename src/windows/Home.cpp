@@ -31,7 +31,7 @@ Home::Home() {
     label->setPlainText("Name no.1 player:");
     scene->addItem(label);
     label->setPos(width()/2-200,height()/2 - label->boundingRect().height());
-//
+
     textField2 = new TextField(400,50);
     textField2->setPlainText("saved name");
     scene->addItem(textField2);
