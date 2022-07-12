@@ -261,10 +261,11 @@ PlayWithFire2_autogen/timestamp: \
 	D:/PlayWithFire2/src/SaveToFile.h \
 	D:/PlayWithFire2/src/views/Block.cpp \
 	D:/PlayWithFire2/src/views/Block.h \
-	D:/PlayWithFire2/src/views/Box.cpp \
 	D:/PlayWithFire2/src/views/Box.h \
 	D:/PlayWithFire2/src/views/Button.cpp \
 	D:/PlayWithFire2/src/views/Button.h \
+	D:/PlayWithFire2/src/views/HomeImage.cpp \
+	D:/PlayWithFire2/src/views/HomeImage.h \
 	D:/PlayWithFire2/src/views/Label.cpp \
 	D:/PlayWithFire2/src/views/Label.h \
 	D:/PlayWithFire2/src/views/Player.cpp \
@@ -381,6 +382,7 @@ PlayWithFire2_autogen/timestamp: \
 	D:/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
 	D:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
+	D:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
 	D:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsTextItem \
 	D:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsView \
 	D:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \

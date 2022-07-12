@@ -22,20 +22,20 @@ Home::Home() {
     scene->addItem(homeImage);
     homeImage->setPos((width()-ImageWidth)/2,0);
 
-    textField = new TextField(400,50);
-    textField->setPlainText("saved name");
-    scene->addItem(textField);
-    textField->setPos(width()/2-200,height()/2);
+    textField1 = new TextField(400,50);
+    textField1->setPlainText("saved name");
+    scene->addItem(textField1);
+    textField1->setPos(width()/2-200,height()/2);
 
     auto label = new Label();
     label->setPlainText("Name no.1 player:");
     scene->addItem(label);
     label->setPos(width()/2-200,height()/2 - label->boundingRect().height());
 //
-    textField = new TextField(400,50);
-    textField->setPlainText("saved name");
-    scene->addItem(textField);
-    textField->setPos(width()/2-200,height()/2+85);
+    textField2 = new TextField(400,50);
+    textField2->setPlainText("saved name");
+    scene->addItem(textField2);
+    textField2->setPos(width()/2-200,height()/2+85);
 
     auto label2 = new Label();
     label2->setPlainText("Name no.2 player:");
@@ -50,7 +50,8 @@ Home::Home() {
 }
 
 void Home::onGameStart() {
-    auto name = textField->toPlainText();
+    auto name1 = textField1->toPlainText();
+    auto name2 = textField2->toPlainText();
     close();
-    (new Game(name))->show();
+    (new Game(name1,name2))->show();
 }
