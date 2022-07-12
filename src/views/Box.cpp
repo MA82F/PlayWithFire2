@@ -1,7 +1,3 @@
-//
-// Created by IHC on 7/11/2022.
-//
-
 #include "Box.h"
 
 Box::Box(int width,int height): QGraphicsPixmapItem() {

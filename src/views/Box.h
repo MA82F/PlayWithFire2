@@ -6,7 +6,6 @@
 class Box: public QGraphicsPixmapItem{
 public:
     Box(int width,int height);
-
 };
 
 
