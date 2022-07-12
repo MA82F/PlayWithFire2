@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj.d"
   "CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.obj"
   "CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.obj.d"
+  "CMakeFiles/PlayWithFire2.dir/src/views/Box.cpp.obj"
+  "CMakeFiles/PlayWithFire2.dir/src/views/Box.cpp.obj.d"
   "CMakeFiles/PlayWithFire2.dir/src/views/Button.cpp.obj"
   "CMakeFiles/PlayWithFire2.dir/src/views/Button.cpp.obj.d"
   "CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj"

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/programing/PlayWithFire22/src/Controller.cpp" "CMakeFiles/PlayWithFire2.dir/src/Controller.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/Controller.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/SaveToFile.cpp" "CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/views/Block.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.obj.d"
+  "E:/programing/PlayWithFire22/src/views/Box.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/Box.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/Box.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/views/Button.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/Button.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/Button.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/views/HomeImage.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/views/Label.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/Label.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/Label.cpp.obj.d"

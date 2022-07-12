@@ -159,6 +159,12 @@
 		<Unit filename="E:/programing/PlayWithFire22/src/SaveToFile.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/Block.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/Block.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Box.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>
@@ -201,18 +207,6 @@
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Wall.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/views/cup_image.cpp">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/views/cup_image.h">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/views/you_win.cpp">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/views/you_win.h">
-			<Option target="PlayWithFire2"/>
-		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/windows/Game.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>
@@ -223,12 +217,6 @@
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/windows/Home.h">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/windows/result.cpp">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/windows/result.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/CMakeLists.txt">

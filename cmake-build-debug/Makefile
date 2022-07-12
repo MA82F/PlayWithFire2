@@ -261,6 +261,30 @@ src/SaveToFile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.s
 .PHONY : src/SaveToFile.cpp.s
 
+src/views/Block.obj: src/views/Block.cpp.obj
+.PHONY : src/views/Block.obj
+
+# target to build an object file
+src/views/Block.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.obj
+.PHONY : src/views/Block.cpp.obj
+
+src/views/Block.i: src/views/Block.cpp.i
+.PHONY : src/views/Block.i
+
+# target to preprocess a source file
+src/views/Block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.i
+.PHONY : src/views/Block.cpp.i
+
+src/views/Block.s: src/views/Block.cpp.s
+.PHONY : src/views/Block.s
+
+# target to generate assembly for a file
+src/views/Block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.s
+.PHONY : src/views/Block.cpp.s
+
 src/views/Box.obj: src/views/Box.cpp.obj
 .PHONY : src/views/Box.obj
 
@@ -429,54 +453,6 @@ src/views/Wall.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Wall.cpp.s
 .PHONY : src/views/Wall.cpp.s
 
-src/views/cup_image.obj: src/views/cup_image.cpp.obj
-.PHONY : src/views/cup_image.obj
-
-# target to build an object file
-src/views/cup_image.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj
-.PHONY : src/views/cup_image.cpp.obj
-
-src/views/cup_image.i: src/views/cup_image.cpp.i
-.PHONY : src/views/cup_image.i
-
-# target to preprocess a source file
-src/views/cup_image.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.i
-.PHONY : src/views/cup_image.cpp.i
-
-src/views/cup_image.s: src/views/cup_image.cpp.s
-.PHONY : src/views/cup_image.s
-
-# target to generate assembly for a file
-src/views/cup_image.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.s
-.PHONY : src/views/cup_image.cpp.s
-
-src/views/you_win.obj: src/views/you_win.cpp.obj
-.PHONY : src/views/you_win.obj
-
-# target to build an object file
-src/views/you_win.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj
-.PHONY : src/views/you_win.cpp.obj
-
-src/views/you_win.i: src/views/you_win.cpp.i
-.PHONY : src/views/you_win.i
-
-# target to preprocess a source file
-src/views/you_win.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.i
-.PHONY : src/views/you_win.cpp.i
-
-src/views/you_win.s: src/views/you_win.cpp.s
-.PHONY : src/views/you_win.s
-
-# target to generate assembly for a file
-src/views/you_win.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.s
-.PHONY : src/views/you_win.cpp.s
-
 src/windows/Game.obj: src/windows/Game.cpp.obj
 .PHONY : src/windows/Game.obj
 
@@ -525,30 +501,6 @@ src/windows/Home.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/Home.cpp.s
 .PHONY : src/windows/Home.cpp.s
 
-src/windows/result.obj: src/windows/result.cpp.obj
-.PHONY : src/windows/result.obj
-
-# target to build an object file
-src/windows/result.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj
-.PHONY : src/windows/result.cpp.obj
-
-src/windows/result.i: src/windows/result.cpp.i
-.PHONY : src/windows/result.i
-
-# target to preprocess a source file
-src/windows/result.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.i
-.PHONY : src/windows/result.cpp.i
-
-src/windows/result.s: src/windows/result.cpp.s
-.PHONY : src/windows/result.s
-
-# target to generate assembly for a file
-src/windows/result.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.s
-.PHONY : src/windows/result.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -574,6 +526,9 @@ help:
 	@echo ... src/SaveToFile.obj
 	@echo ... src/SaveToFile.i
 	@echo ... src/SaveToFile.s
+	@echo ... src/views/Block.obj
+	@echo ... src/views/Block.i
+	@echo ... src/views/Block.s
 	@echo ... src/views/Box.obj
 	@echo ... src/views/Box.i
 	@echo ... src/views/Box.s
@@ -595,21 +550,12 @@ help:
 	@echo ... src/views/Wall.obj
 	@echo ... src/views/Wall.i
 	@echo ... src/views/Wall.s
-	@echo ... src/views/cup_image.obj
-	@echo ... src/views/cup_image.i
-	@echo ... src/views/cup_image.s
-	@echo ... src/views/you_win.obj
-	@echo ... src/views/you_win.i
-	@echo ... src/views/you_win.s
 	@echo ... src/windows/Game.obj
 	@echo ... src/windows/Game.i
 	@echo ... src/windows/Game.s
 	@echo ... src/windows/Home.obj
 	@echo ... src/windows/Home.i
 	@echo ... src/windows/Home.s
-	@echo ... src/windows/result.obj
-	@echo ... src/windows/result.i
-	@echo ... src/windows/result.s
 .PHONY : help
 
 
