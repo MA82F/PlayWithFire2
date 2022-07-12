@@ -9,9 +9,9 @@
 #include <QStyleOptionGraphicsItem>
 
 TextField::TextField(int width, int height):width(width),height(height), QGraphicsTextItem() {
-    setDefaultTextColor((QColor("white")));
+    setDefaultTextColor((QColor("black")));
     QFont font;
-    font.setPixelSize(76);
+    font.setPixelSize(23);
     font.setBold(true);
     setFont(font);
     setTextInteractionFlags(Qt::TextEditorInteraction);

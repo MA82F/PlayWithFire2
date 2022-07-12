@@ -4,11 +4,11 @@
 
 #ifndef PLAYWITHFIRE2_HOME_H
 #define PLAYWITHFIRE2_HOME_H
-
 #include <QGraphicsView>
 #include "../views/TextField.h"
+#include "../views/HomeImage.h"
 
-class Home:public QGraphicsView {
+class Home:public QGraphicsView{
     Q_OBJECT
 private:
     TextField *textField;

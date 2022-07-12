@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "D:/Qt/6.2.4/mingw_64")
+set(CMAKE_PREFIX_PATH "C:/Qt/6.4.0/mingw_64")
 
 find_package(Qt6 COMPONENTS
         Core
@@ -15,7 +15,7 @@ find_package(Qt6 COMPONENTS
         Multimedia
         REQUIRED)
 
-add_executable(PlayWithFire2 main.cpp src/windows/Home.cpp src/windows/Home.h src/views/TextField.cpp src/views/TextField.h resources.qrc src/views/Label.cpp src/views/Label.h src/views/Button.cpp src/views/Button.h src/windows/Game.cpp src/windows/Game.h src/views/Wall.cpp src/views/Wall.h src/views/Box.cpp src/views/Box.h src/Controller.cpp src/Controller.h src/SaveToFile.cpp src/SaveToFile.h)
+add_executable(PlayWithFire2 main.cpp src/windows/Home.cpp src/windows/Home.h src/views/TextField.cpp src/views/TextField.h resources.qrc src/views/Label.cpp src/views/Label.h src/views/Button.cpp src/views/Button.h src/windows/Game.cpp src/windows/Game.h src/views/Wall.cpp src/views/Wall.h src/views/Box.cpp src/views/Box.h src/Controller.cpp src/Controller.h src/SaveToFile.cpp src/SaveToFile.h src/views/HomeImage.cpp src/views/HomeImage.h)
 target_link_libraries(PlayWithFire2
         Qt::Core
         Qt::Gui

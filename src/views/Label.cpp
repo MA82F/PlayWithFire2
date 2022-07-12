@@ -9,7 +9,7 @@
 Label::Label() {
     setDefaultTextColor((QColor("white")));
     QFont font;
-    font.setPixelSize(76);
+    font.setPixelSize(20);
     font.setBold(true);
     setFont(font);
     document()->setDocumentMargin(10);
