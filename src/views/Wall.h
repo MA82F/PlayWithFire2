@@ -1,9 +1,9 @@
 #ifndef PLAYWITHFIRE2_WALL_H
 #define PLAYWITHFIRE2_WALL_H
 
-#include <QGraphicsPixmapItem>
+#include "Block.h"
 
-class Wall: public QGraphicsPixmapItem{
+class Wall:public Block{
 public:
     Wall(int width,int height);
 };

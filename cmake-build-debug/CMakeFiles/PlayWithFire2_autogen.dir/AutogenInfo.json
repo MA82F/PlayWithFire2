@@ -438,6 +438,7 @@
 		[ "D:/PlayWithFire2/src/Controller.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/SaveToFile.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/Block.cpp", "MU", null ],
+		[ "D:/PlayWithFire2/src/views/Box.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/Button.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/HomeImage.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/Label.cpp", "MU", null ],

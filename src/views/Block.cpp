@@ -4,6 +4,4 @@
 
 #include "Block.h"
 
-Block::Block(int width,int height):QGraphicsPixmapItem() {
-
-}
+Block::Block():QGraphicsPixmapItem() {}
