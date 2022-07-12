@@ -24,14 +24,14 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         for (int j = 0; j < 15; ++j) {
             if (i!=0 && i!=14 && j!=0 && j!=14 && (i%2!=0 || j%2!=0)){
                 if (i==1 && j==1){
-                    auto player1 = new Player(name1);
+                    auto player1 = new Player(name1,playerWidth,playerHeight);
                     scene->addItem(player1);
-                    player1->setPos(playerWidth*i,playerHeight*j);
+                    player1->setPos(playerWidth*i+10,playerHeight*j+3);
                 }
                 else if(i==13 && j==13){
-                    auto player2 = new Player(name2);
+                    auto player2 = new Player(name2,playerWidth,playerHeight);
                     scene->addItem(player2);
-                    player2->setPos(playerWidth*i,playerHeight*j);
+                    player2->setPos(playerWidth*i+10,playerHeight*j+3);
                 }
                 continue;
             }
