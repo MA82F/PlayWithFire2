@@ -308,6 +308,12 @@
 			null
 		],
 		[
+			"D:/PlayWithFire2/src/views/Block.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Block.cpp",
+			null
+		],
+		[
 			"D:/PlayWithFire2/src/views/Box.h",
 			"MU",
 			"Z3L7HTGYLD/moc_Box.cpp",
@@ -323,6 +329,12 @@
 			"D:/PlayWithFire2/src/views/Label.h",
 			"MU",
 			"Z3L7HTGYLD/moc_Label.cpp",
+			null
+		],
+		[
+			"D:/PlayWithFire2/src/views/Player.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Player.cpp",
 			null
 		],
 		[
@@ -419,9 +431,11 @@
 		[ "D:/PlayWithFire2/main.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/Controller.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/SaveToFile.cpp", "MU", null ],
+		[ "D:/PlayWithFire2/src/views/Block.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/Box.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/Button.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/Label.cpp", "MU", null ],
+		[ "D:/PlayWithFire2/src/views/Player.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/TextField.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/views/Wall.cpp", "MU", null ],
 		[ "D:/PlayWithFire2/src/windows/Game.cpp", "MU", null ],

@@ -5,7 +5,7 @@
 
 class Game: public QGraphicsView{
 public:
-    Game(QString name);
+    Game(QString name1,QString name2);
 };
 
 

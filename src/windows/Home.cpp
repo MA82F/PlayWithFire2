@@ -18,10 +18,15 @@ Home::Home() {
     scene->setBackgroundBrush(QColor("#2F2627"));
     setScene(scene);
 
-    textField = new TextField(400,150);
-    textField->setPlainText("saved name");
-    scene->addItem(textField);
-    textField->setPos(width()/2,height()/2);
+    textField1 = new TextField(400,150);
+    textField1->setPlainText("saved name");
+    scene->addItem(textField1);
+    textField1->setPos(width()/2,height()/2);
+
+    textField2 = new TextField(400,150);
+    textField2->setPlainText("saved name");
+    scene->addItem(textField2);
+    textField2->setPos(width()/2+50,height()/2+50);
 
     auto label = new Label();
     label->setPlainText("Name:");
@@ -36,7 +41,8 @@ Home::Home() {
 }
 
 void Home::onGameStart() {
-    auto name = textField->toPlainText();
+    auto name1 = textField1->toPlainText();
+    auto name2 = textField2->toPlainText();
     close();
-    (new Game(name))->show();
+    (new Game(name1,name2))->show();
 }
