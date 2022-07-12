@@ -21,8 +21,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/programing/PlayWithFire22/src/views/Player.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/views/TextField.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/TextField.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/TextField.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/views/Wall.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/Wall.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/Wall.cpp.obj.d"
+  "E:/programing/PlayWithFire22/src/views/box_position.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj.d"
+  "E:/programing/PlayWithFire22/src/views/cup_image.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj.d"
+  "E:/programing/PlayWithFire22/src/views/you_win.cpp" "CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/windows/Game.cpp" "CMakeFiles/PlayWithFire2.dir/src/windows/Game.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/windows/Game.cpp.obj.d"
   "E:/programing/PlayWithFire22/src/windows/Home.cpp" "CMakeFiles/PlayWithFire2.dir/src/windows/Home.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/windows/Home.cpp.obj.d"
+  "E:/programing/PlayWithFire22/src/windows/result.cpp" "CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj" "gcc" "CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj.d"
   )
 
 # Targets to which this target links.

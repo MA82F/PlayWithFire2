@@ -8,6 +8,7 @@
 #include "../views/Box.h"
 #include <QList>
 #include <ctime>
+#include <iostream>
 
 Game::Game(QString name1,QString name2): QGraphicsView() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -48,7 +49,12 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         }
     }
 
-        std::string positionOfBoxes[35];
+        box_position positionOfBoxes[35];
+        for(int i=0;i<36;i++){
+            positionOfBoxes[i].x=100;
+            positionOfBoxes[i].y=100;
+        }
+        numOfBox=0;
         srand(time(0));
         for (int i = 0; i < 36; ++i) {
             int ii = rand() % 15;
@@ -57,23 +63,26 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
                 if (((ii != 13 || jj != 13) && (ii != 1 || jj != 1) && (ii != 12 || jj != 13) &&
                      (ii != 13 || jj != 12) && (ii != 1 || jj != 2) && (ii != 2 || jj != 1) && (ii != 1 || jj != 3) &&
                      (ii != 3 || jj != 1) && (ii != 11 || jj != 13) && (ii != 13 || jj != 11))) {
-                    std::string si = std::to_string(ii);
-                    std::string sj = std::to_string(jj);
-                    positionOfBoxes[i]= (si + sj);
-                    for (int j = 0; j < i+1; ++j) {
-                        if(positionOfBoxes[j] == positionOfBoxes[i]){
-                            --i;
-                            continue;
-                        }
-                    }
+                    positionOfBoxes[i].x = ii;
+                    positionOfBoxes[i].y = jj;
+                    for (int j = 0; j < i + 1; ++j) {
+                        for(int z=0;z<i+1;++z){
+                        if (positionOfBoxes[j].x != positionOfBoxes[z].x) {
+                            if (positionOfBoxes[j].y != positionOfBoxes[z].y) {
+                                //--i;
+                                //std::cout<<"hello world\n";
+                                continue;
+                                //    break;
+                            }
                     auto box = new class Box(blockWidth, blockHeight);
                     scene->addItem(box);
                     box->setPos(blockWidth * ii, blockHeight * jj);
-                }
-            }
+                    ++numOfBox;
+                }}
+            }}}
             else
                 --i;
         }
-
-
+        std::cout<<numOfBox<<std::endl;
 }
+

@@ -688,9 +688,13 @@ E:/programing/PlayWithFire22/src/views/Label.cpp
 E:/programing/PlayWithFire22/src/views/Wall.cpp
 E:/programing/PlayWithFire22/src/windows/Game.cpp
 E:/programing/PlayWithFire22/src/views/Player.h
+E:/programing/PlayWithFire22/src/views/box_position.cpp
 E:/programing/PlayWithFire22/src/windows/result.h
 E:/programing/PlayWithFire22/src/windows/result.cpp
 E:/programing/PlayWithFire22/src/views/cup_image.h
 E:/programing/PlayWithFire22/src/views/cup_image.cpp
 E:/programing/PlayWithFire22/src/views/you_win.h
 E:/programing/PlayWithFire22/src/views/you_win.cpp
+E:/programing/PlayWithFire22/src/views/Block.h
+E:/programing/PlayWithFire22/src/views/Block.cpp
+E:/programing/PlayWithFire22/src/views/box_position.h

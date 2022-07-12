@@ -373,6 +373,24 @@
 			null
 		],
 		[
+			"E:/programing/PlayWithFire22/src/views/box_position.h",
+			"MU",
+			"Z3L7HTGYLD/moc_box_position.cpp",
+			null
+		],
+		[
+			"E:/programing/PlayWithFire22/src/views/cup_image.h",
+			"MU",
+			"Z3L7HTGYLD/moc_cup_image.cpp",
+			null
+		],
+		[
+			"E:/programing/PlayWithFire22/src/views/you_win.h",
+			"MU",
+			"Z3L7HTGYLD/moc_you_win.cpp",
+			null
+		],
+		[
 			"E:/programing/PlayWithFire22/src/windows/Game.h",
 			"MU",
 			"3LXPKN4LCA/moc_Game.cpp",
@@ -382,6 +400,12 @@
 			"E:/programing/PlayWithFire22/src/windows/Home.h",
 			"MU",
 			"3LXPKN4LCA/moc_Home.cpp",
+			null
+		],
+		[
+			"E:/programing/PlayWithFire22/src/windows/result.h",
+			"MU",
+			"3LXPKN4LCA/moc_result.cpp",
 			null
 		]
 	],
@@ -469,8 +493,12 @@
 		[ "E:/programing/PlayWithFire22/src/views/Player.cpp", "MU", null ],
 		[ "E:/programing/PlayWithFire22/src/views/TextField.cpp", "MU", null ],
 		[ "E:/programing/PlayWithFire22/src/views/Wall.cpp", "MU", null ],
+		[ "E:/programing/PlayWithFire22/src/views/box_position.cpp", "MU", null ],
+		[ "E:/programing/PlayWithFire22/src/views/cup_image.cpp", "MU", null ],
+		[ "E:/programing/PlayWithFire22/src/views/you_win.cpp", "MU", null ],
 		[ "E:/programing/PlayWithFire22/src/windows/Game.cpp", "MU", null ],
-		[ "E:/programing/PlayWithFire22/src/windows/Home.cpp", "MU", null ]
+		[ "E:/programing/PlayWithFire22/src/windows/Home.cpp", "MU", null ],
+		[ "E:/programing/PlayWithFire22/src/windows/result.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

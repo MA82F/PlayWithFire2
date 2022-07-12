@@ -1,6 +1,7 @@
 CMakeFiles/PlayWithFire2.dir/src/views/Wall.cpp.obj: \
  E:\programing\PlayWithFire22\src\views\Wall.cpp \
  E:\programing\PlayWithFire22\src\views\Wall.h \
+ E:\programing\PlayWithFire22\src\views\Block.h \
  C:/Qt/6.4.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  C:/Qt/6.4.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
  C:/Qt/6.4.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

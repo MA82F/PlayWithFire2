@@ -340,4 +340,5 @@ CMakeFiles/PlayWithFire2.dir/src/windows/Home.cpp.obj: \
  C:/Qt/6.4.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  E:/programing/PlayWithFire22/src/views/Label.h \
  E:/programing/PlayWithFire22/src/views/Button.h \
- E:\programing\PlayWithFire22\src\windows\Game.h
+ E:\programing\PlayWithFire22\src\windows\Game.h \
+ E:/programing/PlayWithFire22/src/views/box_position.h

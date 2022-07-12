@@ -332,10 +332,29 @@ CMakeFiles/PlayWithFire2.dir/src/windows/Game.cpp.obj: \
  C:/Qt/6.4.0/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.4.0/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.4.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ E:/programing/PlayWithFire22/src/views/box_position.h \
  E:/programing/PlayWithFire22/src/views/Wall.h \
+ E:/programing/PlayWithFire22/src/views/Block.h \
  C:/Qt/6.4.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  C:/Qt/6.4.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
  C:/Qt/6.4.0/mingw_64/include/QtGui/qpainterpath.h \
  E:/programing/PlayWithFire22/src/views/Player.h \
  C:/Qt/6.4.0/mingw_64/include/QtCore/QString \
- C:/Qt/6.4.0/mingw_64/include/QtCore/qstring.h
+ C:/Qt/6.4.0/mingw_64/include/QtCore/qstring.h \
+ E:/programing/PlayWithFire22/src/views/Box.h \
+ C:/Qt/6.4.0/mingw_64/include/QtCore/QList \
+ C:/Qt/6.4.0/mingw_64/include/QtCore/qlist.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ostream \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ios \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_ios.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwctype \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets.tcc \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_ios.tcc \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc

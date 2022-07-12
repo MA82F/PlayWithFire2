@@ -251,11 +251,26 @@ CMakeFiles/PlayWithFire2.dir/src/Controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayWithFire2.dir/src/Controller.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\programing\PlayWithFire22\src\Controller.cpp -o CMakeFiles\PlayWithFire2.dir\src\Controller.cpp.s
 
+CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj: CMakeFiles/PlayWithFire2.dir/flags.make
+CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
+CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj: ../src/windows/result.cpp
+CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\src\windows\result.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\src\windows\result.cpp.obj -c E:\programing\PlayWithFire22\src\windows\result.cpp
+
+CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\programing\PlayWithFire22\src\windows\result.cpp > CMakeFiles\PlayWithFire2.dir\src\windows\result.cpp.i
+
+CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\programing\PlayWithFire22\src\windows\result.cpp -o CMakeFiles\PlayWithFire2.dir\src\windows\result.cpp.s
+
 CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj: CMakeFiles/PlayWithFire2.dir/flags.make
 CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
 CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj: ../src/SaveToFile.cpp
 CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\src\SaveToFile.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\src\SaveToFile.cpp.obj -c E:\programing\PlayWithFire22\src\SaveToFile.cpp
 
 CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.i: cmake_force
@@ -270,7 +285,7 @@ CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj: CMakeFiles/PlayWithFir
 CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
 CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj: ../src/views/HomeImage.cpp
 CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\src\views\HomeImage.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\src\views\HomeImage.cpp.obj -c E:\programing\PlayWithFire22\src\views\HomeImage.cpp
 
 CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.i: cmake_force
@@ -285,7 +300,7 @@ CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj: CMakeFiles/PlayWithFire2.
 CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
 CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj: ../src/views/Player.cpp
 CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\src\views\Player.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\src\views\Player.cpp.obj -c E:\programing\PlayWithFire22\src\views\Player.cpp
 
 CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.i: cmake_force
@@ -296,11 +311,56 @@ CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\programing\PlayWithFire22\src\views\Player.cpp -o CMakeFiles\PlayWithFire2.dir\src\views\Player.cpp.s
 
+CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj: CMakeFiles/PlayWithFire2.dir/flags.make
+CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
+CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj: ../src/views/cup_image.cpp
+CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\src\views\cup_image.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\src\views\cup_image.cpp.obj -c E:\programing\PlayWithFire22\src\views\cup_image.cpp
+
+CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\programing\PlayWithFire22\src\views\cup_image.cpp > CMakeFiles\PlayWithFire2.dir\src\views\cup_image.cpp.i
+
+CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\programing\PlayWithFire22\src\views\cup_image.cpp -o CMakeFiles\PlayWithFire2.dir\src\views\cup_image.cpp.s
+
+CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj: CMakeFiles/PlayWithFire2.dir/flags.make
+CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
+CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj: ../src/views/you_win.cpp
+CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\src\views\you_win.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\src\views\you_win.cpp.obj -c E:\programing\PlayWithFire22\src\views\you_win.cpp
+
+CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\programing\PlayWithFire22\src\views\you_win.cpp > CMakeFiles\PlayWithFire2.dir\src\views\you_win.cpp.i
+
+CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\programing\PlayWithFire22\src\views\you_win.cpp -o CMakeFiles\PlayWithFire2.dir\src\views\you_win.cpp.s
+
+CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj: CMakeFiles/PlayWithFire2.dir/flags.make
+CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
+CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj: ../src/views/box_position.cpp
+CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\src\views\box_position.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\src\views\box_position.cpp.obj -c E:\programing\PlayWithFire22\src\views\box_position.cpp
+
+CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\programing\PlayWithFire22\src\views\box_position.cpp > CMakeFiles\PlayWithFire2.dir\src\views\box_position.cpp.i
+
+CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\programing\PlayWithFire22\src\views\box_position.cpp -o CMakeFiles\PlayWithFire2.dir\src\views\box_position.cpp.s
+
 CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/PlayWithFire2.dir/flags.make
 CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/PlayWithFire2.dir/includes_CXX.rsp
 CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj: PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/PlayWithFire2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj -MF CMakeFiles\PlayWithFire2.dir\PlayWithFire2_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d -o CMakeFiles\PlayWithFire2.dir\PlayWithFire2_autogen\EWIEGA46WW\qrc_resources.cpp.obj -c E:\programing\PlayWithFire22\cmake-build-debug\PlayWithFire2_autogen\EWIEGA46WW\qrc_resources.cpp
 
 CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
@@ -324,9 +384,13 @@ PlayWithFire2_OBJECTS = \
 "CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.obj" \
 "CMakeFiles/PlayWithFire2.dir/src/views/Box.cpp.obj" \
 "CMakeFiles/PlayWithFire2.dir/src/Controller.cpp.obj" \
+"CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj" \
 "CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj" \
 "CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj" \
 "CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj" \
+"CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj" \
+"CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj" \
+"CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj" \
 "CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
 
 # External object files for target PlayWithFire2
@@ -343,9 +407,13 @@ PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/Wall.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/Block.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/Box.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/Controller.cpp.obj
+PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/windows/result.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/SaveToFile.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/HomeImage.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/Player.cpp.obj
+PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj
+PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj
+PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/src/views/box_position.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.obj
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/build.make
 PlayWithFire2.exe: C:/Qt/6.4.0/mingw_64/lib/libQt6Multimedia.a
@@ -356,11 +424,13 @@ PlayWithFire2.exe: C:/Qt/6.4.0/mingw_64/lib/libQt6Core.a
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/linklibs.rsp
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/objects1.rsp
 PlayWithFire2.exe: CMakeFiles/PlayWithFire2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable PlayWithFire2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\programing\PlayWithFire22\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable PlayWithFire2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PlayWithFire2.dir\link.txt --verbose=$(VERBOSE)
-	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E copy D:/Qt/6.2.4/mingw_64/../../bin/Qt6Core.dll E:/programing/PlayWithFire22/cmake-build-debug
-	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E copy D:/Qt/6.2.4/mingw_64/../../bin/Qt6Gui.dll E:/programing/PlayWithFire22/cmake-build-debug
-	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E copy D:/Qt/6.2.4/mingw_64/../../bin/Qt6Widgets.dll E:/programing/PlayWithFire22/cmake-build-debug
+	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E make_directory E:/programing/PlayWithFire22/cmake-build-debug/plugins/platforms/
+	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.4.0/mingw_64/plugins/platforms/qwindows.dll E:/programing/PlayWithFire22/cmake-build-debug/plugins/platforms/
+	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.4.0/mingw_64/bin/Qt6Core.dll E:/programing/PlayWithFire22/cmake-build-debug
+	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.4.0/mingw_64/bin/Qt6Gui.dll E:/programing/PlayWithFire22/cmake-build-debug
+	"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.4.0/mingw_64/bin/Qt6Widgets.dll E:/programing/PlayWithFire22/cmake-build-debug
 
 # Rule to build all files generated by this target.
 CMakeFiles/PlayWithFire2.dir/build: PlayWithFire2.exe
