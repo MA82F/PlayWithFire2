@@ -7,6 +7,8 @@
 #include "../views/Label.h"
 #include "../views/Button.h"
 #include "Game.h"
+#include "../SaveToFile.h"
+
 Home::Home() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -23,7 +25,7 @@ Home::Home() {
     homeImage->setPos((width()-ImageWidth)/2,0);
 
     textField1 = new TextField(400,50);
-    textField1->setPlainText("saved name");
+//    textField1->setPlainText();
     scene->addItem(textField1);
     textField1->setPos(width()/2-200,height()/2);
 
@@ -52,6 +54,7 @@ Home::Home() {
 void Home::onGameStart() {
     auto name1 = textField1->toPlainText();
     auto name2=textField2->toPlainText();
+    SaveToFile file(name1,name2);
     close();
     (new Game(name1,name2))->show();
 }

@@ -14,6 +14,7 @@ PlayWithFire2_autogen/timestamp: \
 	D:/CLion\ 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake \
 	D:/CLion\ 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake \
 	D:/CLion\ 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake \
+	D:/CLion\ 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckIncludeFile.c.in \
 	D:/CLion\ 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckIncludeFile.cmake \
 	D:/CLion\ 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckLibraryExists.cmake \
 	D:/CLion\ 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
@@ -263,6 +264,8 @@ PlayWithFire2_autogen/timestamp: \
 	D:/PlayWithFire2/src/views/Block.h \
 	D:/PlayWithFire2/src/views/Box.cpp \
 	D:/PlayWithFire2/src/views/Box.h \
+	D:/PlayWithFire2/src/views/Box_Place.cpp \
+	D:/PlayWithFire2/src/views/Box_Place.h \
 	D:/PlayWithFire2/src/views/Button.cpp \
 	D:/PlayWithFire2/src/views/Button.h \
 	D:/PlayWithFire2/src/views/HomeImage.cpp \
