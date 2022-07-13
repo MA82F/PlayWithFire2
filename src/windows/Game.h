@@ -6,6 +6,7 @@
 #include "../views/Player.h"
 #include "../views/Box.h"
 #include "../views/Block.h"
+#include "../views/Box_Place.h"
 
 class Game: public QGraphicsView{
 public:
