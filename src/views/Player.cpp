@@ -6,6 +6,8 @@
 
 bool Player::numPlayer{false};
 Player::Player(QString name,int width, int height) {
+    setFlags(GraphicsItemFlag::ItemIsFocusable);
+    setFocus();
     QPixmap pixmap2(":/images/player2-1");
     if (!numPlayer) {
         QPixmap pixmap1(":/images/player1-1");
@@ -18,4 +20,8 @@ Player::Player(QString name,int width, int height) {
         setPixmap(pixmap2);
         numPlayer = false;
     }
+}
+
+int Player::getSpeed() {
+    return speed;
 }
