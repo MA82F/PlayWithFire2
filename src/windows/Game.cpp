@@ -1,9 +1,7 @@
 #include "Game.h"
 #include <QList>
 #include <ctime>
-#include <iostream>
 #include "../Controller.h"
-
 Game::Game(QString name1,QString name2): QGraphicsView() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -11,7 +9,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
 
     auto scene = new QGraphicsScene(this);
     scene->setSceneRect(0,0,width(),height());
-    scene->setBackgroundBrush(QColor("#2F2627"));
+    scene->setBackgroundBrush(QColor("#211C16"));
     setScene(scene);
 
     auto blockWidth = width() / 15;
@@ -22,22 +20,23 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     auto player1 = new Player(name1,playerWidth,playerHeight);
     scene->addItem(player1);
     player1->setPos(playerWidth+10,playerHeight+3);
+//    players.first()=player1;
 
     auto player2 = new Player(name2,playerWidth,playerHeight);
     scene->addItem(player2);
     player2->setPos(playerWidth*13+10,playerHeight*13+3);
-
+//    players.last()=player2;
     players.append(player1);
     players.append(player2);
 
-    for (int i = 0; i < 15; ++i) {
+    for (int l = 0; l < 15; ++l) {
         for (int j = 0; j < 15; ++j) {
-            if (i!=0 && i!=14 && j!=0 && j!=14 && (i%2!=0 || j%2!=0)){
+            if (l!=0 && l!=14 && j!=0 && j!=14 && (l%2!=0 || j%2!=0)){
                 continue;
             }
             auto wall = new Wall(blockWidth, blockHeight);
             scene->addItem(wall);
-            wall->setPos(blockWidth * i, blockHeight * j);
+            wall->setPos(blockWidth * l, blockHeight * j);
             blocks.append(wall);
         }
     }
@@ -45,9 +44,9 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     srand(time(0));
     // srand(time(0));
     Box_Place positionOfBoxes[224];
-    for(int i=0;i<36;i++){
-        positionOfBoxes[i].x=100;
-        positionOfBoxes[i].y=100;
+    for(int temp=0;temp<224;temp++){
+        positionOfBoxes[temp].x=100;
+        positionOfBoxes[temp].y=100;
     }
     numOfBox=0;
     for (int i = 0; i < 225; ++i) {
@@ -77,6 +76,9 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
             }
         }
     }
-    auto controller =new Controller(players);
+    //setFocus();
+    auto controller=new Controller(players);
+    scene->addItem(controller);
+    controller->setFocus();
 }
 

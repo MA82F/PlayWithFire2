@@ -1,6 +1,5 @@
 #ifndef PLAYWITHFIRE2_GAME_H
 #define PLAYWITHFIRE2_GAME_H
-
 #include <QGraphicsView>
 #include "../views/Wall.h"
 #include "../views/Player.h"

@@ -2,27 +2,42 @@
 #define PLAYWITHFIRE2_CONTROLLER_H
 #include "../src/views/Player.h"
 #include <QObject>
+#include <QList>
 #include <QKeyEvent>
-class Controller: public QObject,public Player{
+#include <QGraphicsPixmapItem>
+#include <QPropertyAnimation>
+class Controller: public QObject,public QGraphicsPixmapItem {
 Q_OBJECT
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
     Q_PROPERTY(qreal height READ y WRITE setY);
     Q_PROPERTY(qreal width READ x WRITE setX);
 public:
-    Controller(QList <Player*> players);
+    qreal yp1, yp2, xp1, xp2;
+    int speedplayers;
+    QList <Player*> tempPlayers{};
+    Controller(QList<Player *> players);
+private:
     QPropertyAnimation *animator1;
     QPropertyAnimation *animator2;
     QPropertyAnimation *animator3;
     QPropertyAnimation *animator4;
+public slots:
     void down();
+
     void Up();
+
     void right();
+
     void left();
+    void down2();
 
-protected:
-    void keyPressEvent(QKeyEvent *event) override;
-}
+    void Up2();
 
+    void right2();
 
+    void left2();
 
+};
 
 #endif //PLAYWITHFIRE2_CONTROLLER_H

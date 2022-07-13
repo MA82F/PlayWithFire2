@@ -26,10 +26,6 @@ public:
     Player(QString name,int width, int height);
     int getSpeed();
 public slots:
-    void down();
-    void Up();
-    void right();
-    void left();
 
 };
 #endif //PLAYWITHFIRE2_PLAYER_H
