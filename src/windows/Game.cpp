@@ -2,6 +2,7 @@
 #include <QList>
 #include <ctime>
 #include <iostream>
+#include "../Controller.h"
 
 Game::Game(QString name1,QString name2): QGraphicsView() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -76,6 +77,6 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
             }
         }
     }
-    //std::cout<<numOfBox;
+    auto controller =new Controller(players);
 }
 

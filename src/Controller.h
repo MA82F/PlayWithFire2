@@ -8,8 +8,8 @@ Q_OBJECT
     Q_PROPERTY(qreal height READ y WRITE setY);
     Q_PROPERTY(qreal width READ x WRITE setX);
 public:
-    Controller();
-    QPropertyAnimation *animator;
+    Controller(QList <Player*> players);
+    QPropertyAnimation *animator1;
     QPropertyAnimation *animator2;
     QPropertyAnimation *animator3;
     QPropertyAnimation *animator4;

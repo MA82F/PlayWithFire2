@@ -3,8 +3,8 @@
 //
 
 #include "Controller.h"
-Controller::Controller() {
-    animator = new QPropertyAnimation(this, "height", this);
+Controller::Controller(QList <Player*> players) {
+    animator1 = new QPropertyAnimation(this, "height", this);
     animator2 = new QPropertyAnimation(this, "width", this);
     animator3=new QPropertyAnimation(,,);
     animator4=new QPropertyAnimation(,,);
