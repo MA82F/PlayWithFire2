@@ -1,11 +1,4 @@
-//
-// Created by IHC on 7/11/2022.
-//
-
 #include "Game.h"
-#include "../views/Wall.h"
-#include "../views/Player.h"
-#include "../views/Box.h"
 #include <QList>
 #include <ctime>
 #include <iostream>
@@ -24,8 +17,6 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     auto blockHeight = height() /15;
     auto playerWidth = width() /15;
     auto playerHeight = height() /15;
-
-    QList<Player*> players;
 
     auto player1 = new Player(name1,playerWidth,playerHeight);
     scene->addItem(player1);
@@ -46,43 +37,29 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
             auto wall = new Wall(blockWidth, blockHeight);
             scene->addItem(wall);
             wall->setPos(blockWidth * i, blockHeight * j);
+            blocks.append(wall);
         }
     }
 
-        box_position positionOfBoxes[35];
-        for(int i=0;i<36;i++){
-            positionOfBoxes[i].x=100;
-            positionOfBoxes[i].y=100;
-        }
-        numOfBox=0;
-        srand(time(0));
-        for (int i = 0; i < 36; ++i) {
+    srand(time(0));
+    int i=0;
+    for (auto BOX:blocks) {
             int ii = rand() % 15;
             int jj = rand() % 15;
-            if ((ii != 0 && ii != 14 && jj != 0 && jj != 14 && (ii % 2 != 0 || jj % 2 != 0))) {
-                if (((ii != 13 || jj != 13) && (ii != 1 || jj != 1) && (ii != 12 || jj != 13) &&
-                     (ii != 13 || jj != 12) && (ii != 1 || jj != 2) && (ii != 2 || jj != 1) && (ii != 1 || jj != 3) &&
-                     (ii != 3 || jj != 1) && (ii != 11 || jj != 13) && (ii != 13 || jj != 11))) {
-                    positionOfBoxes[i].x = ii;
-                    positionOfBoxes[i].y = jj;
-                    for (int j = 0; j < i + 1; ++j) {
-                        for(int z=0;z<i+1;++z){
-                        if (positionOfBoxes[j].x != positionOfBoxes[z].x) {
-                            if (positionOfBoxes[j].y != positionOfBoxes[z].y) {
-                                //--i;
-                                //std::cout<<"hello world\n";
-                                continue;
-                                //    break;
-                            }
-                    auto box = new class Box(blockWidth, blockHeight);
-                    scene->addItem(box);
-                    box->setPos(blockWidth * ii, blockHeight * jj);
-                    ++numOfBox;
-                }}
-            }}}
-            else
-                --i;
+            if(ii!=0 && ii!=14 && jj!=0 && jj!=14 && (ii%2!=0 || jj%2!=0)) {
+                auto boxx = new class Box(blockWidth, blockHeight);
+                if (boxx->x() != BOX->x() && boxx->y() != BOX->y()) {
+                    scene->addItem(boxx);
+                    boxx->setPos(blockWidth * ii, blockHeight * jj);
+                    blocks.append(boxx);
+                    ++i;
+                    if (i == 10) {
+                        break;
+                    }
+                }
+                else
+                    --i;
+            }
         }
-        std::cout<<numOfBox<<std::endl;
 }
 

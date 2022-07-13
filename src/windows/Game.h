@@ -2,10 +2,15 @@
 #define PLAYWITHFIRE2_GAME_H
 
 #include <QGraphicsView>
-#include "../views/box_position.h"
+#include "../views/Wall.h"
+#include "../views/Player.h"
+#include "../views/Box.h"
+#include "../views/Block.h"
 
 class Game: public QGraphicsView{
 public:
+    QList <Player*> players{};
+    QList <Block*> blocks{};
     int numOfBox;
     Game(QString name1,QString name2);
 };
