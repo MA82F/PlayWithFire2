@@ -43,7 +43,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
 
     srand(time(0));
     int i=0;
-    for (auto BOX:blocks) {
+    for (const auto BOX:blocks ) {//&& const auto PLAYER:players
             int ii = rand() % 15;
             int jj = rand() % 15;
             if(ii!=0 && ii!=14 && jj!=0 && jj!=14 && (ii%2!=0 || jj%2!=0)) {
@@ -57,8 +57,6 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
                         break;
                     }
                 }
-                else
-                    --i;
             }
         }
 }
