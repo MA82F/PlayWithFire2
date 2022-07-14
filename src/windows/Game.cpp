@@ -49,7 +49,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         positionOfBoxes[temp].y=100;
     }
     numOfBox=0;
-    for (int i = 0; i < 225 && numOfBox<50; ++i) {
+    for (int i = 0;numOfBox<50; ++i) {
         int ii = rand() % 15;
         int jj = rand() % 15;
         if ((ii != 0 && ii != 14 && jj != 0 && jj != 14 && (ii % 2 != 0 || jj % 2 != 0))) {
