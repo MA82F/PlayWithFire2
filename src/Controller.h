@@ -6,6 +6,8 @@
 #include <QKeyEvent>
 #include <QGraphicsPixmapItem>
 #include <QPropertyAnimation>
+#include "views/Block.h"
+
 class Controller: public QObject,public QGraphicsPixmapItem {
 Q_OBJECT
 protected:
@@ -16,7 +18,8 @@ public:
     qreal yp1, yp2, xp1, xp2;
     int speedplayers;
     QList <Player*> tempPlayers{};
-    Controller(QList<Player *> players);
+    QList <Block*> tempBlocks{};
+    Controller(QList<Player *> players,QList <Block*> blocks);
 private:
     QPropertyAnimation *animator1;
     QPropertyAnimation *animator2;
@@ -37,7 +40,6 @@ public slots:
     void right2();
 
     void left2();
-
 };
 
 #endif //PLAYWITHFIRE2_CONTROLLER_H

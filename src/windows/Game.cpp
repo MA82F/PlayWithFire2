@@ -78,7 +78,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         }
     }
     //setFocus();
-    auto controller=new Controller(players);
+    auto controller=new Controller(players,blocks);
     scene->addItem(controller);
     controller->setFocus();
 }

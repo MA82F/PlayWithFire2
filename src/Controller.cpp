@@ -2,7 +2,7 @@
 #include <QWidgetData>
 #include <QWidget>
 #include "Controller.h"
-Controller::Controller(QList <Player*> players) {
+Controller::Controller(QList <Player*> players,QList <Block*> blocks) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
     animator2 = new QPropertyAnimation(players.at(0), "width", players.at(0));
@@ -14,6 +14,7 @@ Controller::Controller(QList <Player*> players) {
     xp2=players.at(1)->x();
     speedplayers=players.at(0)->getSpeed();
     tempPlayers=players;
+    tempBlocks=blocks;
 }
 
 void Controller::down() {
@@ -51,7 +52,7 @@ void Controller::Up() {
     animator1->start();
 
 }
-////////////////////////////////////////
+//----------------------------------------------------------------------------------------------------------------------
 
 void Controller::down2() {
     animator3->stop();
@@ -92,30 +93,55 @@ void Controller::Up2() {
 
 void Controller::keyPressEvent(QKeyEvent *event) {
     QGraphicsItem::keyPressEvent(event);
-
+    auto player1Width = tempPlayers.at(0)->boundingRect().width();
+    auto player1Height = tempPlayers.at(0)->boundingRect().height();
+    auto player2Width = tempPlayers.at(1)->boundingRect().width();
+    auto player2Height = tempPlayers.at(1)->boundingRect().height();
+    auto newX1 = tempPlayers.at(0)->x();
+    auto newY1 = tempPlayers.at(0)->y();
+    auto newX2 = tempPlayers.at(1)->x();
+    auto newY2 = tempPlayers.at(1)->y();
     if(event->key()==Qt::Key::Key_S){
         down();
     }
-    else if(event->key()==Qt::Key::Key_W){
+    if(event->key()==Qt::Key::Key_W){
         Up();
     }
-    else if(event->key()==Qt::Key::Key_A){
+    if(event->key()==Qt::Key::Key_A){
         left();
     }
-    else if(event->key()==Qt::Key::Key_D){
+    if(event->key()==Qt::Key::Key_D){
         right();
     }
-    else if(event->key()==Qt::Key::Key_Down){
+    if(event->key()==Qt::Key::Key_Down){
         down2();
     }
-    else if(event->key()==Qt::Key::Key_Up){
+    if(event->key()==Qt::Key::Key_Up){
         Up2();
     }
-    else if(event->key()==Qt::Key::Key_Left){
+    if(event->key()==Qt::Key::Key_Left){
         left2();
     }
-    else if(event->key()==Qt::Key::Key_Right){
+    if(event->key()==Qt::Key::Key_Right){
         right2();
+    }
+    for (const auto block:tempBlocks) {
+        if(block->x()<newX1 && block->x() + block->boundingRect().width()>newX1
+            && block->y()<newY1 && block->y() + block->boundingRect().height()>newY1){
+            return;
+        }
+        if(block->x()<newX1 + player1Width && block->x() + block->boundingRect().width()>newX1 + player1Width
+            && block->y()<newY1 && block->y() + block->boundingRect().height()>newY1){
+            return;
+        }
+        if(block->x()<newX1 + player1Width && block->x() + block->boundingRect().width()>newX1 + player1Width
+            && block->y()<newY1 + player1Height && block->y() + block->boundingRect().height()>newY1 + player1Height){
+            return;
+        }
+        if(block->x()<newX1 + player1Width && block->x() + block->boundingRect().width()>newX1 + player1Width
+            && block->y()<newY1 + player1Height && block->y() + block->boundingRect().height()>newY1 + player1Height){
+            return;
+        }
     }
 
 }
