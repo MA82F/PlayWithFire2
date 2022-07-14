@@ -16,7 +16,7 @@ private:
     int score{0};
     int bombCount{10};
     int lifeCount{3};
-    int speed{1};
+    int speed{10};
     int bombRadius{3};
 
 
@@ -25,6 +25,8 @@ public:
     QPropertyAnimation *animator2;
     Player(QString name,int width, int height);
     int getSpeed();
+    int getScore();
+    int setScore();
 public slots:
 
 };

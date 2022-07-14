@@ -49,13 +49,14 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         positionOfBoxes[temp].y=100;
     }
     numOfBox=0;
-    for (int i = 0; i < 225; ++i) {
+    for (int i = 0; i < 225 && numOfBox<50; ++i) {
         int ii = rand() % 15;
         int jj = rand() % 15;
         if ((ii != 0 && ii != 14 && jj != 0 && jj != 14 && (ii % 2 != 0 || jj % 2 != 0))) {
             if (((ii != 13 || jj != 13) && (ii != 1 || jj != 1) && (ii != 12 || jj != 13) &&
-                 (ii != 13 || jj != 12) && (ii != 1 || jj != 2) && (ii != 2 || jj != 1) && (ii != 1 || jj != 3) &&
-                 (ii != 3 || jj != 1) && (ii != 11 || jj != 13) && (ii != 13 || jj != 11))) {
+                 (ii != 13 || jj != 12) && (ii != 1 || jj != 2) && (ii != 2 || jj != 1)))// && (ii != 1 || jj != 3) &&
+                 //(ii != 3 || jj != 1) && (ii != 11 || jj != 13) && (ii != 13 || jj != 11)))
+                  {
                 //positionOfBoxes[i].x=ii;
                 // positionOfBoxes[i].y=jj;
                 bool is_exist= false;
