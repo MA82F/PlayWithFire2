@@ -245,7 +245,7 @@ build PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir
 #############################################
 # Phony custom command for CMakeFiles\PlayWithFire2_autogen_timestamp_deps
 
-build CMakeFiles/PlayWithFire2_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/PlayWithFire2_autogen_timestamp_deps: phony D$:/Qt/6.2.4/mingw_64/./bin/uic.exe D$:/Qt/6.2.4/mingw_64/./bin/moc.exe
+build CMakeFiles/PlayWithFire2_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/PlayWithFire2_autogen_timestamp_deps: phony D$:/Qt/6.2.4/mingw_64/./bin/moc.exe D$:/Qt/6.2.4/mingw_64/./bin/uic.exe
 
 
 #############################################

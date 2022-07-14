@@ -146,7 +146,7 @@ void Controller::keyPressEvent(QKeyEvent *event) {
             && block->y()<newY1 + player1Height && block->y() + block->boundingRect().height()>newY1 + player1Height){
             return;
         }
-        if(block->x()<newX1 + player1Width && block->x() + block->boundingRect().width()>newX1 + player1Width
+        if(block->x()<newX1 && block->x() + block->boundingRect().width()>newX1
             && block->y()<newY1 + player1Height && block->y() + block->boundingRect().height()>newY1 + player1Height){
             return;
         }
@@ -164,7 +164,7 @@ void Controller::keyPressEvent(QKeyEvent *event) {
            && block->y()<newY2 + player2Height && block->y() + block->boundingRect().height()>newY2 + player2Height){
             return;
         }
-        if(block->x()<newX2 + player2Width && block->x() + block->boundingRect().width()>newX2 + player2Width
+        if(block->x()<newX2  && block->x() + block->boundingRect().width()>newX2
            && block->y()<newY2 + player2Height && block->y() + block->boundingRect().height()>newY2 + player2Height){
             return;
         }
