@@ -29,6 +29,13 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     players.append(player1);
     players.append(player2);
 
+    auto Bomb1=new Bomb(width()/15,height()/15);
+    scene->addItem(Bomb1);
+    BombList.append(Bomb1);
+    auto Bomb2=new Bomb(width()/15,height()/15);
+    scene->addItem(Bomb2);
+    BombList.append(Bomb2);
+
     for (int l = 0; l < 15; ++l) {
         for (int j = 0; j < 15; ++j) {
             if (l!=0 && l!=14 && j!=0 && j!=14 && (l%2!=0 || j%2!=0)){
@@ -78,7 +85,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         }
     }
 //    setFocus();
-    auto controller=new Controller(players,blocks);
+    auto controller=new Controller(players,blocks,BombList);
     scene->addItem(controller);
     controller->setFocus();
 }

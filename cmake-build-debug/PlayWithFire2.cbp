@@ -153,16 +153,16 @@
 		<Unit filename="E:/programing/PlayWithFire22/src/Controller.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/SaveToFile.cpp">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="E:/programing/PlayWithFire22/src/SaveToFile.h">
-			<Option target="PlayWithFire2"/>
-		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Block.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Block.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/Bomb.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/Bomb.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Box.cpp">

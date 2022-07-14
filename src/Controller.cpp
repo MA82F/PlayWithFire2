@@ -2,7 +2,7 @@
 #include <QWidgetData>
 #include <QWidget>
 #include "Controller.h"
-Controller::Controller(QList <Player*> players,QList <Block*> blocks) {
+Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
     animator2 = new QPropertyAnimation(players.at(0), "width", players.at(0));
@@ -15,6 +15,7 @@ Controller::Controller(QList <Player*> players,QList <Block*> blocks) {
     speedplayers=players.at(0)->getSpeed();
     tempPlayers=players;
     tempBlocks=blocks;
+    tempBombList=BombList;
 }
 
 void Controller::down() {
@@ -98,6 +99,18 @@ void Controller::Up2() {
 
 }
 
+void Controller::bomb1() {
+    newX3 = tempPlayers.at(0)->x();
+    newY3=tempPlayers.at(0)->y();
+tempBombList.at(0)->setPos(newX3,newY3);
+}
+
+void Controller::bomb2() {
+    newX4 = tempPlayers.at(1)->x();
+    newY4=tempPlayers.at(1)->y();
+    tempBombList.at(1)->setPos(newX4,newY4);
+}
+
 
 void Controller::keyPressEvent(QKeyEvent *event) {
     QGraphicsItem::keyPressEvent(event);
@@ -109,6 +122,12 @@ void Controller::keyPressEvent(QKeyEvent *event) {
      newY1 = tempPlayers.at(0)->y();
      newX2 = tempPlayers.at(1)->x();
      newY2 = tempPlayers.at(1)->y();
+    if (event->key()==Qt::Key::Key_Space){
+        bomb1();
+    }
+    if(event->key()==Qt::Key::Key_Delete){
+        bomb2();
+    }
     if(event->key()==Qt::Key::Key_S){
         down();
     }
