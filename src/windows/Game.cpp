@@ -42,7 +42,6 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     }
 
     srand(time(0));
-    // srand(time(0));
     Box_Place positionOfBoxes[224];
     for(int temp=0;temp<224;temp++){
         positionOfBoxes[temp].x=100;
@@ -72,12 +71,13 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
                     box->setPos(blockWidth * ii, blockHeight * jj);
                     positionOfBoxes[i].x=ii;
                     positionOfBoxes[i].y=jj;
+                    blocks.append(box);
                     ++numOfBox;
                 }
             }
         }
     }
-    //setFocus();
+//    setFocus();
     auto controller=new Controller(players,blocks);
     scene->addItem(controller);
     controller->setFocus();

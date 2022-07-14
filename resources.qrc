@@ -6,8 +6,12 @@
         <file alias="wall">resources/images/wall.png</file>
         <file alias="player1-1">resources/images/char1_to_down.png</file>
         <file alias="player1-2">resources/images/player1-2.png</file>
-        <file alias="player2-1">resources/images/player2-1.png</file>
+        <file alias="player2-1">resources/images/char2_to_down.png</file>
         <file alias="player2-2">resources/images/player2-2.png</file>
+<!--        <file alias="player1-1">resources/images/char1_to_down.png</file>-->
+<!--        <file alias="player1-2">resources/images/player1-2.png</file>-->
+<!--        <file alias="player2-1">resources/images/player2-1.png</file>-->
+<!--        <file alias="player2-2">resources/images/player2-2.png</file>-->
         <file alias="wall">resources/images/wall.png</file>
         <file alias="home_image">resources/images/home_image.png</file>
         <file alias="winner">resources/images/winner.png</file>

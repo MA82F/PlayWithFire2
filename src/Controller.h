@@ -11,17 +11,20 @@
 class Controller: public QObject,public QGraphicsPixmapItem {
 Q_OBJECT
 protected:
-    void keyPressEvent(QKeyEvent *event) override;
     Q_PROPERTY(qreal height READ y WRITE setY);
     Q_PROPERTY(qreal width READ x WRITE setX);
 public:
-    qreal yp1, yp2, xp1, xp2;
+    qreal newX1, newY1, newX2, newY2;
     int speedplayers;
     QList <Player*> tempPlayers{};
     QList <Block*> tempBlocks{};
     Controller(QList<Player *> players,QList <Block*> blocks);
 private:
     QPropertyAnimation *animator1;
+protected:
+//    void keyReleaseEvent(QKeyEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
+private:
     QPropertyAnimation *animator2;
     QPropertyAnimation *animator3;
     QPropertyAnimation *animator4;
