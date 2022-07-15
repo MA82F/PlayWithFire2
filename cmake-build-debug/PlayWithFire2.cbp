@@ -165,6 +165,12 @@
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Bomb.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/Bomb_effect.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/Bomb_effect.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Box.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>

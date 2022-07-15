@@ -5,7 +5,7 @@
 #include <QList>
 #include <QKeyEvent>
 #include <QGraphicsPixmapItem>
-#include <QPropertyAnimation>
+//#include <QPropertyAnimation>
 #include "views/Block.h"
 #include "views/Bomb.h"
 #include "windows/Game.h"
@@ -25,19 +25,17 @@ public:
     QList <Player*> tempPlayers{};
     QList <Block*> tempBlocks{};
     QList<Bomb*>tempBombList;
-    QList<Bomb_effect*>tempBooms;
-//    Bomb_effect *boom;
-    Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList,QList<Bomb_effect*> booms);
+    //Bomb_effect *boom;
+    Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList);
 private:
     QPropertyAnimation *animator1;
 protected:
-//    void keyReleaseEvent(QKeyEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
 private:
     QPropertyAnimation *animator2;
     QPropertyAnimation *animator3;
     QPropertyAnimation *animator4;
-public slots:
+public  slots:
     void down();
 
     void Up();
@@ -52,13 +50,9 @@ public slots:
     void right2();
 
     void left2();
-
     void bomb1();
-
-    void bomb2();
-public slots:
-    void bomb_effect1();
-    void bomb_effect2();
+signals:
+void bomb1_called();
 };
 
 #endif //PLAYWITHFIRE2_CONTROLLER_H

@@ -2,9 +2,14 @@
 #include <QPushButton>
 #include "src/windows/Home.h"
 #include "src/windows/result.h"
+#include "src/Controller.h"
+#include "src/windows/Game.h"
+
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     (new Home())->show();
 //    (new result())->show();
-    return QApplication::exec();
+//    QObject::connect(Controller,&Controller::bomb1,Game,&Game::bomb_effect);
+
+return QApplication::exec();
 }

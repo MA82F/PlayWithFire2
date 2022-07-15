@@ -5,7 +5,7 @@
 #include "../views/Label.h"
 #include "../views/Bomb_effect.h"
 
-Game::Game(QString name1,QString name2): QGraphicsView() {
+Game::Game(QString name1,QString name2): QGraphicsView{} {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     showFullScreen();
@@ -39,14 +39,14 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(Bomb2);
     BombList.append(Bomb2);
 
-    auto bomb_effect1 = new Bomb_effect(width()/15,height()/15);
-    scene->addItem(bomb_effect1);
-    booms.append(bomb_effect1);
-    auto bomb_effect2 = new Bomb_effect(width()/15,height()/15);
-    scene->addItem(bomb_effect2);
-    booms.append(bomb_effect2);
+//    auto bomb_effect = new Bomb_effect(width()/15,height()/15);
+//    scene->addItem(bomb_effect);
 //    boom = bomb_effect;
-
+//bomb_effect();
+    auto controller=new Controller(players,blocks,BombList);
+    scene->addItem(controller);
+    controller->setFocus();
+    QObject::connect( controller,&Controller::bomb1_called, this,&Game::bomb_effect);
     for (int l = 0; l < 15; ++l) {
         for (int j = 0; j < 15; ++j) {
             if (l!=0 && l!=14 && j!=0 && j!=14 && (l%2!=0 || j%2!=0)){
@@ -104,16 +104,18 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(n2player);
     n2player->setPos(blockWidth*11,blockHeight/5);
 //    setFocus();
-    auto controller=new Controller(players,blocks,BombList,booms);
-    scene->addItem(controller);
-    controller->setFocus();
 //    bombTimer =new QTimer();
 //    bombTimer->setInterval(2000);
 //    connect(bombTimer,&QTimer::timeout,&Controller::bomb1,&Game::boom);
 //    bombTimer->start();
 }
-//void Game::boom(){
-//    auto bomb_effect = new Bomb_effect(scene()->width(),scene()->height());
-//    scene()->addItem(bomb_effect);
-//
-//}
+
+void Game::bomb_effect() {
+    bombTimer=new QTimer();
+    bombTimer->setInterval(2000);
+    bombTimer->start();
+    auto bomb_Effect = new Bomb_effect(width()/15,height()/15);
+    scene()->addItem(bomb_Effect);
+    BombList.at(0)->setPos(players.at(0)->x(),players.at(0)->y());
+    bomb_Effect->setPos(BombList.at(0)->x(),BombList.at(0)->y());
+}

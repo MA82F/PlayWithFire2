@@ -8,8 +8,11 @@
 #include "../views/Box_Place.h"
 #include "../views/Bomb.h"
 #include "../views/Bomb_effect.h"
-//#include <QTimer>
-
+#include <QObject>
+#include <QList>
+#include <QTimer>
+#include <QWidgetData>
+#include <QObject>
 class Game: public QGraphicsView{
     Q_OBJECT
 //private:
@@ -20,7 +23,11 @@ public:
     QList<Bomb*>BombList;
     QList<Bomb_effect*> booms;
     int numOfBox;
-    Game(QString name1,QString name2);
+    QTimer* bombTimer;
+
+   Game(QString name1,QString name2);
+public slots:
+    void bomb_effect();
 //public slots:
 //    void boom();
 };

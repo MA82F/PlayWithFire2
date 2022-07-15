@@ -3,7 +3,7 @@
 #include <QWidget>
 #include "Controller.h"
 //#include <QGraphicsView>
-Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList,QList<Bomb_effect*> booms) {
+Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
     animator2 = new QPropertyAnimation(players.at(0), "width", players.at(0));
@@ -17,7 +17,7 @@ Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*
     tempPlayers=players;
     tempBlocks=blocks;
     tempBombList=BombList;
-    tempBooms = booms;
+    //boom = booom;
 }
 
 void Controller::down() {
@@ -105,13 +105,14 @@ void Controller::bomb1() {
     newX3 = tempPlayers.at(0)->x();
     newY3=tempPlayers.at(0)->y();
 tempBombList.at(0)->setPos(newX3,newY3);
+ emit bomb1_called();
 }
 
-void Controller::bomb2() {
-    newX4 = tempPlayers.at(1)->x();
-    newY4=tempPlayers.at(1)->y();
-    tempBombList.at(1)->setPos(newX4,newY4);
-}
+//void Controller::bomb2() {
+//    newX4 = tempPlayers.at(1)->x();
+//    newY4=tempPlayers.at(1)->y();
+//    tempBombList.at(1)->setPos(newX4,newY4);
+//}
 
 
 void Controller::keyPressEvent(QKeyEvent *event) {
@@ -126,18 +127,10 @@ void Controller::keyPressEvent(QKeyEvent *event) {
      newY2 = tempPlayers.at(1)->y();
     if (event->key()==Qt::Key::Key_Space){
         bomb1();
-        bombTimer =new QTimer();
-        bombTimer->setInterval(10000);
-        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect1);
-        bombTimer->start();
     }
-    if(event->key()==Qt::Key::Key_Delete){
-        bomb2();
-        bombTimer =new QTimer();
-        bombTimer->setInterval(10000);
-        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect2);
-        bombTimer->start();
-    }
+//    if(event->key()==Qt::Key::Key_Delete){
+//        bomb2();
+//    }
     if(event->key()==Qt::Key::Key_S){
         down();
     }
@@ -200,17 +193,6 @@ void Controller::keyPressEvent(QKeyEvent *event) {
     }
     tempPlayers.at(0)->setPos(newX1,newY1);
     tempPlayers.at(1)->setPos(newX2,newY2);
-}
-void Controller::bomb_effect1(){
-    tempBooms.at(0)->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
-//    boom->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
-
-
-}
-void Controller::bomb_effect2(){
-    tempBooms.at(1)->setPos(tempBombList.at(1)->x(),tempBombList.at(1)->y());
-//    boom->setPos(tempBombList.at(1)->x(),tempBombList.at(1)->y());
-
 }
 
 
