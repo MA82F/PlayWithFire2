@@ -7,14 +7,21 @@
 #include "../views/Block.h"
 #include "../views/Box_Place.h"
 #include "../views/Bomb.h"
+#include "../views/Bomb_effect.h"
+//#include <QTimer>
 
 class Game: public QGraphicsView{
+    Q_OBJECT
+//private:
+//    QTimer* bombTimer;
 public:
     QList <Player*> players{};
     QList <Block*> blocks{};
     QList<Bomb*>BombList;
     int numOfBox;
     Game(QString name1,QString name2);
+//public slots:
+//    void boom();
 };
 
 

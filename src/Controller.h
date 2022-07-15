@@ -9,9 +9,13 @@
 #include "views/Block.h"
 #include "views/Bomb.h"
 #include "windows/Game.h"
+#include <QTimer>
+#include "views/Bomb_effect.h"
 
 class Controller: public QObject,public QGraphicsPixmapItem{
 Q_OBJECT
+private:
+    QTimer* bombTimer;
 protected:
     Q_PROPERTY(qreal height READ y WRITE setY);
     Q_PROPERTY(qreal width READ x WRITE setX);
@@ -21,7 +25,8 @@ public:
     QList <Player*> tempPlayers{};
     QList <Block*> tempBlocks{};
     QList<Bomb*>tempBombList;
-    Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList);
+    Bomb_effect *boom;
+    Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList,Bomb_effect *booom);
 private:
     QPropertyAnimation *animator1;
 protected:
@@ -50,6 +55,8 @@ public slots:
     void bomb1();
 
     void bomb2();
+public slots:
+    void bomb_effect();
 };
 
 #endif //PLAYWITHFIRE2_CONTROLLER_H

@@ -2,7 +2,8 @@
 #include <QWidgetData>
 #include <QWidget>
 #include "Controller.h"
-Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList) {
+//#include <QGraphicsView>
+Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList,Bomb_effect *booom) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
     animator2 = new QPropertyAnimation(players.at(0), "width", players.at(0));
@@ -16,6 +17,7 @@ Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*
     tempPlayers=players;
     tempBlocks=blocks;
     tempBombList=BombList;
+    boom = booom;
 }
 
 void Controller::down() {
@@ -124,6 +126,10 @@ void Controller::keyPressEvent(QKeyEvent *event) {
      newY2 = tempPlayers.at(1)->y();
     if (event->key()==Qt::Key::Key_Space){
         bomb1();
+        bombTimer =new QTimer();
+        bombTimer->setInterval(2000);
+        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect);
+        bombTimer->start();
     }
     if(event->key()==Qt::Key::Key_Delete){
         bomb2();
@@ -191,5 +197,12 @@ void Controller::keyPressEvent(QKeyEvent *event) {
     tempPlayers.at(0)->setPos(newX1,newY1);
     tempPlayers.at(1)->setPos(newX2,newY2);
 }
+void Controller::bomb_effect(){
+//    auto blockWidth = width() / 15;
+//    auto blockHeight = height() / 15;
+//    auto bomb_effect = new Bomb_effect(width()/15,height()/15);
+//    scene()->addItem(bomb_effect);
+    boom->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
 
+}
 

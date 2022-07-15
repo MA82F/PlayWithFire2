@@ -8,6 +8,8 @@
         <file alias="player1-2">resources/images/player1-2.png</file>
         <file alias="player2-1">resources/images/char2_to_down.png</file>
         <file alias="player2-2">resources/images/player2-2.png</file>
+        <file alias="bomb-line">resources/images/bomb_line.png</file>
+        <file alias="boom">resources/images/boom.png</file>
 <!--        <file alias="player1-1">resources/images/char1_to_down.png</file>-->
 <!--        <file alias="player1-2">resources/images/player1-2.png</file>-->
 <!--        <file alias="player2-1">resources/images/player2-1.png</file>-->

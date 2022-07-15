@@ -2,4 +2,5 @@
 #include "UVLADIE3JM/moc_Controller.cpp"
 #include "Z3L7HTGYLD/moc_Button.cpp"
 #include "Z3L7HTGYLD/moc_Player.cpp"
+#include "3LXPKN4LCA/moc_Game.cpp"
 #include "3LXPKN4LCA/moc_Home.cpp"

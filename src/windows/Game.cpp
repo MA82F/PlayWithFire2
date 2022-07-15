@@ -1,7 +1,10 @@
 #include "Game.h"
 #include <QList>
-#include <ctime>
+//#include <ctime>
 #include "../Controller.h"
+#include "../views/Label.h"
+#include "../views/Bomb_effect.h"
+
 Game::Game(QString name1,QString name2): QGraphicsView() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -35,6 +38,10 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     auto Bomb2=new Bomb(width()/15,height()/15);
     scene->addItem(Bomb2);
     BombList.append(Bomb2);
+
+    auto bomb_effect = new Bomb_effect(width()/15,height()/15);
+    scene->addItem(bomb_effect);
+//    boom = bomb_effect;
 
     for (int l = 0; l < 15; ++l) {
         for (int j = 0; j < 15; ++j) {
@@ -84,9 +91,25 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
             }
         }
     }
+    auto n1player = new Label();
+    n1player->setPlainText("Player1: " + name1);
+    scene->addItem(n1player);
+    n1player->setPos(blockWidth*1.5,blockHeight/5);
+    auto n2player = new Label();
+    n2player->setPlainText("Player2: " + name2);
+    scene->addItem(n2player);
+    n2player->setPos(blockWidth*11,blockHeight/5);
 //    setFocus();
-    auto controller=new Controller(players,blocks,BombList);
+    auto controller=new Controller(players,blocks,BombList,bomb_effect);
     scene->addItem(controller);
     controller->setFocus();
+//    bombTimer =new QTimer();
+//    bombTimer->setInterval(2000);
+//    connect(bombTimer,&QTimer::timeout,&Controller::bomb1,&Game::boom);
+//    bombTimer->start();
 }
-
+//void Game::boom(){
+//    auto bomb_effect = new Bomb_effect(scene()->width(),scene()->height());
+//    scene()->addItem(bomb_effect);
+//
+//}
