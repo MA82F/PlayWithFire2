@@ -39,8 +39,12 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(Bomb2);
     BombList.append(Bomb2);
 
-    auto bomb_effect = new Bomb_effect(width()/15,height()/15);
-    scene->addItem(bomb_effect);
+    auto bomb_effect1 = new Bomb_effect(width()/15,height()/15);
+    scene->addItem(bomb_effect1);
+    booms.append(bomb_effect1);
+    auto bomb_effect2 = new Bomb_effect(width()/15,height()/15);
+    scene->addItem(bomb_effect2);
+    booms.append(bomb_effect2);
 //    boom = bomb_effect;
 
     for (int l = 0; l < 15; ++l) {
@@ -100,7 +104,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(n2player);
     n2player->setPos(blockWidth*11,blockHeight/5);
 //    setFocus();
-    auto controller=new Controller(players,blocks,BombList,bomb_effect);
+    auto controller=new Controller(players,blocks,BombList,booms);
     scene->addItem(controller);
     controller->setFocus();
 //    bombTimer =new QTimer();

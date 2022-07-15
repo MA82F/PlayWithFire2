@@ -18,6 +18,7 @@ public:
     QList <Player*> players{};
     QList <Block*> blocks{};
     QList<Bomb*>BombList;
+    QList<Bomb_effect*> booms;
     int numOfBox;
     Game(QString name1,QString name2);
 //public slots:

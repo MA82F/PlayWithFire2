@@ -25,8 +25,9 @@ public:
     QList <Player*> tempPlayers{};
     QList <Block*> tempBlocks{};
     QList<Bomb*>tempBombList;
-    Bomb_effect *boom;
-    Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList,Bomb_effect *booom);
+    QList<Bomb_effect*>tempBooms;
+//    Bomb_effect *boom;
+    Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList,QList<Bomb_effect*> booms);
 private:
     QPropertyAnimation *animator1;
 protected:
@@ -56,7 +57,8 @@ public slots:
 
     void bomb2();
 public slots:
-    void bomb_effect();
+    void bomb_effect1();
+    void bomb_effect2();
 };
 
 #endif //PLAYWITHFIRE2_CONTROLLER_H
