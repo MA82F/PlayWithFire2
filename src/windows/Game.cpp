@@ -1,10 +1,13 @@
 #include "Game.h"
 #include <QList>
-//#include <ctime>
+#include <ctime>
 #include "../Controller.h"
 #include "../views/Label.h"
 #include "../views/Bomb_effect.h"
+#include <QTimer>
+//#include<cstdlib>
 
+//using namespace std;
 Game::Game(QString name1,QString name2): QGraphicsView() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -33,19 +36,14 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     players.append(player2);
 //    playerspictures* pPicture=new playerspictures();
 
-    auto Bomb1=new Bomb(width()/15,height()/15);
-    scene->addItem(Bomb1);
-    BombList.append(Bomb1);
-    auto Bomb2=new Bomb(width()/15,height()/15);
-    scene->addItem(Bomb2);
-    BombList.append(Bomb2);
+//    auto Bomb1=new Bomb(width()/15,height()/15);
+//    scene->addItem(Bomb1);
+//    BombList.append(Bomb1);
+//    auto Bomb2=new Bomb(width()/15,height()/15);
+//    scene->addItem(Bomb2);
+//    BombList.append(Bomb2);
 
-    auto bomb_effect1 = new Bomb_effect(width()/15,height()/15);
-    scene->addItem(bomb_effect1);
-    booms.append(bomb_effect1);
-    auto bomb_effect2 = new Bomb_effect(width()/15,height()/15);
-    scene->addItem(bomb_effect2);
-    booms.append(bomb_effect2);
+//
 //    boom = bomb_effect;
 
     for (int l = 0; l < 15; ++l) {
@@ -105,7 +103,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(n2player);
     n2player->setPos(blockWidth*11,blockHeight/5);
 //    setFocus();
-    auto controller=new Controller(players,blocks,BombList);
+    auto controller=new Controller(players,blocks);
     scene->addItem(controller);
     controller->setFocus();
     connect(controller,&Controller::bomb1_called, this,&Game::boom);
@@ -126,9 +124,14 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
 }
 void Game::boom(){
 auto tempBomb=new Bomb(75,75);
+Bomb1=tempBomb;
 scene()->addItem(tempBomb);
 tempBomb->setPos(100,150);
-
+bombTimer=new QTimer();
+bombTimer->setInterval(2000);
+    connect(bombTimer,&QTimer::timeout, this,&Game::bomb_remover);
+//scene()->removeItem(tempBomb);
+bombTimer->start();
 }
 
 void Game::p1Up() {
@@ -168,3 +171,6 @@ void Game::p2Right() {
 
 }
 
+void Game::bomb_remover() {
+scene()->removeItem(Bomb1);
+}

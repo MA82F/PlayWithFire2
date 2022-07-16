@@ -10,6 +10,7 @@
 #include "../views/Bomb_effect.h"
 //#include <QTimer>
 #include "../views/playerspictures.h"
+//#include <iostream>
 
 class Game: public QGraphicsView{
     Q_OBJECT
@@ -18,11 +19,13 @@ class Game: public QGraphicsView{
 public:
     QList <Player*> players{};
     QList <Block*> blocks{};
-    QList<Bomb*>BombList;
+    Bomb*Bomb1;
     QList<Bomb_effect*> booms;
     int numOfBox;
     Game(QString name1,QString name2);
     playerspictures* pPicture=new playerspictures(70,50);
+    QTimer* bombTimer;
+
 public slots:
     void boom();
     void p1Up();
@@ -33,6 +36,7 @@ public slots:
     void p2Left();
     void p1Right();
     void p2Right();
+    void bomb_remover();
 };
 
 
