@@ -27,7 +27,7 @@ public:
     QList<Bomb*>tempBombList;
     QList<Bomb_effect*>tempBooms;
 //    Bomb_effect *boom;
-    Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList);
+    Controller(QList<Player *> players,QList <Block*> blocks);//,QList<Bomb*>BombList
 private:
     QPropertyAnimation *animator1;
 protected:
@@ -56,8 +56,6 @@ public :
     void bomb1();
 
     void bomb2();
-    void bomb_effect1();
-    void bomb_effect2();
     signals:
     void bomb1_called();
     void bomb2_called();

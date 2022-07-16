@@ -352,6 +352,8 @@ PlayWithFire2_autogen/timestamp: \
 	D:/PlayWithFire2/src/views/TextField.h \
 	D:/PlayWithFire2/src/views/Wall.cpp \
 	D:/PlayWithFire2/src/views/Wall.h \
+	D:/PlayWithFire2/src/views/playerspictures.cpp \
+	D:/PlayWithFire2/src/views/playerspictures.h \
 	D:/PlayWithFire2/src/windows/Game.cpp \
 	D:/PlayWithFire2/src/windows/Game.h \
 	D:/PlayWithFire2/src/windows/Home.cpp \

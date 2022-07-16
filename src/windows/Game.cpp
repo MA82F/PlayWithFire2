@@ -20,12 +20,12 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     auto playerWidth = width() /15;
     auto playerHeight = height() /15;
 
-    auto player1 = new Player(name1,playerWidth,playerHeight);
+    auto player1 = new Player(name1,playerWidth-5,playerHeight-13);
     scene->addItem(player1);
     player1->setPos(playerWidth+10,playerHeight+3);
 //    players.first()=player1;
 
-    auto player2 = new Player(name2,playerWidth,playerHeight);
+    auto player2 = new Player(name2,playerWidth-5,playerHeight-13);
     scene->addItem(player2);
     player2->setPos(playerWidth*13+10,playerHeight*13+3);
 //    players.last()=player2;
@@ -33,19 +33,19 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     players.append(player2);
 //    playerspictures* pPicture=new playerspictures();
 
-    auto Bomb1=new Bomb(width()/15,height()/15);
-    scene->addItem(Bomb1);
-    BombList.append(Bomb1);
-    auto Bomb2=new Bomb(width()/15,height()/15);
-    scene->addItem(Bomb2);
-    BombList.append(Bomb2);
+//    auto Bomb1=new Bomb(width()/15,height()/15);
+//    scene->addItem(Bomb1);
+//    BombList.append(Bomb1);
+//    auto Bomb2=new Bomb(width()/15,height()/15);
+//    scene->addItem(Bomb2);
+//    BombList.append(Bomb2);
 
-    auto bomb_effect1 = new Bomb_effect(width()/15,height()/15);
-    scene->addItem(bomb_effect1);
-    booms.append(bomb_effect1);
-    auto bomb_effect2 = new Bomb_effect(width()/15,height()/15);
-    scene->addItem(bomb_effect2);
-    booms.append(bomb_effect2);
+//    auto bomb_effect1 = new Bomb_effect(width()/15,height()/15);
+//    scene->addItem(bomb_effect1);
+//    booms.append(bomb_effect1);
+//    auto bomb_effect2 = new Bomb_effect(width()/15,height()/15);
+//    scene->addItem(bomb_effect2);
+//    booms.append(bomb_effect2);
 //    boom = bomb_effect;
 
     for (int l = 0; l < 15; ++l) {
@@ -67,7 +67,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         positionOfBoxes[temp].y=100;
     }
     numOfBox=0;
-    for (int i = 0;numOfBox<50; ++i) {
+    for (int i = 0;numOfBox<10; ++i) {
         int ii = rand() % 15;
         int jj = rand() % 15;
         if ((ii != 0 && ii != 14 && jj != 0 && jj != 14 && (ii % 2 != 0 || jj % 2 != 0))) {
@@ -105,7 +105,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(n2player);
     n2player->setPos(blockWidth*11,blockHeight/5);
 //    setFocus();
-    auto controller=new Controller(players,blocks,BombList);
+    auto controller=new Controller(players,blocks);//,BombList
     scene->addItem(controller);
     controller->setFocus();
     connect(controller,&Controller::bomb1_called, this,&Game::boom);
@@ -125,10 +125,14 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
 //    bombTimer->start();
 }
 void Game::boom(){
-auto tempBomb=new Bomb(75,75);
-scene()->addItem(tempBomb);
-tempBomb->setPos(100,150);
-
+bomb1=new Bomb(91,51);
+//BombList.append(bomb1);
+scene()->addItem(bomb1);
+    bomb1->setPos(players.at(0)->x(),players.at(0)->y());
+bombTimer = new QTimer();
+bombTimer->setInterval(5000);
+connect(bombTimer,&QTimer::timeout,this,&Game::bombRemove);
+bombTimer->start();
 }
 
 void Game::p1Up() {
@@ -166,5 +170,8 @@ void Game::p1Right() {
 void Game::p2Right() {
     players.at(1)->setPixmap(pPicture->ImagesPlayer2.at(3));
 
+}
+void Game::bombRemove() {
+    scene()->removeItem(bomb1);
 }
 

@@ -3,7 +3,7 @@
 #include <QWidget>
 #include "Controller.h"
 //#include <QGraphicsView>
-Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList) {
+Controller::Controller(QList <Player*> players,QList <Block*> blocks) {//,QList<Bomb*>BombList
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
     animator2 = new QPropertyAnimation(players.at(0), "width", players.at(0));
@@ -16,7 +16,7 @@ Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*
     speedplayers=players.at(0)->getSpeed();
     tempPlayers=players;
     tempBlocks=blocks;
-    tempBombList=BombList;
+//    tempBombList=BombList;
     //tempBooms = booms;
 }
 
@@ -136,17 +136,17 @@ void Controller::keyPressEvent(QKeyEvent *event) {
      newY2 = tempPlayers.at(1)->y();
     if (event->key()==Qt::Key::Key_Space){
         bomb1();
-        bombTimer =new QTimer();
-        bombTimer->setInterval(10000);
-        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect1);
-        bombTimer->start();
+//        bombTimer =new QTimer();
+//        bombTimer->setInterval(10000);
+//        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect1);
+//        bombTimer->start();
     }
     if(event->key()==Qt::Key::Key_Delete){
         bomb2();
-        bombTimer =new QTimer();
-        bombTimer->setInterval(10000);
-        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect2);
-        bombTimer->start();
+//        bombTimer =new QTimer();
+//        bombTimer->setInterval(10000);
+//        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect2);
+//        bombTimer->start();
     }
     if(event->key()==Qt::Key::Key_S){
         down();
@@ -211,14 +211,14 @@ void Controller::keyPressEvent(QKeyEvent *event) {
     tempPlayers.at(0)->setPos(newX1,newY1);
     tempPlayers.at(1)->setPos(newX2,newY2);
 }
-void Controller::bomb_effect1(){
-    tempBooms.at(0)->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
-//    boom->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
-}
-void Controller::bomb_effect2(){
-    tempBooms.at(1)->setPos(tempBombList.at(1)->x(),tempBombList.at(1)->y());
-//    boom->setPos(tempBombList.at(1)->x(),tempBombList.at(1)->y());
-
-}
+//void Controller::bomb_effect1(){
+//    tempBooms.at(0)->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
+////    boom->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
+//}
+//void Controller::bomb_effect2(){
+//    tempBooms.at(1)->setPos(tempBombList.at(1)->x(),tempBombList.at(1)->y());
+////    boom->setPos(tempBombList.at(1)->x(),tempBombList.at(1)->y());
+//
+//}
 
 
