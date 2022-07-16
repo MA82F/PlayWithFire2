@@ -501,6 +501,30 @@ src/views/Wall.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Wall.cpp.s
 .PHONY : src/views/Wall.cpp.s
 
+src/views/playerspictures.obj: src/views/playerspictures.cpp.obj
+.PHONY : src/views/playerspictures.obj
+
+# target to build an object file
+src/views/playerspictures.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/playerspictures.cpp.obj
+.PHONY : src/views/playerspictures.cpp.obj
+
+src/views/playerspictures.i: src/views/playerspictures.cpp.i
+.PHONY : src/views/playerspictures.i
+
+# target to preprocess a source file
+src/views/playerspictures.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/playerspictures.cpp.i
+.PHONY : src/views/playerspictures.cpp.i
+
+src/views/playerspictures.s: src/views/playerspictures.cpp.s
+.PHONY : src/views/playerspictures.s
+
+# target to generate assembly for a file
+src/views/playerspictures.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/playerspictures.cpp.s
+.PHONY : src/views/playerspictures.cpp.s
+
 src/windows/Game.obj: src/windows/Game.cpp.obj
 .PHONY : src/windows/Game.obj
 
@@ -604,6 +628,9 @@ help:
 	@echo ... src/views/Wall.obj
 	@echo ... src/views/Wall.i
 	@echo ... src/views/Wall.s
+	@echo ... src/views/playerspictures.obj
+	@echo ... src/views/playerspictures.i
+	@echo ... src/views/playerspictures.s
 	@echo ... src/windows/Game.obj
 	@echo ... src/windows/Game.i
 	@echo ... src/windows/Game.s

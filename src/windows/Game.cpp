@@ -31,6 +31,7 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
 //    players.last()=player2;
     players.append(player1);
     players.append(player2);
+//    playerspictures* pPicture=new playerspictures();
 
     auto Bomb1=new Bomb(width()/15,height()/15);
     scene->addItem(Bomb1);
@@ -108,7 +109,16 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(controller);
     controller->setFocus();
     connect(controller,&Controller::bomb1_called, this,&Game::boom);
-    connect(controller,&Controller::bomb2_called, this,&Game::boom);
+    //connect(controller,&Controller::bomb2_called, this,&Game::boom);
+    connect(controller,&Controller::player1_up, this,&Game::p1Up);
+    connect(controller,&Controller::player2_up, this,&Game::p2Up);
+    connect(controller,&Controller::player1_down, this,&Game::p1Down);
+    connect(controller,&Controller::player2_down, this,&Game::p2Down);
+    connect(controller,&Controller::player1_left, this,&Game::p1Left);
+    connect(controller,&Controller::player2_left, this,&Game::p2Left);
+    connect(controller,&Controller::player1_right, this,&Game::p1Right);
+    connect(controller,&Controller::player2_right, this,&Game::p2Right);
+  //  connect()
 //    bombTimer =new QTimer();
 //    bombTimer->setInterval(2000);
 //    connect(bombTimer,&QTimer::timeout,&Controller::bomb1,&Game::boom);
@@ -117,6 +127,44 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
 void Game::boom(){
 auto tempBomb=new Bomb(75,75);
 scene()->addItem(tempBomb);
-tempBomb->setPos(players.at(0)->x(),players.at(0)->y());
+tempBomb->setPos(100,150);
 
 }
+
+void Game::p1Up() {
+    players.at(0)->setPixmap(pPicture->ImagesPlayer1.at(0));
+
+}
+
+void Game::p2Up() {
+    players.at(1)->setPixmap(pPicture->ImagesPlayer2.at(0));
+}
+
+void Game::p1Down() {
+    players.at(0)->setPixmap(pPicture->ImagesPlayer1.at(1));
+
+}
+
+void Game::p2Down() {
+    players.at(1)->setPixmap(pPicture->ImagesPlayer2.at(1));
+}
+
+void Game::p1Left() {
+    players.at(0)->setPixmap(pPicture->ImagesPlayer1.at(2));
+}
+
+void Game::p2Left() {
+    players.at(1)->setPixmap(pPicture->ImagesPlayer2.at(2));
+
+}
+
+void Game::p1Right() {
+    players.at(0)->setPixmap(pPicture->ImagesPlayer1.at(3));
+
+}
+
+void Game::p2Right() {
+    players.at(1)->setPixmap(pPicture->ImagesPlayer2.at(3));
+
+}
+

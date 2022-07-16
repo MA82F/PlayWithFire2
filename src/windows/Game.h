@@ -9,6 +9,7 @@
 #include "../views/Bomb.h"
 #include "../views/Bomb_effect.h"
 //#include <QTimer>
+#include "../views/playerspictures.h"
 
 class Game: public QGraphicsView{
     Q_OBJECT
@@ -21,8 +22,17 @@ public:
     QList<Bomb_effect*> booms;
     int numOfBox;
     Game(QString name1,QString name2);
+    playerspictures* pPicture=new playerspictures(70,50);
 public slots:
     void boom();
+    void p1Up();
+    void p2Up();
+    void p1Down();
+    void p2Down();
+    void p1Left();
+    void p2Left();
+    void p1Right();
+    void p2Right();
 };
 
 

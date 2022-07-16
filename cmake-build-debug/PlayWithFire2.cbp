@@ -219,6 +219,12 @@
 		<Unit filename="E:/programing/PlayWithFire22/src/views/Wall.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/playerspictures.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="E:/programing/PlayWithFire22/src/views/playerspictures.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
 		<Unit filename="E:/programing/PlayWithFire22/src/windows/Game.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>

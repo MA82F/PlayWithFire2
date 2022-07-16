@@ -22,6 +22,7 @@ Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*
 
 void Controller::down() {
     newY1 = tempPlayers.at(0)->y() +15;
+    emit player1_down();
 //    animator1->stop();
 //    animator1->setStartValue(tempPlayers.at(0)->y());
 //    animator1->setEndValue(tempPlayers.at(0)->y()+75);
@@ -31,6 +32,7 @@ void Controller::down() {
 }
 void Controller::right() {
     newX1 = tempPlayers.at(0)->x() +15;
+    emit player1_right();
 //    animator2->stop();
 //    animator2->setStartValue( tempPlayers.at(0)->x());
 //    animator2->setEndValue(tempPlayers.at(0)->x()+75);
@@ -40,6 +42,7 @@ void Controller::right() {
 }
 void Controller::left() {
     newX1 = tempPlayers.at(0)->x() -15;
+    emit player1_left();
 //    animator2->stop();
 //    animator2->setStartValue( tempPlayers.at(0)->x());
 //    animator2->setEndValue(tempPlayers.at(0)->x()-75);
@@ -52,6 +55,7 @@ void Controller::left() {
 
 void Controller::Up() {
     newY1 = tempPlayers.at(0)->y() -15;
+    emit player1_up();
 //    animator1->stop();
 //    animator1->setStartValue( tempPlayers.at(0)->y());
 //    animator1->setEndValue(tempPlayers.at(0)->y()-75);
@@ -63,6 +67,7 @@ void Controller::Up() {
 
 void Controller::down2() {
     newY2 = tempPlayers.at(1)->y() +15;
+    emit player2_down();
 //    animator3->stop();
 //    animator3->setStartValue(tempPlayers.at(1)->y());
 //    animator3->setEndValue(tempPlayers.at(1)->y()+75);
@@ -72,6 +77,7 @@ void Controller::down2() {
 }
 void Controller::right2() {
     newX2 = tempPlayers.at(1)->x() +15;
+    emit player2_right();
 //    animator4->stop();
 //    animator4->setStartValue( tempPlayers.at(1)->x());
 //    animator4->setEndValue(tempPlayers.at(1)->x()+75);
@@ -81,6 +87,7 @@ void Controller::right2() {
 }
 void Controller::left2() {
     newX2 = tempPlayers.at(1)->x() -15;
+    emit player2_left();
 //    animator4->stop();
 //    animator4->setStartValue( tempPlayers.at(1)->x());
 //    animator4->setEndValue(tempPlayers.at(1)->x()-75);
@@ -93,6 +100,7 @@ void Controller::left2() {
 
 void Controller::Up2() {
     newY2 = tempPlayers.at(1)->y() -15;
+    emit player2_up();
 //    animator3->stop();
 //    animator3->setStartValue( tempPlayers.at(1)->y());
 //    animator3->setEndValue(tempPlayers.at(1)->y()-75);
@@ -206,8 +214,6 @@ void Controller::keyPressEvent(QKeyEvent *event) {
 void Controller::bomb_effect1(){
     tempBooms.at(0)->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
 //    boom->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
-
-
 }
 void Controller::bomb_effect2(){
     tempBooms.at(1)->setPos(tempBombList.at(1)->x(),tempBombList.at(1)->y());

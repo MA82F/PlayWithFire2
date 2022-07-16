@@ -61,6 +61,14 @@ public :
     signals:
     void bomb1_called();
     void bomb2_called();
+    void player1_up();
+    void player2_up();
+    void player1_down();
+    void player2_down();
+    void player1_left();
+    void player2_left();
+    void player1_right();
+    void player2_right();
 };
 
 #endif //PLAYWITHFIRE2_CONTROLLER_H
