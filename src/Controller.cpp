@@ -3,7 +3,7 @@
 #include <QWidget>
 #include "Controller.h"
 //#include <QGraphicsView>
-Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList,QList<Bomb_effect*> booms) {
+Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*>BombList) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
     animator2 = new QPropertyAnimation(players.at(0), "width", players.at(0));
@@ -17,7 +17,7 @@ Controller::Controller(QList <Player*> players,QList <Block*> blocks,QList<Bomb*
     tempPlayers=players;
     tempBlocks=blocks;
     tempBombList=BombList;
-    tempBooms = booms;
+    //tempBooms = booms;
 }
 
 void Controller::down() {
@@ -104,13 +104,15 @@ void Controller::Up2() {
 void Controller::bomb1() {
     newX3 = tempPlayers.at(0)->x();
     newY3=tempPlayers.at(0)->y();
-tempBombList.at(0)->setPos(newX3,newY3);
+//tempBombList.at(0)->setPos(newX3,newY3);
+emit bomb1_called();
 }
 
 void Controller::bomb2() {
     newX4 = tempPlayers.at(1)->x();
     newY4=tempPlayers.at(1)->y();
-    tempBombList.at(1)->setPos(newX4,newY4);
+  //  tempBombList.at(1)->setPos(newX4,newY4);
+    emit bomb2_called();
 }
 
 

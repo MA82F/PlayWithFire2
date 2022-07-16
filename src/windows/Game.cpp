@@ -104,16 +104,19 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     scene->addItem(n2player);
     n2player->setPos(blockWidth*11,blockHeight/5);
 //    setFocus();
-    auto controller=new Controller(players,blocks,BombList,booms);
+    auto controller=new Controller(players,blocks,BombList);
     scene->addItem(controller);
     controller->setFocus();
+    connect(controller,&Controller::bomb1_called, this,&Game::boom);
+    connect(controller,&Controller::bomb2_called, this,&Game::boom);
 //    bombTimer =new QTimer();
 //    bombTimer->setInterval(2000);
 //    connect(bombTimer,&QTimer::timeout,&Controller::bomb1,&Game::boom);
 //    bombTimer->start();
 }
-//void Game::boom(){
-//    auto bomb_effect = new Bomb_effect(scene()->width(),scene()->height());
-//    scene()->addItem(bomb_effect);
-//
-//}
+void Game::boom(){
+auto tempBomb=new Bomb(75,75);
+scene()->addItem(tempBomb);
+tempBomb->setPos(players.at(0)->x(),players.at(0)->y());
+
+}

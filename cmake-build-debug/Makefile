@@ -285,6 +285,30 @@ src/views/Bomb.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Bomb.cpp.s
 .PHONY : src/views/Bomb.cpp.s
 
+src/views/Bomb_effect.obj: src/views/Bomb_effect.cpp.obj
+.PHONY : src/views/Bomb_effect.obj
+
+# target to build an object file
+src/views/Bomb_effect.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Bomb_effect.cpp.obj
+.PHONY : src/views/Bomb_effect.cpp.obj
+
+src/views/Bomb_effect.i: src/views/Bomb_effect.cpp.i
+.PHONY : src/views/Bomb_effect.i
+
+# target to preprocess a source file
+src/views/Bomb_effect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Bomb_effect.cpp.i
+.PHONY : src/views/Bomb_effect.cpp.i
+
+src/views/Bomb_effect.s: src/views/Bomb_effect.cpp.s
+.PHONY : src/views/Bomb_effect.s
+
+# target to generate assembly for a file
+src/views/Bomb_effect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Bomb_effect.cpp.s
+.PHONY : src/views/Bomb_effect.cpp.s
+
 src/views/Box.obj: src/views/Box.cpp.obj
 .PHONY : src/views/Box.obj
 
@@ -553,6 +577,9 @@ help:
 	@echo ... src/views/Bomb.obj
 	@echo ... src/views/Bomb.i
 	@echo ... src/views/Bomb.s
+	@echo ... src/views/Bomb_effect.obj
+	@echo ... src/views/Bomb_effect.i
+	@echo ... src/views/Bomb_effect.s
 	@echo ... src/views/Box.obj
 	@echo ... src/views/Box.i
 	@echo ... src/views/Box.s

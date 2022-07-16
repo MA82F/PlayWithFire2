@@ -21,8 +21,8 @@ public:
     QList<Bomb_effect*> booms;
     int numOfBox;
     Game(QString name1,QString name2);
-//public slots:
-//    void boom();
+public slots:
+    void boom();
 };
 
 
