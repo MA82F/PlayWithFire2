@@ -126,10 +126,12 @@ void Controller::keyPressEvent(QKeyEvent *event) {
      newY2 = tempPlayers.at(1)->y();
     if (event->key()==Qt::Key::Key_Space){
         bomb1();
+        auto bomb = Bomb(91,51);
         bombTimer =new QTimer();
         bombTimer->setInterval(10000);
         connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect1);
         bombTimer->start();
+        scene()->removeItem(tempBooms.at(0));
     }
     if(event->key()==Qt::Key::Key_Delete){
         bomb2();
@@ -137,6 +139,8 @@ void Controller::keyPressEvent(QKeyEvent *event) {
         bombTimer->setInterval(10000);
         connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect2);
         bombTimer->start();
+//        remo
+//        removeSceneEventFilter(tempBooms.at(1));
     }
     if(event->key()==Qt::Key::Key_S){
         down();
@@ -203,6 +207,11 @@ void Controller::keyPressEvent(QKeyEvent *event) {
 }
 void Controller::bomb_effect1(){
     tempBooms.at(0)->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
+    bombTimer = new QTimer();
+    bombTimer->setInterval(2000);
+    bombTimer->start();
+    emit remove();
+//    connect(bombTimer,&QTimer::timeout,tempBooms.at(0),&Game::boom);
 //    boom->setPos(tempBombList.at(0)->x(),tempBombList.at(0)->y());
 
 

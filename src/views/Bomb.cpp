@@ -4,8 +4,7 @@
 
 #include "Bomb.h"
 bool Bomb::bombNumber{false};
-Bomb::Bomb(int width, int height) {
-    //QList<Bomb*> BombList;
+Bomb::Bomb(int width, int height):width(width),height(height) {
     QPixmap pixmap2(":/images/Bomb2");
     if (!bombNumber) {
         QPixmap pixmap1(":/images/Bomb1");
@@ -18,6 +17,15 @@ Bomb::Bomb(int width, int height) {
         setPixmap(pixmap2);
         bombNumber = false;
     }
+    bombTimer = new QTimer();
+    bombTimer->setInterval(5000);
+    connect(bombTimer,&QTimer::timeout,this,&Bomb::boom);
+    bombTimer->start();
+}
+void Bomb::boom(){
+    QPixmap pixmap(":/images/boom");
+    pixmap = pixmap.scaled(width,height);
+    setPixmap(pixmap);
 }
 
 

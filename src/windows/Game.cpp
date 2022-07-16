@@ -107,13 +107,12 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
     auto controller=new Controller(players,blocks,BombList,booms);
     scene->addItem(controller);
     controller->setFocus();
+    connect(controller,&Controller::remove,this,&Game::boom);
 //    bombTimer =new QTimer();
 //    bombTimer->setInterval(2000);
-//    connect(bombTimer,&QTimer::timeout,&Controller::bomb1,&Game::boom);
+//    connect(bombTimer,&QTimer::timeout,this,&Game::boom);
 //    bombTimer->start();
 }
 //void Game::boom(){
-//    auto bomb_effect = new Bomb_effect(scene()->width(),scene()->height());
-//    scene()->addItem(bomb_effect);
-//
+//    BombList
 //}

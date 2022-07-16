@@ -28,6 +28,8 @@ public:
     QList<Bomb_effect*>tempBooms;
 //    Bomb_effect *boom;
     Controller(QList<Player *> players,QList <Block*> blocks,QList<Bomb*>BombList,QList<Bomb_effect*> booms);
+    signals:
+    void remove();
 private:
     QPropertyAnimation *animator1;
 protected:
