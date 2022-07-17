@@ -29,7 +29,7 @@ public:
     QList <Block*> *tempBlocks{};
     QList<Bomb*>tempBombList;
     //QList<Bomb_effect*>tempBooms;
-    Bomb_effect *boom;
+    //Bomb_effect *boom;
     Controller(QList<Player *> players,QList <Block*> *blocks);
 private:
     QPropertyAnimation *animator1;

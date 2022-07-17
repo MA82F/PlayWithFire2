@@ -12,6 +12,7 @@
 #include <QTimer>
 #include <QList>
 #include "../views/playerspictures.h"
+//#include <QGraphicsItem>
 
 class Game: public QGraphicsView{
     Q_OBJECT
@@ -26,9 +27,13 @@ public:
 //    Controller controller;
 //    QList<Bomb_effect*> booms;
     QTimer* bombTimer;
+    QTimer* boomTimer;
     int numOfBox;
     Game(QString name1,QString name2);
     playerspictures* pPicture=new playerspictures(60,40);
+    bool bomb1X();
+    //* tempBoom;
+    QList<Bomb_effect*> BoomTemplate;
 public slots:
     void boom1();
     void boom2();
@@ -42,6 +47,11 @@ public slots:
     void p2Right();
     void bombRemove1();
     void bombRemove2();
+    void boomRemover();
+    void boomRemover2();
+    void boomRemover3();
+    void boomRemover4();
+    void allBoomRemover();
 };
 
 

@@ -7,6 +7,7 @@
 #include <QGraphicsPixmapItem>
 #include <QTimer>
 #include <QObject>
+#include "Block.h"
 
 class Bomb :public QObject,public  QGraphicsPixmapItem{
     Q_OBJECT
@@ -14,10 +15,12 @@ class Bomb :public QObject,public  QGraphicsPixmapItem{
 public:
     Bomb(int width, int height);
     QTimer *bombTimer;
+
+
     int width;
     int height;
-public slots:
-    void boom();
+//public slots:
+//    void boom();
 };
 
 

@@ -117,7 +117,7 @@ void Controller::bomb1() {
 //tempBombList.at(0)->setPos(newX3,newY3);
     emit bomb1_called();
     bombTimer1 = new QTimer();
-    bombTimer1->setInterval(10000);
+    bombTimer1->setInterval(2000);
     connect(bombTimer1,&QTimer::timeout,this,&Controller::bombTimerTime1);
     bombTimer1->start();
 }
@@ -156,14 +156,10 @@ void Controller::keyPressEvent(QKeyEvent *event) {
         if(!bombKey1){
             bombKey1 = true;
             bomb1();
-//            bombKey1 = false;
         }
         else
             event->ignore();
-//        bombTimer =new QTimer();
-//        bombTimer->setInterval(10000);
-//        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect1);
-//        bombTimer->start();
+
     }
     if(event->key()==Qt::Key::Key_Delete){
         if(!bombKey2){
