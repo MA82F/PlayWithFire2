@@ -141,7 +141,7 @@ bombTimer = new QTimer();
 bombTimer->setInterval(5000);
 connect(bombTimer,&QTimer::timeout,this,&Game::bombRemove2);
 bombTimer->start();
-bombTimer->stop();
+// bombTimer->stop();
 }
 
 void Game::p1Up() {
@@ -249,10 +249,13 @@ void Game::boomRemover4() {
 
 void Game::allBoomRemover() {
     for(int y=0;y<5;y++){
-        if(BoomTemplate[y]!= nullptr){
+        if(BoomTemplate[y]!= NULL){
             scene()->removeItem(BoomTemplate[y]);
         }
+    bombTimer->stop();
+        
     }
+    
 
 }
 //void Game::boomRemover2() {
