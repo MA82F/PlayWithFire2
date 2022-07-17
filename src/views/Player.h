@@ -15,9 +15,10 @@ private:
     QString name{};
     int score{0};
     int bombCount{10};
-    int lifeCount{3};
     int speed{10};
     int bombRadius{3};
+public:
+    int lifeCount{3};
 
 
 public:

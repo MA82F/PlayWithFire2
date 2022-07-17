@@ -8,6 +8,7 @@
 #include "../views/Box_Place.h"
 #include "../views/Bomb.h"
 #include "../views/Bomb_effect.h"
+#include "../Controller.h"
 #include <QTimer>
 #include <QList>
 #include "../views/playerspictures.h"
@@ -19,14 +20,17 @@ public:
     QList <Player*> players{};
     QList <Block*> blocks{};
     QList<Bomb*>BombList;
-    Bomb * bomb1;
+    Bomb* bomb1;
+    Bomb* bomb2;
+//    Controller controller;
 //    QList<Bomb_effect*> booms;
     QTimer* bombTimer;
     int numOfBox;
     Game(QString name1,QString name2);
     playerspictures* pPicture=new playerspictures(60,40);
 public slots:
-    void boom();
+    void boom1();
+    void boom2();
     void p1Up();
     void p2Up();
     void p1Down();
@@ -35,7 +39,8 @@ public slots:
     void p2Left();
     void p1Right();
     void p2Right();
-    void bombRemove();
+    void bombRemove1();
+    void bombRemove2();
 };
 
 

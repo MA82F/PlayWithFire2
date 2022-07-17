@@ -19,7 +19,7 @@ Bomb::Bomb(int width, int height):width(width),height(height) {
         bombNumber = false;
     }
     bombTimer = new QTimer();
-    bombTimer->setInterval(2000);
+    bombTimer->setInterval(5000);
     connect(bombTimer,&QTimer::timeout,this,&Bomb::boom);
     bombTimer->start();
 }

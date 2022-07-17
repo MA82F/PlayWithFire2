@@ -14,12 +14,13 @@
 
 class Controller: public QObject,public QGraphicsPixmapItem{
 Q_OBJECT
-private:
+public:
     QTimer* bombTimer;
 protected:
     Q_PROPERTY(qreal height READ y WRITE setY);
     Q_PROPERTY(qreal width READ x WRITE setX);
 public:
+    static bool bombKey1;
     qreal newX1, newY1, newX2, newY2,newX3,newY3,newX4,newY4;
     int speedplayers;
     QList <Player*> tempPlayers{};
@@ -39,23 +40,17 @@ private:
     QPropertyAnimation *animator4;
 public :
     void down();
-
     void Up();
-
     void right();
-
     void left();
     void down2();
-
     void Up2();
-
     void right2();
-
     void left2();
-
     void bomb1();
-
     void bomb2();
+public slots:
+    void bombTimerTime();
     signals:
     void bomb1_called();
     void bomb2_called();

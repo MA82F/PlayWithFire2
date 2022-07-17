@@ -3,6 +3,7 @@
 #include <QWidget>
 #include "Controller.h"
 //#include <QGraphicsView>
+bool Controller::bombKey1 = {false};
 Controller::Controller(QList <Player*> players,QList <Block*> blocks) {//,QList<Bomb*>BombList
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
@@ -113,7 +114,14 @@ void Controller::bomb1() {
     newX3 = tempPlayers.at(0)->x();
     newY3=tempPlayers.at(0)->y();
 //tempBombList.at(0)->setPos(newX3,newY3);
-emit bomb1_called();
+    emit bomb1_called();
+    bombTimer = new QTimer();
+    bombTimer->setInterval(11000);
+    connect(bombTimer,&QTimer::timeout,this,&Controller::bombTimerTime);
+    bombTimer->start();
+}
+void Controller::bombTimerTime(){
+    bombKey1 = false;
 }
 
 void Controller::bomb2() {
@@ -135,7 +143,13 @@ void Controller::keyPressEvent(QKeyEvent *event) {
      newX2 = tempPlayers.at(1)->x();
      newY2 = tempPlayers.at(1)->y();
     if (event->key()==Qt::Key::Key_Space){
-        bomb1();
+        if(!bombKey1){
+            bombKey1 = true;
+            bomb1();
+//            bombKey1 = false;
+        }
+        else
+            event->ignore();
 //        bombTimer =new QTimer();
 //        bombTimer->setInterval(10000);
 //        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect1);

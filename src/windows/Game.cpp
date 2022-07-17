@@ -1,7 +1,6 @@
 #include "Game.h"
 #include <QList>
 #include <ctime>
-#include "../Controller.h"
 #include "../views/Label.h"
 #include "../views/Bomb_effect.h"
 #include <QTimer>
@@ -94,19 +93,22 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
         }
     }
     auto n1player = new Label();
-    n1player->setPlainText("Player1: " + name1);
+    QString  life1= QString::number(players.at(0)->lifeCount);
+    n1player->setPlainText("Player1: " + life1 );
     scene->addItem(n1player);
     n1player->setPos(blockWidth*1.5,blockHeight/5);
     auto n2player = new Label();
-    n2player->setPlainText("Player2: " + name2);
+    QString  life2= QString::number(players.at(1)->lifeCount);
+    n2player->setPlainText("Player2: " + life2);
+    setAutoFillBackground(n2player);
     scene->addItem(n2player);
     n2player->setPos(blockWidth*11,blockHeight/5);
 //    setFocus();
-    auto controller=new Controller(players,blocks,BombList);
+    auto controller=new Controller(players,blocks);//,BombList
     scene->addItem(controller);
     controller->setFocus();
-    connect(controller,&Controller::bomb1_called, this,&Game::boom);
-    //connect(controller,&Controller::bomb2_called, this,&Game::boom);
+    connect(controller,&Controller::bomb1_called, this,&Game::boom1);
+    connect(controller,&Controller::bomb2_called, this,&Game::boom2);
     connect(controller,&Controller::player1_up, this,&Game::p1Up);
     connect(controller,&Controller::player2_up, this,&Game::p2Up);
     connect(controller,&Controller::player1_down, this,&Game::p1Down);
@@ -121,14 +123,27 @@ Game::Game(QString name1,QString name2): QGraphicsView() {
 //    connect(bombTimer,&QTimer::timeout,&Controller::bomb1,&Game::boom);
 //    bombTimer->start();
 }
-void Game::boom(){
+void Game::boom1(){
 bomb1=new Bomb(91,51);
 //BombList.append(bomb1);
 scene()->addItem(bomb1);
-    bomb1->setPos(players.at(0)->x(),players.at(0)->y());
+bomb1->setPos(players.at(0)->x(),players.at(0)->y());
+bombTimer =new QTimer();
+bombTimer->setInterval(10000);
+connect(bombTimer,&QTimer::timeout,this,&Game::bombRemove1);
+bombTimer->start();
+//scene()->removeItem(bomb1);
+//delete bomb1;
+//bombTimer->start();
+}
+void Game::boom2(){
+bomb2=new Bomb(91,51);
+//BombList.append(bomb1);
+scene()->addItem(bomb2);
+bomb2->setPos(players.at(1)->x(),players.at(1)->y());
 bombTimer = new QTimer();
 bombTimer->setInterval(5000);
-connect(bombTimer,&QTimer::timeout,this,&Game::bombRemove);
+connect(bombTimer,&QTimer::timeout,this,&Game::bombRemove2);
 bombTimer->start();
 }
 
@@ -168,7 +183,57 @@ void Game::p2Right() {
     players.at(1)->setPixmap(pPicture->ImagesPlayer2.at(3));
 
 }
-void Game::bombRemove() {
+void Game::bombRemove1() {
+    auto bomb1Width = blocks.at(0)->boundingRect().width();
+    auto bomb1Height = blocks.at(0)->boundingRect().height();
+    auto newX1 = bomb1->x();
+    auto newY1 = bomb1->y();
+    for (const auto block:blocks) {
+        if (block->x() < newX1 && block->x() + block->boundingRect().width() > newX1
+            && block->y() < newY1 && block->y() + block->boundingRect().height() > newY1) {
+            scene()->removeItem(block);
+        }
+        if (block->x() < newX1 + bomb1Width && block->x() + block->boundingRect().width() > newX1 + bomb1Width
+            && block->y() < newY1 && block->y() + block->boundingRect().height() > newY1) {
+            scene()->removeItem(block);
+        }
+        if (block->x() < newX1 + bomb1Width && block->x() + block->boundingRect().width() > newX1 + bomb1Width
+            && block->y() < newY1 + bomb1Height && block->y() + block->boundingRect().height() > newY1 + bomb1Height) {
+            scene()->removeItem(block);
+        }
+        if (block->x() < newX1 && block->x() + block->boundingRect().width() > newX1
+            && block->y() < newY1 + bomb1Height && block->y() + block->boundingRect().height() > newY1 + bomb1Height) {
+            scene()->removeItem(block);
+        }
+    }
     scene()->removeItem(bomb1);
+//    return;
+//    delete bomb1;
+//    delete bombTimer;
+}
+void Game::bombRemove2() {
+    auto bomb2Width = bomb2->boundingRect().width();
+    auto bomb2Height = bomb2->boundingRect().height();
+    auto newX2 = bomb2->x();
+    auto newY2 = bomb2->y();
+    for (const auto block:blocks) {
+        if (block->x() < newX2 && block->x() + block->boundingRect().width() > newX2
+            && block->y() < newY2 && block->y() + block->boundingRect().height() > newY2) {
+            scene()->removeItem(block);
+        }
+        if (block->x() < newX2 + bomb2Width && block->x() + block->boundingRect().width() > newX2 + bomb2Width
+            && block->y() < newY2 && block->y() + block->boundingRect().height() > newY2) {
+            scene()->removeItem(block);
+        }
+        if (block->x() < newX2 + bomb2Width && block->x() + block->boundingRect().width() > newX2 + bomb2Width
+            && block->y() < newY2 + bomb2Height && block->y() + block->boundingRect().height() > newY2 + bomb2Height) {
+            scene()->removeItem(block);
+        }
+        if (block->x() < newX2 && block->x() + block->boundingRect().width() > newX2
+            && block->y() < newY2 + bomb2Height && block->y() + block->boundingRect().height() > newY2 + bomb2Height) {
+            scene()->removeItem(block);
+        }
+    }
+    scene()->removeItem(bomb2);
 }
 
