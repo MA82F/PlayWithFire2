@@ -20,6 +20,7 @@ public:
     QList <Player*> players{};
     QList <Block*> blocks{};
     QList<Bomb*>BombList;
+//    QList <Box*> boxes{};
     Bomb* bomb1;
     Bomb* bomb2;
 //    Controller controller;

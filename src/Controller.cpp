@@ -4,7 +4,8 @@
 #include "Controller.h"
 //#include <QGraphicsView>
 bool Controller::bombKey1 = {false};
-Controller::Controller(QList <Player*> players,QList <Block*> blocks) {//,QList<Bomb*>BombList
+bool Controller::bombKey2 = {false};
+Controller::Controller(QList <Player*> players,QList <Block*> *blocks) {//,QList<Bomb*>BombList
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     animator1 = new QPropertyAnimation(players.at(0), "height", players.at(0));
     animator2 = new QPropertyAnimation(players.at(0), "width", players.at(0));
@@ -115,13 +116,18 @@ void Controller::bomb1() {
     newY3=tempPlayers.at(0)->y();
 //tempBombList.at(0)->setPos(newX3,newY3);
     emit bomb1_called();
-    bombTimer = new QTimer();
-    bombTimer->setInterval(11000);
-    connect(bombTimer,&QTimer::timeout,this,&Controller::bombTimerTime);
-    bombTimer->start();
+    bombTimer1 = new QTimer();
+    bombTimer1->setInterval(10000);
+    connect(bombTimer1,&QTimer::timeout,this,&Controller::bombTimerTime1);
+    bombTimer1->start();
 }
-void Controller::bombTimerTime(){
+void Controller::bombTimerTime1(){
     bombKey1 = false;
+    bombTimer1->stop();
+}
+void Controller::bombTimerTime2(){
+    bombKey2 = false;
+    bombTimer2->stop();
 }
 
 void Controller::bomb2() {
@@ -129,6 +135,10 @@ void Controller::bomb2() {
     newY4=tempPlayers.at(1)->y();
   //  tempBombList.at(1)->setPos(newX4,newY4);
     emit bomb2_called();
+    bombTimer2 = new QTimer();
+    bombTimer2->setInterval(5000);
+    connect(bombTimer2,&QTimer::timeout,this,&Controller::bombTimerTime2);
+    bombTimer2->start();
 }
 
 
@@ -156,7 +166,13 @@ void Controller::keyPressEvent(QKeyEvent *event) {
 //        bombTimer->start();
     }
     if(event->key()==Qt::Key::Key_Delete){
-        bomb2();
+        if(!bombKey2){
+            bombKey2 = true;
+            bomb2();
+//            bombKey1 = false;
+        }
+        else
+            event->ignore();
 //        bombTimer =new QTimer();
 //        bombTimer->setInterval(10000);
 //        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect2);
@@ -186,7 +202,7 @@ void Controller::keyPressEvent(QKeyEvent *event) {
     if(event->key()==Qt::Key::Key_Right){
         right2();
     }
-    for (const auto block:tempBlocks) {
+    for (const auto block:*tempBlocks) {
         if(block->x()<newX1 && block->x() + block->boundingRect().width()>newX1
             && block->y()<newY1 && block->y() + block->boundingRect().height()>newY1){
             return;
@@ -204,7 +220,7 @@ void Controller::keyPressEvent(QKeyEvent *event) {
             return;
         }
     }
-    for(const auto block:tempBlocks){
+    for(const auto block:*tempBlocks){
         if(block->x()<newX2 && block->x() + block->boundingRect().width()>newX2
            && block->y()<newY2 && block->y() + block->boundingRect().height()>newY2){
             return;

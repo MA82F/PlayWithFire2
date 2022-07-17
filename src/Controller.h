@@ -15,20 +15,22 @@
 class Controller: public QObject,public QGraphicsPixmapItem{
 Q_OBJECT
 public:
-    QTimer* bombTimer;
+    QTimer* bombTimer1;
+    QTimer* bombTimer2;
 protected:
     Q_PROPERTY(qreal height READ y WRITE setY);
     Q_PROPERTY(qreal width READ x WRITE setX);
 public:
     static bool bombKey1;
+    static bool bombKey2;
     qreal newX1, newY1, newX2, newY2,newX3,newY3,newX4,newY4;
     int speedplayers;
     QList <Player*> tempPlayers{};
-    QList <Block*> tempBlocks{};
+    QList <Block*> *tempBlocks{};
     QList<Bomb*>tempBombList;
     //QList<Bomb_effect*>tempBooms;
     Bomb_effect *boom;
-    Controller(QList<Player *> players,QList <Block*> blocks);
+    Controller(QList<Player *> players,QList <Block*> *blocks);
 private:
     QPropertyAnimation *animator1;
 protected:
@@ -50,7 +52,8 @@ public :
     void bomb1();
     void bomb2();
 public slots:
-    void bombTimerTime();
+    void bombTimerTime1();
+    void bombTimerTime2();
     signals:
     void bomb1_called();
     void bomb2_called();

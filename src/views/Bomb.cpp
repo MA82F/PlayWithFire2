@@ -27,6 +27,7 @@ void Bomb::boom(){
     QPixmap pixmap(":/images/boom");
     pixmap = pixmap.scaled(width-10, height-6 );
     setPixmap(pixmap);
+    bombTimer->stop();
 }
 
 
