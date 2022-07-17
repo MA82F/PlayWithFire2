@@ -17,7 +17,7 @@ void Bomb_effect::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
     QGraphicsPixmapItem::paint(painter, option, widget);
     for(QGraphicsItem* item: collidingItems()){
        Block* block= dynamic_cast<Block*>(item);
-       if(block!= nullptr){
+       if(block!= NULL){
            //game->boomRemover();
            emit clash();
        }
