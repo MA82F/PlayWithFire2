@@ -6,6 +6,7 @@
 class Box: public Block{
 public:
     Box(int width,int height);
+//    bool type;
 };
 
 

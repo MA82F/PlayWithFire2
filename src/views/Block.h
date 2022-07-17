@@ -6,6 +6,7 @@
 class Block: public QGraphicsPixmapItem{
 public:
     Block();
+    int type;
 };
 
 

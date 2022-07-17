@@ -4,6 +4,7 @@
 #include "../views/Label.h"
 #include "../views/Bomb_effect.h"
 #include <QTimer>
+#include <iostream>
 //#include<cstdlib>
 
 Game::Game(QString name1,QString name2): QGraphicsView() {
@@ -183,11 +184,19 @@ void Game::p2Right() {
 void Game::bombRemove1() {
     auto bomb1Width = blocks.at(0)->boundingRect().width();
     auto bomb1Height = blocks.at(0)->boundingRect().height();
-    auto newX1 = bomb1->x();
-    auto newY1 = bomb1->y();
+    auto newX1 = bomb1->x()+15;
+    auto newY1 = bomb1->y()+15;
 //    auto wall = Wall(width() / 15,height() /15);
-    for (const auto block:blocks.) {
-//        if (typeid(block) == typeid(Wall)){
+    for (const auto block:blocks) {
+        if(block->type == 0){
+            continue;
+        }
+//        class Box* box =dynamic_cast<class Box*>(block);
+//        if(box= NULL){
+//            std::cout<<"Iffgfgdgdfgd";
+//            return;
+//        }
+//        if (typeid(block) == typeid(wall)){
 //            return;
 //        }
         if (block->x() < newX1 && block->x() + block->boundingRect().width() > newX1
