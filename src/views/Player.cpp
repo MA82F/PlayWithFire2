@@ -6,7 +6,7 @@
 #include "Bomb_effect.h"
 bool Player::checkLife{false};
 bool Player::numPlayer{false};
-Player::Player(QString name,int width, int height) {
+Player::Player(QString name,int width, int height):name(name) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     setFocus();
     QPixmap pixmap2(":/images/player2-1");
@@ -36,6 +36,9 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
                 checkLife = true;
                 emit check(this);
             }
+        }
+        if(lifeCount == 0){
+            emit gameOver();
         }
     }
 }

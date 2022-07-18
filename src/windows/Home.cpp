@@ -76,7 +76,7 @@ void Home::onGameStart() {
     file.write(name2.toUtf8());
     file.flush();
     file.close();
-    close();
     //------------------------------------------------
+    close();
     (new Game(name1,name2))->show();
 }

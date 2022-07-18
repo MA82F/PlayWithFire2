@@ -4,7 +4,7 @@
 
 #include "Result.h"
 
-Result::Result(){
+Result::Result(QString name,int score){
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     showFullScreen();
@@ -26,12 +26,12 @@ Result::Result(){
     winner->setPos((width()-ImageWidth)/2,(width()-ImageWidth)/7);
 
     auto label = new Label();
-    label->setPlainText("NAME:");
+    label->setPlainText("NAME: " + name);
     scene->addItem(label);
     label->setPos(width()/8,height()/2 - label->boundingRect().height());
 
     auto label2 = new Label();
-    label2->setPlainText("SCORE:");
+    label2->setPlainText("SCORE: " + QString::number(score));dd
     scene->addItem(label2);
     label2->setPos(width()/1.5,height()/2 - label2->boundingRect().height());
 

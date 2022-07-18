@@ -2,6 +2,7 @@
 #include <QList>
 #include <ctime>
 #include "../views/Bomb_effect.h"
+#include "Result.h"
 #include <QTimer>
 Game::Game(QString name1, QString name2) : QGraphicsView() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -122,9 +123,17 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
     connect(controller, &Controller::player1_right, this, &Game::p1Right);
     connect(controller, &Controller::player2_right, this, &Game::p2Right);
     connect(players.at(0),&Player::check,this,&Game::lowHeart);
+    connect(players.at(0),&Player::gameOver,this,&Game::gameOver1);
 
 }
-
+void Game::gameOver1(){
+    close();
+    (new Result(players.at(0)->name,players.at(0)->score))->show();
+}
+void Game::gameOver2(){
+    close();
+    (new Result(players.at(1)->name,players.at(1)->score))->show();
+}
 void Game::boom1() {
     bomb1 = new Bomb(width()/27, height()/18);
 //BombList.append(bomb1);
