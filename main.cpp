@@ -8,7 +8,6 @@
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     (new Home())->show();
-    (new Result())->show();
 //    (new Result())->show();
 //    QObject::connect(Controller,&Controller::bomb1,Game,&Game::bomb_effect);
 
