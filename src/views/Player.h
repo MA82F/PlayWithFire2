@@ -28,6 +28,10 @@ public:
     int getSpeed();
     int getScore();
     int setScore();
+
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+signals:
+    void check(Player *tempBomb_effect);
 public slots:
 
 };

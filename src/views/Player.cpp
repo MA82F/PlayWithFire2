@@ -3,6 +3,7 @@
 //
 
 #include "Player.h"
+#include "Bomb_effect.h"
 
 bool Player::numPlayer{false};
 Player::Player(QString name,int width, int height) {
@@ -24,4 +25,24 @@ Player::Player(QString name,int width, int height) {
 
 int Player::getSpeed() {
     return speed;
+}
+
+void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+    QGraphicsPixmapItem::paint(painter, option, widget);
+    for (QGraphicsItem *item: collidingItems()) {
+        Bomb_effect *bombEf = dynamic_cast<Bomb_effect *>(item);
+//        Block *box=dynamic_cast<Block*>(item);
+        if (bombEf != nullptr) {
+            emit check(this);
+//            scene()->removeItem(this);
+        }
+//        if(box!= nullptr){
+//            emit Box_removed(box);
+//            // scene()->removeItem(box);
+////            delete box;
+////            scene()->removeItem(this);
+////            blocks.removeOne(block);
+//        }
+
+    }
 }

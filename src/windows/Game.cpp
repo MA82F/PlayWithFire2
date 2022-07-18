@@ -1,7 +1,6 @@
 #include "Game.h"
 #include <QList>
 #include <ctime>
-#include "../views/Label.h"
 #include "../views/Bomb_effect.h"
 #include <QTimer>
 Game::Game(QString name1, QString name2) : QGraphicsView() {
@@ -92,9 +91,10 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
             }
         }
     }
-    auto n1player = new Label();
-    QString life1 = QString::number(players.at(0)->lifeCount);
-    n1player->setPlainText("Player1: " + life1);
+    n1player = new Label();
+    auto life1 =new QString(QString::number(players.at(0)->lifeCount));
+//    connect(players.at(0),&Player::check,this,&Game::lowLife);
+    n1player->setPlainText("Player1: " + *life1);
     scene->addItem(n1player);
     n1player->setPos(blockWidth * 1.5, blockHeight / 5);
     auto n2player = new Label();
@@ -195,6 +195,7 @@ void Game::bombRemove1() {
     BoomTemplate.append(boom2);
     scene()->addItem(boom2);
     boom2->setPos(bomb1->x() + bomb1->width, bomb1->y());
+//    connect(boom)
     connect(boom2, &Bomb_effect::clash, this, &Game::boomRemoverTest);
     connect(boom2, &Bomb_effect::Box_removed, this, &Game::Box_Remover);
     ///////////////////////////////////
@@ -225,6 +226,7 @@ void Game::bombRemove1() {
     boomTimer = new QTimer();
     boomTimer->setInterval(2000);
     connect(boomTimer, &QTimer::timeout, this, &Game::allBoomRemover);
+    connect(players.at(0),&Player::check,this,&Game::lowHeart);
     boomTimer->start();
 }
 
@@ -259,6 +261,21 @@ void Game::Box_Remover(Block* temp_box ) {
     }
 }
 
+void Game::lowHeart(Player *tempPlayer) {
+    --(tempPlayer->lifeCount);
+//    delete n1player;
+    scene()->removeItem(n1player);
+    n1player= new Label();
+    auto life1 =new QString(QString::number(players.at(0)->lifeCount));
+//    connect(players.at(0),&Player::check,this,&Game::lowLife);
+    n1player->setPlainText("Player1: " + *life1);
+    scene()->addItem(n1player);
+    n1player->setPos((width()/15) * 1.5, (height()/15) / 5);
+//    emit life();
+}
+//void Game::lowLife(){
+//    --(players.at(0)->lifeCount);
+//}
 
 
 

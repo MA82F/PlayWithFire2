@@ -13,6 +13,7 @@
 #include <QList>
 #include "../views/playerspictures.h"
 #include "../views/Box.h"
+#include "../views/Label.h"
 
 class Game : public QGraphicsView {
 Q_OBJECT
@@ -21,6 +22,8 @@ public:
     QList<Block *> blocks{};
     QList<Bomb *> BombList;
 //    QList<Box*>*boxese{};
+    Label *n1player;
+//    QString *life1;
     Bomb *bomb1{nullptr};
     Bomb *bomb2{nullptr};
     QTimer *bombTimer{};
@@ -36,35 +39,25 @@ public:
     //* tempBoom;
     QList<Bomb_effect *> BoomTemplate;
 public slots:
-
     void boom1();
-
     void boom2();
-
     void p1Up();
-
     void p2Up();
-
     void p1Down();
-
     void p2Down();
-
     void p1Left();
-
     void p2Left();
-
     void p1Right();
-
     void p2Right();
-
     void bombRemove1();
-
     void bombRemove2();
     void Box_Remover(Block* temp_Box);
     void boomRemoverTest(Bomb_effect *tempBombeffect);
-
-
+    void lowHeart(Player *tempPlayer);
+//    void lowLife();
     void allBoomRemover();
+//    signals:
+//    void life();
 
 };
 
