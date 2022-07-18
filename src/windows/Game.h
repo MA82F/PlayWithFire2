@@ -22,7 +22,8 @@ public:
     QList<Block *> blocks{};
     QList<Bomb *> BombList;
 //    QList<Box*>*boxese{};
-    Label *n1player;
+    Label *playerLife;
+    Label *playerScore;
 //    QString *life1;
     Bomb *bomb1{nullptr};
     Bomb *bomb2{nullptr};

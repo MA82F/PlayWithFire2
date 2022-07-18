@@ -501,6 +501,30 @@ src/views/Wall.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Wall.cpp.s
 .PHONY : src/views/Wall.cpp.s
 
+src/views/cup_image.obj: src/views/cup_image.cpp.obj
+.PHONY : src/views/cup_image.obj
+
+# target to build an object file
+src/views/cup_image.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.obj
+.PHONY : src/views/cup_image.cpp.obj
+
+src/views/cup_image.i: src/views/cup_image.cpp.i
+.PHONY : src/views/cup_image.i
+
+# target to preprocess a source file
+src/views/cup_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.i
+.PHONY : src/views/cup_image.cpp.i
+
+src/views/cup_image.s: src/views/cup_image.cpp.s
+.PHONY : src/views/cup_image.s
+
+# target to generate assembly for a file
+src/views/cup_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.s
+.PHONY : src/views/cup_image.cpp.s
+
 src/views/playerspictures.obj: src/views/playerspictures.cpp.obj
 .PHONY : src/views/playerspictures.obj
 
@@ -524,6 +548,30 @@ src/views/playerspictures.s: src/views/playerspictures.cpp.s
 src/views/playerspictures.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/playerspictures.cpp.s
 .PHONY : src/views/playerspictures.cpp.s
+
+src/views/you_win.obj: src/views/you_win.cpp.obj
+.PHONY : src/views/you_win.obj
+
+# target to build an object file
+src/views/you_win.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.obj
+.PHONY : src/views/you_win.cpp.obj
+
+src/views/you_win.i: src/views/you_win.cpp.i
+.PHONY : src/views/you_win.i
+
+# target to preprocess a source file
+src/views/you_win.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.i
+.PHONY : src/views/you_win.cpp.i
+
+src/views/you_win.s: src/views/you_win.cpp.s
+.PHONY : src/views/you_win.s
+
+# target to generate assembly for a file
+src/views/you_win.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/you_win.cpp.s
+.PHONY : src/views/you_win.cpp.s
 
 src/windows/Game.obj: src/windows/Game.cpp.obj
 .PHONY : src/windows/Game.obj
@@ -572,6 +620,30 @@ src/windows/Home.s: src/windows/Home.cpp.s
 src/windows/Home.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/Home.cpp.s
 .PHONY : src/windows/Home.cpp.s
+
+src/windows/Result.obj: src/windows/Result.cpp.obj
+.PHONY : src/windows/Result.obj
+
+# target to build an object file
+src/windows/Result.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/Result.cpp.obj
+.PHONY : src/windows/Result.cpp.obj
+
+src/windows/Result.i: src/windows/Result.cpp.i
+.PHONY : src/windows/Result.i
+
+# target to preprocess a source file
+src/windows/Result.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/Result.cpp.i
+.PHONY : src/windows/Result.cpp.i
+
+src/windows/Result.s: src/windows/Result.cpp.s
+.PHONY : src/windows/Result.s
+
+# target to generate assembly for a file
+src/windows/Result.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/windows/Result.cpp.s
+.PHONY : src/windows/Result.cpp.s
 
 # Help Target
 help:
@@ -628,15 +700,24 @@ help:
 	@echo ... src/views/Wall.obj
 	@echo ... src/views/Wall.i
 	@echo ... src/views/Wall.s
+	@echo ... src/views/cup_image.obj
+	@echo ... src/views/cup_image.i
+	@echo ... src/views/cup_image.s
 	@echo ... src/views/playerspictures.obj
 	@echo ... src/views/playerspictures.i
 	@echo ... src/views/playerspictures.s
+	@echo ... src/views/you_win.obj
+	@echo ... src/views/you_win.i
+	@echo ... src/views/you_win.s
 	@echo ... src/windows/Game.obj
 	@echo ... src/windows/Game.i
 	@echo ... src/windows/Game.s
 	@echo ... src/windows/Home.obj
 	@echo ... src/windows/Home.i
 	@echo ... src/windows/Home.s
+	@echo ... src/windows/Result.obj
+	@echo ... src/windows/Result.i
+	@echo ... src/windows/Result.s
 .PHONY : help
 
 

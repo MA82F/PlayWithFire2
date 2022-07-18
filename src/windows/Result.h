@@ -9,9 +9,9 @@
 #include "../views/you_win.h"
 #include"../views/Label.h"
 
-class result: public QGraphicsView{
+class Result: public QGraphicsView{
 public:
-    result();
+    Result();
 };
 
 

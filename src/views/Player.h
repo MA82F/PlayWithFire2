@@ -13,12 +13,12 @@ class Player :public QObject,public QGraphicsPixmapItem{
 private:
     static bool numPlayer;
     QString name{};
-    int score{0};
     int bombCount{10};
     int speed{10};
     int bombRadius{3};
 public:
     int lifeCount{3};
+    int score{0};
     static bool checkLife;
 
 

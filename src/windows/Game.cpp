@@ -91,12 +91,16 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
             }
         }
     }
-    n1player = new Label();
+    playerLife = new Label();
     auto life1 =new QString(QString::number(players.at(0)->lifeCount));
-//    connect(players.at(0),&Player::check,this,&Game::lowLife);
-    n1player->setPlainText("Player1: " + *life1);
-    scene->addItem(n1player);
-    n1player->setPos(blockWidth * 1.5, blockHeight / 5);
+    playerLife->setPlainText("Player1: " + *life1);
+    scene->addItem(playerLife);
+    playerLife->setPos(blockWidth * 1.5, blockHeight / 5);
+    playerScore = new Label();
+    auto score1 = new QString(QString::number(players.at(0)->score));
+    playerScore->setPlainText("Player1 Score: "+ *score1);
+    scene->addItem(playerScore);
+    playerScore->setPos(blockWidth * 1.5, height()-50);
     auto n2player = new Label();
     QString life2 = QString::number(players.at(1)->lifeCount);
     n2player->setPlainText("Player2: " + life2);
@@ -260,19 +264,26 @@ void Game::Box_Remover(Block* temp_box ) {
     if (temp_box->type==1){
         scene()->removeItem(temp_box);
         blocks.removeOne(temp_box);
+        players.at(0)->score += 5;
+        scene()->removeItem(playerScore);
+        playerScore = new Label();
+        auto score1 = new QString(QString::number(players.at(0)->score));
+        playerScore->setPlainText("Player1 Score: "+ *score1);
+        scene()->addItem(playerScore);
+        playerScore->setPos((width()/15) * 1.5, height()-50);
     }
 }
 
 void Game::lowHeart(Player *tempPlayer) {
     --(tempPlayer->lifeCount);
-//    delete n1player;
-    scene()->removeItem(n1player);
-    n1player= new Label();
+//    delete playerLife;
+    scene()->removeItem(playerLife);
+    playerLife= new Label();
     auto life1 =new QString(QString::number(players.at(0)->lifeCount));
 //    connect(players.at(0),&Player::check,this,&Game::lowLife);
-    n1player->setPlainText("Player1: " + *life1);
-    scene()->addItem(n1player);
-    n1player->setPos((width()/15) * 1.5, (height()/15) / 5);
+    playerLife->setPlainText("Player1: " + *life1);
+    scene()->addItem(playerLife);
+    playerLife->setPos((width() / 15) * 1.5, (height() / 15) / 5);
 //    emit life();
 }
 //void Game::lowLife(){

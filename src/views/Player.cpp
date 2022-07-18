@@ -31,21 +31,11 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     QGraphicsPixmapItem::paint(painter, option, widget);
     for (QGraphicsItem *item: collidingItems()) {
         Bomb_effect *bombEf = dynamic_cast<Bomb_effect *>(item);
-//        Block *box=dynamic_cast<Block*>(item);
         if(checkLife == false){
             if (bombEf != nullptr) {
                 checkLife = true;
                 emit check(this);
-//            scene()->removeItem(this);
             }
         }
-//        if(box!= nullptr){
-//            emit Box_removed(box);
-//            // scene()->removeItem(box);
-////            delete box;
-////            scene()->removeItem(this);
-////            blocks.removeOne(block);
-//        }
-
     }
 }

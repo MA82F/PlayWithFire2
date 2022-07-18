@@ -68,7 +68,6 @@
 		"D:/CLion 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckIncludeFile.cmake",
 		"D:/CLion 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake",
 		"D:/CLion 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake",
-		"D:/CLion 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/CheckIncludeFile.c.in",
 		"D:/CLion 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
 		"D:/CLion 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/FindPackageMessage.cmake",
 		"D:/Qt/6.2.4/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake",
@@ -372,9 +371,21 @@
 			null
 		],
 		[
+			"D:/PlayWithFire22/src/views/cup_image.h",
+			"MU",
+			"Z3L7HTGYLD/moc_cup_image.cpp",
+			null
+		],
+		[
 			"D:/PlayWithFire22/src/views/playerspictures.h",
 			"MU",
 			"Z3L7HTGYLD/moc_playerspictures.cpp",
+			null
+		],
+		[
+			"D:/PlayWithFire22/src/views/you_win.h",
+			"MU",
+			"Z3L7HTGYLD/moc_you_win.cpp",
 			null
 		],
 		[
@@ -387,6 +398,12 @@
 			"D:/PlayWithFire22/src/windows/Home.h",
 			"MU",
 			"3LXPKN4LCA/moc_Home.cpp",
+			null
+		],
+		[
+			"D:/PlayWithFire22/src/windows/Result.h",
+			"MU",
+			"3LXPKN4LCA/moc_Result.cpp",
 			null
 		]
 	],
@@ -469,9 +486,12 @@
 		[ "D:/PlayWithFire22/src/views/Player.cpp", "MU", null ],
 		[ "D:/PlayWithFire22/src/views/TextField.cpp", "MU", null ],
 		[ "D:/PlayWithFire22/src/views/Wall.cpp", "MU", null ],
+		[ "D:/PlayWithFire22/src/views/cup_image.cpp", "MU", null ],
 		[ "D:/PlayWithFire22/src/views/playerspictures.cpp", "MU", null ],
+		[ "D:/PlayWithFire22/src/views/you_win.cpp", "MU", null ],
 		[ "D:/PlayWithFire22/src/windows/Game.cpp", "MU", null ],
-		[ "D:/PlayWithFire22/src/windows/Home.cpp", "MU", null ]
+		[ "D:/PlayWithFire22/src/windows/Home.cpp", "MU", null ],
+		[ "D:/PlayWithFire22/src/windows/Result.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

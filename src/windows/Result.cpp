@@ -2,9 +2,9 @@
 // Created by Asus on 7/12/2022.
 //
 
-#include "result.h"
+#include "Result.h"
 
-result::result(){
+Result::Result(){
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     showFullScreen();
