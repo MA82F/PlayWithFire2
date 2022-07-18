@@ -16,9 +16,19 @@ Bomb_effect::Bomb_effect(int width, int height) : QGraphicsPixmapItem() {
 void Bomb_effect::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
     QGraphicsPixmapItem::paint(painter, option, widget);
     for (QGraphicsItem *item: collidingItems()) {
-        Block *block = dynamic_cast<Block *>(item);
-        if (block != nullptr) {
+        Wall *wall = dynamic_cast<Wall *>(item);
+        Block *box=dynamic_cast<Block*>(item);
+        if (wall != nullptr) {
             emit clash(this);
+//            scene()->removeItem(this);
         }
+         if(box!= nullptr){
+            emit Box_removed(box);
+           // scene()->removeItem(box);
+//            delete box;
+//            scene()->removeItem(this);
+//            blocks.removeOne(block);
+        }
+
     }
 }

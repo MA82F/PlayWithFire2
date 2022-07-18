@@ -9,6 +9,7 @@
 #include <QGraphicsView>
 //#include "../windows/Game.h"
 #include <QList>
+#include "Box.h"
 
 class Bomb_effect : public QObject, public QGraphicsPixmapItem {
 Q_OBJECT
@@ -21,6 +22,7 @@ public:
     Bomb_effect *tempBoom;
 signals:
     void clash(Bomb_effect *tempBomb_effect);
+    void Box_removed(Block* box_remove);
 
 };
 

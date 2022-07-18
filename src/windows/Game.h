@@ -4,7 +4,6 @@
 #include <QGraphicsView>
 #include "../views/Wall.h"
 #include "../views/Player.h"
-#include "../views/Box.h"
 #include "../views/Block.h"
 #include "../views/Box_Place.h"
 #include "../views/Bomb.h"
@@ -13,6 +12,7 @@
 #include <QTimer>
 #include <QList>
 #include "../views/playerspictures.h"
+#include "../views/Box.h"
 
 class Game : public QGraphicsView {
 Q_OBJECT
@@ -20,17 +20,18 @@ public:
     QList<Player *> players{};
     QList<Block *> blocks{};
     QList<Bomb *> BombList;
+//    QList<Box*>*boxese{};
     Bomb *bomb1{nullptr};
     Bomb *bomb2{nullptr};
     QTimer *bombTimer{};
     QTimer *boomTimer{};
     int numOfBox;
-
+//    Box* temprory{nullptr};
     Game(QString name1, QString name2);
 
     playerspictures *pPicture = new playerspictures(60, 40);
 
-    bool bomb1X();
+//    bool bomb1X();
 
     //* tempBoom;
     QList<Bomb_effect *> BoomTemplate;
@@ -59,10 +60,12 @@ public slots:
     void bombRemove1();
 
     void bombRemove2();
-
+    void Box_Remover(Block* temp_Box);
     void boomRemoverTest(Bomb_effect *tempBombeffect);
 
+
     void allBoomRemover();
+
 };
 
 
