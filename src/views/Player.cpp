@@ -4,7 +4,7 @@
 
 #include "Player.h"
 #include "Bomb_effect.h"
-
+bool Player::checkLife{false};
 bool Player::numPlayer{false};
 Player::Player(QString name,int width, int height) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
@@ -32,9 +32,12 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     for (QGraphicsItem *item: collidingItems()) {
         Bomb_effect *bombEf = dynamic_cast<Bomb_effect *>(item);
 //        Block *box=dynamic_cast<Block*>(item);
-        if (bombEf != nullptr) {
-            emit check(this);
+        if(checkLife == false){
+            if (bombEf != nullptr) {
+                checkLife = true;
+                emit check(this);
 //            scene()->removeItem(this);
+            }
         }
 //        if(box!= nullptr){
 //            emit Box_removed(box);

@@ -19,6 +19,7 @@ private:
     int bombRadius{3};
 public:
     int lifeCount{3};
+    static bool checkLife;
 
 
 public:

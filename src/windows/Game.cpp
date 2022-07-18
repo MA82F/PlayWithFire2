@@ -117,6 +117,8 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
     connect(controller, &Controller::player2_left, this, &Game::p2Left);
     connect(controller, &Controller::player1_right, this, &Game::p1Right);
     connect(controller, &Controller::player2_right, this, &Game::p2Right);
+    connect(players.at(0),&Player::check,this,&Game::lowHeart);
+
 }
 
 void Game::boom1() {
@@ -226,7 +228,6 @@ void Game::bombRemove1() {
     boomTimer = new QTimer();
     boomTimer->setInterval(2000);
     connect(boomTimer, &QTimer::timeout, this, &Game::allBoomRemover);
-    connect(players.at(0),&Player::check,this,&Game::lowHeart);
     boomTimer->start();
 }
 
@@ -252,6 +253,7 @@ void Game::allBoomRemover() {
             BoomTemplate[y] = nullptr;
         }
     }
+    players.at(0)->checkLife = false;
 }
 
 void Game::Box_Remover(Block* temp_box ) {
