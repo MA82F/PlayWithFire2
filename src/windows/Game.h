@@ -1,5 +1,6 @@
 #ifndef PLAYWITHFIRE2_GAME_H
 #define PLAYWITHFIRE2_GAME_H
+
 #include <QGraphicsView>
 #include "../views/Wall.h"
 #include "../views/Player.h"
@@ -12,45 +13,55 @@
 #include <QTimer>
 #include <QList>
 #include "../views/playerspictures.h"
-//#include <QGraphicsItem>
 
-class Game: public QGraphicsView{
-    Q_OBJECT
-//private:
+class Game : public QGraphicsView {
+Q_OBJECT
 public:
-    QList <Player*> players{};
-    QList <Block*> blocks{};
-    QList<Bomb*>BombList;
-//    QList <Box*> boxes{};
-    Bomb* bomb1;
-    Bomb* bomb2;
-//    Controller controller;
-//    QList<Bomb_effect*> booms;
-    QTimer* bombTimer;
-    QTimer* boomTimer;
+    QList<Player *> players{};
+    QList<Block *> blocks{};
+    QList<Bomb *> BombList;
+    Bomb *bomb1{nullptr};
+    Bomb *bomb2{nullptr};
+    QTimer *bombTimer{};
+    QTimer *boomTimer{};
     int numOfBox;
-    Game(QString name1,QString name2);
-    playerspictures* pPicture=new playerspictures(60,40);
+
+    Game(QString name1, QString name2);
+
+    playerspictures *pPicture = new playerspictures(60, 40);
+
     bool bomb1X();
+
     //* tempBoom;
-    QList<Bomb_effect*> BoomTemplate;
+    QList<Bomb_effect *> BoomTemplate;
 public slots:
+
     void boom1();
+
     void boom2();
+
     void p1Up();
+
     void p2Up();
+
     void p1Down();
+
     void p2Down();
+
     void p1Left();
+
     void p2Left();
+
     void p1Right();
+
     void p2Right();
+
     void bombRemove1();
+
     void bombRemove2();
-    void boomRemover();
-    void boomRemover2();
-    void boomRemover3();
-    void boomRemover4();
+
+    void boomRemoverTest(Bomb_effect *tempBombeffect);
+
     void allBoomRemover();
 };
 

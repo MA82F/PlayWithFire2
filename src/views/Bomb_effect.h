@@ -10,16 +10,17 @@
 //#include "../windows/Game.h"
 #include <QList>
 
-class Bomb_effect:public QObject,public  QGraphicsPixmapItem{
-    Q_OBJECT
+class Bomb_effect : public QObject, public QGraphicsPixmapItem {
+Q_OBJECT
 public:
-    Bomb_effect( int width, int height);
-   // Game* game{};
+    Bomb_effect(int width, int height);
+
+
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
-    Bomb_effect* tempBoom;
-//    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
-    signals:
-    void clash();
+
+    Bomb_effect *tempBoom;
+signals:
+    void clash(Bomb_effect *tempBomb_effect);
 
 };
 
