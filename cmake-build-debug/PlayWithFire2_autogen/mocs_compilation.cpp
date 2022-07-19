@@ -4,5 +4,6 @@
 #include "Z3L7HTGYLD/moc_Bomb_effect.cpp"
 #include "Z3L7HTGYLD/moc_Button.cpp"
 #include "Z3L7HTGYLD/moc_Player.cpp"
+#include "Z3L7HTGYLD/moc_heart_picture.cpp"
 #include "3LXPKN4LCA/moc_Game.cpp"
 #include "3LXPKN4LCA/moc_Home.cpp"

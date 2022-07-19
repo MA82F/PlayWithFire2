@@ -14,6 +14,7 @@
 #include "../views/playerspictures.h"
 #include "../views/Box.h"
 #include "../views/Label.h"
+#include "../views/heart_picture.h"
 
 class Game : public QGraphicsView {
 Q_OBJECT
@@ -21,6 +22,7 @@ public:
     QList<Player *> players{};
     QList<Block *> blocks{};
     QList<Bomb *> BombList;
+    QList<heart_picture*>hearts;
 //    QList<Box*>*boxese{};
     Label *playerLife;
     Label *playerScore;
@@ -54,8 +56,8 @@ public slots:
     void p2Left();
     void p1Right();
     void p2Right();
-    void gameOver1();
-    void gameOver2();
+//    void gameOver1();
+//    void gameOver2();
     void bombRemove1();
     void bombRemove2();
     void Box_Remover(Block* temp_Box);
@@ -64,6 +66,7 @@ public slots:
 //    void lowLife();
     void allBoomRemover();
     void allBoomRemover2();
+    void heart_remover(heart_picture*);
 //    signals:
 //    void life();
 

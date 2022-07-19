@@ -525,6 +525,30 @@ src/views/cup_image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/cup_image.cpp.s
 .PHONY : src/views/cup_image.cpp.s
 
+src/views/heart_picture.obj: src/views/heart_picture.cpp.obj
+.PHONY : src/views/heart_picture.obj
+
+# target to build an object file
+src/views/heart_picture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/heart_picture.cpp.obj
+.PHONY : src/views/heart_picture.cpp.obj
+
+src/views/heart_picture.i: src/views/heart_picture.cpp.i
+.PHONY : src/views/heart_picture.i
+
+# target to preprocess a source file
+src/views/heart_picture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/heart_picture.cpp.i
+.PHONY : src/views/heart_picture.cpp.i
+
+src/views/heart_picture.s: src/views/heart_picture.cpp.s
+.PHONY : src/views/heart_picture.s
+
+# target to generate assembly for a file
+src/views/heart_picture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/heart_picture.cpp.s
+.PHONY : src/views/heart_picture.cpp.s
+
 src/views/playerspictures.obj: src/views/playerspictures.cpp.obj
 .PHONY : src/views/playerspictures.obj
 
@@ -703,6 +727,9 @@ help:
 	@echo ... src/views/cup_image.obj
 	@echo ... src/views/cup_image.i
 	@echo ... src/views/cup_image.s
+	@echo ... src/views/heart_picture.obj
+	@echo ... src/views/heart_picture.i
+	@echo ... src/views/heart_picture.s
 	@echo ... src/views/playerspictures.obj
 	@echo ... src/views/playerspictures.i
 	@echo ... src/views/playerspictures.s

@@ -61,7 +61,7 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
         positionOfBoxes[temp].y = 100;
     }
     numOfBox = 0;
-    for (int i = 0; numOfBox < 50; ++i) {
+    for (int i = 0; numOfBox < 52; ++i) {
         int ii = rand() % 15;
         int jj = rand() % 15;
         if ((ii != 0 && ii != 14 && jj != 0 && jj != 14 && (ii % 2 != 0 || jj % 2 != 0))) {
@@ -80,30 +80,40 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
                     }
                 }
                 if (is_exist == false) {
-                    auto box = new class Box(blockWidth, blockHeight);
-                    scene->addItem(box);
-                    box->setPos(blockWidth * ii, blockHeight * jj);
-                    positionOfBoxes[i].x = ii;
-                    positionOfBoxes[i].y = jj;
-                    blocks.append(box);
+                    if (numOfBox != 48 && numOfBox != 49) {
+                        auto box = new class Box(blockWidth, blockHeight);
+                        scene->addItem(box);
+                        box->setPos(blockWidth * ii, blockHeight * jj);
+                        positionOfBoxes[i].x = ii;
+                        positionOfBoxes[i].y = jj;
+                        blocks.append(box);
 //                    boxes.append(box);
-                    ++numOfBox;
+                        ++numOfBox;}
+                    else {
+                        auto heart = new heart_picture(blockWidth, blockHeight);
+                        scene->addItem(heart);
+                        heart->setPos(blockWidth * ii, blockHeight * jj);
+                        positionOfBoxes[i].x = ii;
+                        positionOfBoxes[i].y = jj;
+                        hearts.append(heart);
+                        ++numOfBox;
+                    }
                 }
             }
         }
     }
-    n1player = new Label();
-    auto life1 = new QString(QString::number(players.at(0)->lifeCount));
+//    n1player = new Label();
+//    auto life1 = new QString(QString::number(players.at(0)->lifeCount));
 //    connect(players.at(0),&Player::check,this,&Game::lowLife);
-    n1player->setPlainText("Player1: " + *life1);
-    scene->addItem(n1player);
-    n1player->setPos(blockWidth * 1.5, blockHeight / 5);
-    auto n2player = new Label();
-    QString life2 = QString::number(players.at(1)->lifeCount);
-    n2player->setPlainText("Player2: " + life2);
+//    n1player->setPlainText("Player1: " + *life1);
+//    scene->addItem(n1player);
+//    n1player->setPos(blockWidth * 1.5, blockHeight / 5);
+//    auto n2player = new Label();
+//    QString life2 = QString::number(players.at(1)->lifeCount);
+//    n2player->setPlainText("Player2: " + life2);
 //    setAutoFillBackground(n2player);
-    scene->addItem(n2player);
-    n2player->setPos(blockWidth * 11, blockHeight / 5);
+//    scene->addItem(n2player);
+//    n2player->setPos(blockWidth * 11, blockHeight / 5);
 //    setFocus();
     auto controller = new Controller(players, &blocks);//,BombList
     scene->addItem(controller);
@@ -120,6 +130,8 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
     connect(controller, &Controller::player2_right, this, &Game::p2Right);
     connect(players.at(0), &Player::check, this, &Game::lowHeart);
     connect(players.at(1), &Player::check, this, &Game::lowHeart);
+    connect(hearts[0],&heart_picture::heart_clash, this, &Game::heart_remover);
+    connect(hearts[1],&heart_picture::heart_clash, this, &Game::heart_remover);
 
 }
 
@@ -186,7 +198,8 @@ void Game::p2Right() {
 
 void Game::bombRemove1() {
     bombTimer->stop();
-    BoomTemplate.clear();
+//    bombTimer= nullptr;
+BoomTemplate.clear();
     //////////////////////////////////////
     auto boom1 = new Bomb_effect(width() / 30, height() / 25);
     scene()->addItem(boom1);
@@ -223,7 +236,7 @@ void Game::bombRemove1() {
     connect(boom5, &Bomb_effect::Box_removed, this, &Game::Box_Remover);
     //////////////////////////////////////////////
     scene()->removeItem(bomb1);
-    delete bomb1;
+//    delete bomb1;
 
     boomTimer = new QTimer();
     boomTimer->setInterval(2000);
@@ -281,7 +294,7 @@ void Game::bombRemove2() {
 
 void Game::boomRemoverTest(Bomb_effect *tempBombeffect) {
     scene()->removeItem(tempBombeffect);
-    //tempBombeffect = nullptr;
+    tempBombeffect = nullptr;
 }
 
 void Game::allBoomRemover() {
@@ -314,16 +327,21 @@ void Game::Box_Remover(Block *temp_box) {
 }
 
 void Game::lowHeart(Player *tempPlayer) {
-    --(tempPlayer->lifeCount);
-//    delete n1player;
-    scene()->removeItem(n1player);
-    n1player = new Label();
-    auto life1 = new QString(QString::number(players.at(0)->lifeCount));
-//    connect(players.at(0),&Player::check,this,&Game::lowLife);
-    n1player->setPlainText("Player1: " + *life1);
-    scene()->addItem(n1player);
-    n1player->setPos((width() / 15) * 1.5, (height() / 15) / 5);
+//    --(tempPlayer->lifeCount);
+////    delete n1player;
+//    scene()->removeItem(n1player);
+//    n1player = new Label();
+//    auto life1 = new QString(QString::number(players.at(0)->lifeCount));
+////    connect(players.at(0),&Player::check,this,&Game::lowLife);
+//    n1player->setPlainText("Player1: " + *life1);
+//    scene()->addItem(n1player);
+//    n1player->setPos((width() / 15) * 1.5, (height() / 15) / 5);
 //    emit life();
+}
+
+void Game::heart_remover(heart_picture* temp) {
+scene()->removeItem(temp);
+hearts.removeOne(temp);
 }
 //void Game::lowLife(){
 //    --(players.at(0)->lifeCount);

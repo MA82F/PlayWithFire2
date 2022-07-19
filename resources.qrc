@@ -28,5 +28,6 @@
         <file alias="char2_to_up_2">resources/images/char2_to_up_2.png</file>
         <file alias="char2_to_right_1">resources/images/char2_to_right_1.png</file>
         <file alias="char2_to_left_1">resources/images/char2_to_left_1.png</file>
+        <file alias="heart">resources/images/heart.png</file>
     </qresource>
 </RCC>

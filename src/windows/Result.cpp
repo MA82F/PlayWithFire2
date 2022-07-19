@@ -31,7 +31,7 @@ Result::Result(QString name,int score){
     label->setPos(width()/8,height()/2 - label->boundingRect().height());
 
     auto label2 = new Label();
-    label2->setPlainText("SCORE: " + QString::number(score));dd
+    label2->setPlainText("SCORE: " + QString::number(score));
     scene->addItem(label2);
     label2->setPos(width()/1.5,height()/2 - label2->boundingRect().height());
 

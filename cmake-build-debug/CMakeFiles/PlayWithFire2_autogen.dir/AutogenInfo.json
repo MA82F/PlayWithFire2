@@ -69,7 +69,6 @@
 		"C:/Program Files/JetBrains/CLion 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CheckIncludeFile.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake",
-		"C:/Program Files/JetBrains/CLion 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CheckIncludeFile.c.in",
 		"C:/Program Files/JetBrains/CLion 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/FindPackageMessage.cmake",
 		"C:/Qt/6.4.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake",
@@ -386,9 +385,27 @@
 			null
 		],
 		[
+			"E:/programing/PlayWithFire22/src/views/cup_image.h",
+			"MU",
+			"Z3L7HTGYLD/moc_cup_image.cpp",
+			null
+		],
+		[
+			"E:/programing/PlayWithFire22/src/views/heart_picture.h",
+			"MU",
+			"Z3L7HTGYLD/moc_heart_picture.cpp",
+			null
+		],
+		[
 			"E:/programing/PlayWithFire22/src/views/playerspictures.h",
 			"MU",
 			"Z3L7HTGYLD/moc_playerspictures.cpp",
+			null
+		],
+		[
+			"E:/programing/PlayWithFire22/src/views/you_win.h",
+			"MU",
+			"Z3L7HTGYLD/moc_you_win.cpp",
 			null
 		],
 		[
@@ -401,6 +418,12 @@
 			"E:/programing/PlayWithFire22/src/windows/Home.h",
 			"MU",
 			"3LXPKN4LCA/moc_Home.cpp",
+			null
+		],
+		[
+			"E:/programing/PlayWithFire22/src/windows/Result.h",
+			"MU",
+			"3LXPKN4LCA/moc_Result.cpp",
 			null
 		]
 	],
@@ -490,13 +513,21 @@
 		[ "E:/programing/PlayWithFire22/src/views/Player.cpp", "MU", null ],
 		[ "E:/programing/PlayWithFire22/src/views/TextField.cpp", "MU", null ],
 		[ "E:/programing/PlayWithFire22/src/views/Wall.cpp", "MU", null ],
+		[ "E:/programing/PlayWithFire22/src/views/cup_image.cpp", "MU", null ],
+		[
+			"E:/programing/PlayWithFire22/src/views/heart_picture.cpp",
+			"MU",
+			null
+		],
 		[
 			"E:/programing/PlayWithFire22/src/views/playerspictures.cpp",
 			"MU",
 			null
 		],
+		[ "E:/programing/PlayWithFire22/src/views/you_win.cpp", "MU", null ],
 		[ "E:/programing/PlayWithFire22/src/windows/Game.cpp", "MU", null ],
-		[ "E:/programing/PlayWithFire22/src/windows/Home.cpp", "MU", null ]
+		[ "E:/programing/PlayWithFire22/src/windows/Home.cpp", "MU", null ],
+		[ "E:/programing/PlayWithFire22/src/windows/Result.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
