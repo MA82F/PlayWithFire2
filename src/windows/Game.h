@@ -22,7 +22,8 @@ public:
     QList<Block *> blocks{};
     QList<Bomb *> BombList;
 //    QList<Box*>*boxese{};
-    Label *n1player;
+    Label *playerLife;
+    Label *playerScore;
 //    QString *life1;
     Bomb *bomb1{nullptr};
     Bomb *bomb2{nullptr};
@@ -53,6 +54,8 @@ public slots:
     void p2Left();
     void p1Right();
     void p2Right();
+    void gameOver1();
+    void gameOver2();
     void bombRemove1();
     void bombRemove2();
     void Box_Remover(Block* temp_Box);

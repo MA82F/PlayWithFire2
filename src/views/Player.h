@@ -12,13 +12,13 @@ class Player :public QObject,public QGraphicsPixmapItem{
     Q_PROPERTY(qreal width READ x WRITE setX);
 private:
     static bool numPlayer;
-    QString name{};
-    int score{0};
     int bombCount{10};
     int speed{10};
     int bombRadius{3};
 public:
     int lifeCount{3};
+    int score{0};
+    QString name{};
     static bool checkLife;
 
 
@@ -33,6 +33,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 signals:
     void check(Player *tempBomb_effect);
+    void gameOver();
 public slots:
 
 };
