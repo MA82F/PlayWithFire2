@@ -2,6 +2,7 @@
 #include <QList>
 #include <ctime>
 #include "../views/Bomb_effect.h"
+#include "Result.h"
 #include <QTimer>
 
 Game::Game(QString name1, QString name2) : QGraphicsView() {
@@ -102,18 +103,22 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
             }
         }
     }
-//    n1player = new Label();
-//    auto life1 = new QString(QString::number(players.at(0)->lifeCount));
-//    connect(players.at(0),&Player::check,this,&Game::lowLife);
-//    n1player->setPlainText("Player1: " + *life1);
-//    scene->addItem(n1player);
-//    n1player->setPos(blockWidth * 1.5, blockHeight / 5);
-//    auto n2player = new Label();
-//    QString life2 = QString::number(players.at(1)->lifeCount);
-//    n2player->setPlainText("Player2: " + life2);
+    playerLife = new Label();
+    auto life1 =new QString(QString::number(players.at(0)->lifeCount));
+    playerLife->setPlainText("Player1: " + *life1);
+    scene->addItem(playerLife);
+    playerLife->setPos(blockWidth * 1.5, blockHeight / 5);
+    playerScore = new Label();
+    auto score1 = new QString(QString::number(players.at(0)->score));
+    playerScore->setPlainText("Player1 Score: "+ *score1);
+    scene->addItem(playerScore);
+    playerScore->setPos(blockWidth * 1.5, height()-50);
+    auto n2player = new Label();
+    QString life2 = QString::number(players.at(1)->lifeCount);
+    n2player->setPlainText("Player2: " + life2);
 //    setAutoFillBackground(n2player);
-//    scene->addItem(n2player);
-//    n2player->setPos(blockWidth * 11, blockHeight / 5);
+    scene->addItem(n2player);
+    n2player->setPos(blockWidth * 11, blockHeight / 5);
 //    setFocus();
     auto controller = new Controller(players, &blocks);//,BombList
     scene->addItem(controller);
@@ -128,13 +133,20 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
     connect(controller, &Controller::player2_left, this, &Game::p2Left);
     connect(controller, &Controller::player1_right, this, &Game::p1Right);
     connect(controller, &Controller::player2_right, this, &Game::p2Right);
-    connect(players.at(0), &Player::check, this, &Game::lowHeart);
-    connect(players.at(1), &Player::check, this, &Game::lowHeart);
+    connect(players.at(0),&Player::check,this,&Game::lowHeart);
+    connect(players.at(0),&Player::gameOver,this,&Game::gameOver1);
     connect(hearts[0],&heart_picture::heart_clash, this, &Game::heart_remover);
     connect(hearts[1],&heart_picture::heart_clash, this, &Game::heart_remover);
 
 }
-
+void Game::gameOver1(){
+    close();
+    (new Result(players.at(0)->name,players.at(0)->score))->show();
+}
+void Game::gameOver2(){
+    close();
+    (new Result(players.at(1)->name,players.at(1)->score))->show();
+}
 void Game::boom1() {
     bomb1 = new Bomb(width() / 27, height() / 18, 2);
 //BombList.append(bomb1);
@@ -198,8 +210,7 @@ void Game::p2Right() {
 
 void Game::bombRemove1() {
     bombTimer->stop();
-//    bombTimer= nullptr;
-BoomTemplate.clear();
+    BoomTemplate.clear();
     //////////////////////////////////////
     auto boom1 = new Bomb_effect(width() / 30, height() / 25);
     scene()->addItem(boom1);
@@ -323,19 +334,26 @@ void Game::Box_Remover(Block *temp_box) {
     if (temp_box->type == 1) {
         scene()->removeItem(temp_box);
         blocks.removeOne(temp_box);
+        players.at(0)->score += 5;
+        scene()->removeItem(playerScore);
+        playerScore = new Label();
+        auto score1 = new QString(QString::number(players.at(0)->score));
+        playerScore->setPlainText("Player1 Score: "+ *score1);
+        scene()->addItem(playerScore);
+        playerScore->setPos((width()/15) * 1.5, height()-50);
     }
 }
 
 void Game::lowHeart(Player *tempPlayer) {
-//    --(tempPlayer->lifeCount);
-////    delete n1player;
-//    scene()->removeItem(n1player);
-//    n1player = new Label();
-//    auto life1 = new QString(QString::number(players.at(0)->lifeCount));
-////    connect(players.at(0),&Player::check,this,&Game::lowLife);
-//    n1player->setPlainText("Player1: " + *life1);
-//    scene()->addItem(n1player);
-//    n1player->setPos((width() / 15) * 1.5, (height() / 15) / 5);
+    --(tempPlayer->lifeCount);
+//    delete playerLife;
+    scene()->removeItem(playerLife);
+    playerLife= new Label();
+    auto life1 =new QString(QString::number(players.at(0)->lifeCount));
+//    connect(players.at(0),&Player::check,this,&Game::lowLife);
+    playerLife->setPlainText("Player1: " + *life1);
+    scene()->addItem(playerLife);
+    playerLife->setPos((width() / 15) * 1.5, (height() / 15) / 5);
 //    emit life();
 }
 
