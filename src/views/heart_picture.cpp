@@ -15,12 +15,12 @@ void heart_picture::paint(QPainter *painter, const QStyleOptionGraphicsItem *opt
     QGraphicsPixmapItem::paint(painter, option, widget);
     for (QGraphicsItem *item: collidingItems()) {
 //        Wall *wall = dynamic_cast<Wall *>(item);
-Player* temp_player=dynamic_cast<Player*>(item);
-
-
-        if(temp_player!= nullptr){
-            emit heart_clash(this);
-        }
+        Player* temp_player=dynamic_cast<Player*>(item);
+            if(temp_player!= nullptr){
+                ++(temp_player->lifeCount);
+                name = temp_player->name;
+                emit heart_clash(this);
+            }
 
     }
 }

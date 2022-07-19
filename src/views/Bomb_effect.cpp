@@ -20,7 +20,6 @@ void Bomb_effect::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
         Block *box=dynamic_cast<Block*>(item);
         if (wall != nullptr) {
             emit clash(this);
-//            scene()->removeItem(this);
         }
          if(box!= nullptr){
             emit Box_removed(box);

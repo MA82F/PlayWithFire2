@@ -19,13 +19,16 @@
 class Game : public QGraphicsView {
 Q_OBJECT
 public:
+    int numOfBoxes{50};
     QList<Player *> players{};
     QList<Block *> blocks{};
     QList<Bomb *> BombList;
     QList<heart_picture*>hearts;
 //    QList<Box*>*boxese{};
-    Label *playerLife;
-    Label *playerScore;
+    Label *playerLife1;
+    Label *playerLife2;
+    Label *playerScore1;
+    Label *playerScore2;
 //    QString *life1;
     Bomb *bomb1{nullptr};
     Bomb *bomb2{nullptr};
@@ -60,15 +63,14 @@ public slots:
 //    void gameOver2();
     void bombRemove1();
     void bombRemove2();
-    void Box_Remover(Block* temp_Box);
+    void Box_Remover1(Block* temp_Box);
+    void Box_Remover2(Block* temp_Box);
     void boomRemoverTest(Bomb_effect *tempBombeffect);
     void lowHeart(Player *tempPlayer);
-//    void lowLife();
     void allBoomRemover();
     void allBoomRemover2();
+    void checkNumOfBoxes();
     void heart_remover(heart_picture*);
-//    signals:
-//    void life();
 
 };
 

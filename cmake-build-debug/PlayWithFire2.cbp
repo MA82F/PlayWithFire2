@@ -132,10 +132,139 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/EWIEGA46WW/qrc_resources.cpp.rule">
+			<Option target="PlayWithFire2"/>
+		</Unit>
 		<Unit filename="D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/mocs_compilation.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>
+		<Unit filename="D:/PlayWithFire222/main.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/resources.qrc">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/Controller.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/Controller.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Block.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Block.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Bomb.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Bomb.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Bomb_effect.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Bomb_effect.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Box.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Box.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Box_Place.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Box_Place.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Button.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Button.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/HomeImage.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/HomeImage.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Label.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Label.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Player.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Player.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/TextField.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/TextField.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Wall.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/Wall.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/cup_image.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/cup_image.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/heart_picture.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/heart_picture.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/playerspictures.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/playerspictures.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/you_win.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/views/you_win.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/windows/Game.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/windows/Game.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/windows/Home.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/windows/Home.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/windows/Result.cpp">
+			<Option target="PlayWithFire2"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/src/windows/Result.h">
+			<Option target="PlayWithFire2"/>
+		</Unit>
 		<Unit filename="D:/PlayWithFire222/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/PlayWithFire222/resources.qrc">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="D:/PlayWithFire222/../Qt/6.2.4/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake">

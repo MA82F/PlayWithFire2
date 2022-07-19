@@ -13,7 +13,7 @@ class heart_picture:public QObject,public QGraphicsPixmapItem {
 Q_OBJECT
 public:
     heart_picture(int width,int height);
-
+    QString name;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     signals:
     void heart_clash(heart_picture*);

@@ -12,7 +12,7 @@
 
 class Result: public QGraphicsView{
 public:
-    Result(QString name,int score);
+    Result(QString name1,int score1,QString name2,int score2);
 };
 
 

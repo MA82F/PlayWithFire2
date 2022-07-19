@@ -3,8 +3,10 @@
 //
 
 #include "Result.h"
+#include <windows.h>
+#include <iostream>
 
-Result::Result(QString name,int score){
+Result::Result(QString name1,int score1,QString name2,int score2){
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     showFullScreen();
@@ -25,20 +27,24 @@ Result::Result(QString name,int score){
     scene->addItem(winner);
     winner->setPos((width()-ImageWidth)/2,(width()-ImageWidth)/7);
 
-    auto label = new Label();
-    label->setPlainText("NAME: " + name);
-    scene->addItem(label);
-    label->setPos(width()/8,height()/2 - label->boundingRect().height());
+    auto first = new Label();
+    first->setPlainText("1ST: " + name2);
+    scene->addItem(first);
+    first->setPos(width()/8,height()/2 - first->boundingRect().height());
+    auto firstScore = new Label();
+    firstScore->setPlainText("SCORE: " + QString::number(score2));
+    scene->addItem(firstScore);
+    firstScore->setPos(width()/1.5,height()/2 - first->boundingRect().height());
 
-    auto label2 = new Label();
-    label2->setPlainText("SCORE: " + QString::number(score));
-    scene->addItem(label2);
-    label2->setPos(width()/1.5,height()/2 - label2->boundingRect().height());
+    Sleep(1000);
 
-//if(){
-//    auto label3 = new Label();
-//    label3->setPlainText("");
-//    scene->addItem(label3);
-//    label3->setPos(width()/2,height()/2 - label3->boundingRect().height());
-//}
+    auto second = new Label();
+    second->setPlainText("2ND: " + name1);
+    scene->addItem(second);
+    second->setPos(width()/8,height()/2 - second->boundingRect().height());
+    auto secondScore = new Label();
+    secondScore->setPlainText("SCORE: " + QString::number(score1));//-label22->boundingRect().height()
+    scene->addItem(secondScore);
+    secondScore->setPos(width()/1.5,height()/2 - second->boundingRect().height());
+
 }
