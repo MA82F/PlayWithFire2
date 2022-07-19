@@ -13,7 +13,7 @@ class Bomb :public QObject,public  QGraphicsPixmapItem{
     Q_OBJECT
     static bool bombNumber;
 public:
-    Bomb(int width, int height);
+    Bomb(int width, int height,int counter);
     QTimer *bombTimer;
 
 

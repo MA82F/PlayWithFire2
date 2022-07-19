@@ -27,7 +27,9 @@ public:
     Bomb *bomb1{nullptr};
     Bomb *bomb2{nullptr};
     QTimer *bombTimer{};
+    QTimer *bombTimer2{};
     QTimer *boomTimer{};
+    QTimer *boomTimer2{};
     int numOfBox;
 //    Box* temprory{nullptr};
     Game(QString name1, QString name2);
@@ -38,6 +40,8 @@ public:
 
     //* tempBoom;
     QList<Bomb_effect *> BoomTemplate;
+    QList<Bomb_effect *> BoomTemplate2;
+
 public slots:
     void boom1();
     void boom2();
@@ -56,6 +60,7 @@ public slots:
     void lowHeart(Player *tempPlayer);
 //    void lowLife();
     void allBoomRemover();
+    void allBoomRemover2();
 //    signals:
 //    void life();
 

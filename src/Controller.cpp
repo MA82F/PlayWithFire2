@@ -169,10 +169,7 @@ void Controller::keyPressEvent(QKeyEvent *event) {
         }
         else
             event->ignore();
-//        bombTimer =new QTimer();
-//        bombTimer->setInterval(10000);
-//        connect(bombTimer,&QTimer::timeout,this,&Controller::bomb_effect2);
-//        bombTimer->start();
+
     }
     if(event->key()==Qt::Key::Key_S){
         down();
