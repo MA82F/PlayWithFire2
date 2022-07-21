@@ -31,10 +31,10 @@ Home::Home() {
         file.close();
     }
     //----------------------------------------------------
-    textFieldHeart = new TextField(10,10);
+    textFieldHeart = new TextField(150,50);
     textFieldHeart->setPlainText(heart);
     scene->addItem(textFieldHeart);
-    textField1->setPos(width()/2+400,height()/2);
+    textFieldHeart->setPos(width()/2+400,height()/2);
 
     auto label = new Label();
     label->setPlainText("Number of Hearts:");
