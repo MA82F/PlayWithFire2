@@ -2,10 +2,12 @@
 
 bool Player::checkLife{false};
 bool Player::numPlayer{false};
+bool Player::checkCountLife{false};
 
-Player::Player(QString name,int width, int height):name(name) {
+Player::Player(QString name,QString heart,int width, int height):name(name) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     setFocus();
+    lifeCount = heart.toInt();
     QPixmap pixmap2(":/images/player2-1");
     if (!numPlayer) {
         QPixmap pixmap1(":/images/player1-1");
@@ -35,7 +37,10 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
             }
         }
         else if(lifeCount == 0){
-            emit gameOver(this);
+            if(checkCountLife == false){
+                checkCountLife = true;
+                emit gameOver(this);
+            }
         }
     }
 }

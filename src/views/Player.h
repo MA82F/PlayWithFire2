@@ -16,20 +16,16 @@ class Player :public QObject,public QGraphicsPixmapItem{
 
 private:
     static bool numPlayer;
-    int bombCount{10};
-    int bombRadius{3};
 
 public:
-    Player(QString name,int width, int height);
+    Player(QString name,QString heart,int width, int height);
 
     int lifeCount{3};
     int score{0};
     QString name{};
     double speed{1};
     static bool checkLife;
-
-    QPropertyAnimation *animator;
-    QPropertyAnimation *animator2;
+    static bool checkCountLife;
 
     int getSpeed();
     int getScore();

@@ -19,6 +19,7 @@ Home::Home() {
     //READ FROM FILE---------------------------------------
     QString name1;
     QString name2;
+    QString heart;
     QFile file("Lastinput.txt");
     if(file.exists()){
         file.open(QIODevice::ReadWrite);
@@ -26,18 +27,29 @@ Home::Home() {
         name2 = file.readLine();
         if(name2 =="\n")
             name2 = file.readLine();
+        heart = file.readLine();
         file.close();
     }
     //----------------------------------------------------
+    textFieldHeart = new TextField(10,10);
+    textFieldHeart->setPlainText(heart);
+    scene->addItem(textFieldHeart);
+    textField1->setPos(width()/2+400,height()/2);
+
+    auto label = new Label();
+    label->setPlainText("Number of Hearts:");
+    scene->addItem(label);
+    label->setPos(width()/2+400,height()/2 -label->boundingRect().height());
+
     textField1 = new TextField(400,50);
     textField1->setPlainText(name1);
     scene->addItem(textField1);
     textField1->setPos(width()/2-200,height()/2);
 
-    auto label = new Label();
-    label->setPlainText("Name no.1 player:");
-    scene->addItem(label);
-    label->setPos(width()/2-200,height()/2 - label->boundingRect().height());
+    auto label1 = new Label();
+    label1->setPlainText("Name no.1 player:");
+    scene->addItem(label1);
+    label1->setPos(width()/2-200,height()/2 - label1->boundingRect().height());
 
     textField2 = new TextField(400,50);
     textField2->setPlainText(name2);
@@ -47,7 +59,7 @@ Home::Home() {
     auto label2 = new Label();
     label2->setPlainText("Name no.2 player:");
     scene->addItem(label2);
-    label2->setPos(width()/2-200,height()/2 - label->boundingRect().height()+90);
+    label2->setPos(width()/2-200,height()/2 - label1->boundingRect().height()+90);
 
     auto button = new Button(400,150);
     button->setPlainText("");
@@ -59,15 +71,18 @@ Home::Home() {
 void Home::onGameStart() {
     auto name1 = textField1->toPlainText();
     auto name2=textField2->toPlainText();
+    auto heart = textFieldHeart->toPlainText();
     //WRITE IN FILE-----------------------------------
     QFile file("Lastinput.txt");
     file.open(QIODevice::ReadWrite);
     file.write(name1.toUtf8());
     file.write("\n");
     file.write(name2.toUtf8());
+    file.write("\n");
+    file.write(heart.toUtf8());
     file.flush();
     file.close();
     //------------------------------------------------
     close();
-    (new Game(name1,name2))->show();
+    (new Game(name1,name2,heart))->show();
 }

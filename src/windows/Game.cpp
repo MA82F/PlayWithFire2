@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game(QString name1, QString name2) : QGraphicsView() {
+Game::Game(QString name1, QString name2,QString heart) : QGraphicsView() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     showFullScreen();
@@ -15,11 +15,11 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
     auto playerWidth = width() / 15;
     auto playerHeight = height() / 15;
 
-    auto player1 = new Player(name1, playerWidth, playerHeight);
+    auto player1 = new Player(name1,heart, playerWidth, playerHeight);
     scene->addItem(player1);
     player1->setPos(playerWidth + 10, playerHeight + 3);
 
-    auto player2 = new Player(name2, playerWidth, playerHeight);
+    auto player2 = new Player(name2,heart, playerWidth, playerHeight);
     scene->addItem(player2);
     player2->setPos(playerWidth * 13 + 10, playerHeight * 13 + 3);
 
@@ -138,11 +138,6 @@ void Game::gameOver(Player* temp){
     close();
     (new Result(temp->name,temp->score,players.at(1)->name,players.at(1)->score))->show();
 }
-
-//void Game::gameOver2(){
-//    close();
-//    (new Result(players.at(1)->name,players.at(1)->score,players.at(0)->name,players.at(0)->score))->show();
-//}
 
 //----------------------------------------------------------------------------------------------------------------------
 

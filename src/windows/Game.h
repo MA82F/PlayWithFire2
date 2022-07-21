@@ -24,7 +24,10 @@
 
 class Game : public QGraphicsView {
 Q_OBJECT
+
 public:
+
+    Game(QString name1, QString name2,QString heart);
     int numOfBoxes{50};
     QList<Player *> players{};
     QList<Block *> blocks{};
@@ -49,7 +52,6 @@ public:
 
     int numOfBox;
 
-    Game(QString name1, QString name2);
 
     playersPictures *pPicture = new playersPictures(60, 40);
 
@@ -71,7 +73,6 @@ public slots:
     void p2Left();
 
     void gameOver(Player* temp);
-//    void gameOver2();
 
     void bombRemove1();
     void bombRemove2();
