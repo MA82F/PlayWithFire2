@@ -13,44 +13,44 @@ Controller::Controller(QList <Player*> players, QList <Block*> *blocks) {
 //----------------------------------------------------------------------------------------------------------------------
 
 void Controller::Up1() {
-    newY1 = tempPlayers.at(0)->y() -15;
+    newY1 = tempPlayers.at(0)->y() -10*(speedPlayers*1.2);
     emit player1_up();
 }
 
 void Controller::right1() {
-    newX1 = tempPlayers.at(0)->x() +15;
+    newX1 = tempPlayers.at(0)->x() +10*(speedPlayers*1.2);
     emit player1_right();
 }
 
 void Controller::down1() {
-    newY1 = tempPlayers.at(0)->y() +15;
+    newY1 = tempPlayers.at(0)->y() +10*(speedPlayers*1.2);
     emit player1_down();
 }
 
 void Controller::left1() {
-    newX1 = tempPlayers.at(0)->x() -15;
+    newX1 = tempPlayers.at(0)->x() -10*(speedPlayers*1.2);
     emit player1_left();
 }
 
 //----------------------------------------------------------------------------------------------------------------------
 
 void Controller::Up2() {
-    newY2 = tempPlayers.at(1)->y() -15;
+    newY2 = tempPlayers.at(1)->y() -10*(speedPlayers*1.2);
     emit player2_up();
 }
 
 void Controller::right2() {
-    newX2 = tempPlayers.at(1)->x() +15;
+    newX2 = tempPlayers.at(1)->x() +10*(speedPlayers*1.2);
     emit player2_right();
 }
 
 void Controller::down2() {
-    newY2 = tempPlayers.at(1)->y() +15;
+    newY2 = tempPlayers.at(1)->y() +10*(speedPlayers*1.2);
     emit player2_down();
 }
 
 void Controller::left2() {
-    newX2 = tempPlayers.at(1)->x() -15;
+    newX2 = tempPlayers.at(1)->x() -10*(speedPlayers*1.2);
     emit player2_left();
 }
 

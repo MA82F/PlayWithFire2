@@ -28,7 +28,7 @@ public:
 
     qreal newX1, newY1,newX2, newY2;
 
-    int speedPlayers;
+    double speedPlayers;
 
     QList <Player*> tempPlayers{};
     QList <Block*>  *tempBlocks{};

@@ -25,7 +25,7 @@ public:
     int lifeCount{3};
     int score{0};
     QString name{};
-    int speed{10};
+    double speed{1};
     static bool checkLife;
 
     QPropertyAnimation *animator;
