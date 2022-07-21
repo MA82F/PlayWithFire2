@@ -127,22 +127,22 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
 
     connect(players.at(0),&Player::check,this,&Game::lowHeart);
     connect(players.at(1),&Player::check,this,&Game::lowHeart);
-    connect(players.at(0),&Player::gameOver,this,&Game::gameOver1);
-    connect(players.at(1),&Player::gameOver,this,&Game::gameOver2);
+    connect(players[0],&Player::gameOver,this,&Game::gameOver);
+    connect(players[1],&Player::gameOver,this,&Game::gameOver);
     connect(hearts[0],&heart_picture::heart_clash, this, &Game::heart_remover);
     connect(hearts[1],&heart_picture::heart_clash, this, &Game::heart_remover);
 
 }
 
-void Game::gameOver1(){
+void Game::gameOver(Player* temp){
     close();
-    (new Result(players.at(0)->name,players.at(0)->score,players.at(1)->name,players.at(1)->score))->show();
+    (new Result(temp->name,temp->score,players.at(1)->name,players.at(1)->score))->show();
 }
 
-void Game::gameOver2(){
-    close();
-    (new Result(players.at(1)->name,players.at(1)->score,players.at(0)->name,players.at(0)->score))->show();
-}
+//void Game::gameOver2(){
+//    close();
+//    (new Result(players.at(1)->name,players.at(1)->score,players.at(0)->name,players.at(0)->score))->show();
+//}
 
 //----------------------------------------------------------------------------------------------------------------------
 

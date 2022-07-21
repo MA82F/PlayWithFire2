@@ -39,6 +39,6 @@ public:
 
 signals:
     void check(Player *tempBomb_effect);
-    void gameOver();
+    void gameOver(Player*);
 };
 #endif //PLAYWITHFIRE2_PLAYER_H

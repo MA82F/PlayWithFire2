@@ -70,8 +70,8 @@ public slots:
     void p2Down();
     void p2Left();
 
-    void gameOver1();
-    void gameOver2();
+    void gameOver(Player* temp);
+//    void gameOver2();
 
     void bombRemove1();
     void bombRemove2();

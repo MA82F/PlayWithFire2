@@ -34,8 +34,8 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
                 emit check(this);
             }
         }
-        if(lifeCount == 0){
-            emit gameOver();
+        else if(lifeCount == 0){
+            emit gameOver(this);
         }
     }
 }
