@@ -150,7 +150,7 @@
 		<Unit filename="D:/PlayWithFire222/src/Controller.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>
-		<Unit filename="D:/PlayWithFire222/src/Controller.h">
+		<Unit filename="D:/PlayWithFire222/src/Controller1.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="D:/PlayWithFire222/src/views/Block.cpp">
@@ -231,10 +231,10 @@
 		<Unit filename="D:/PlayWithFire222/src/views/heart_picture.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
-		<Unit filename="D:/PlayWithFire222/src/views/playerspictures.cpp">
+		<Unit filename="D:/PlayWithFire222/src/views/playersPictures.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>
-		<Unit filename="D:/PlayWithFire222/src/views/playerspictures.h">
+		<Unit filename="D:/PlayWithFire222/src/views/playersPictures.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="D:/PlayWithFire222/src/views/you_win.cpp">

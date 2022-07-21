@@ -8,10 +8,10 @@
 #include "../views/Box_Place.h"
 #include "../views/Bomb.h"
 #include "../views/Bomb_effect.h"
-#include "../Controller.h"
+#include "../Controller1.h"
 #include <QTimer>
 #include <QList>
-#include "../views/playerspictures.h"
+#include "../views/playersPictures.h"
 #include "../views/Box.h"
 #include "../views/Label.h"
 #include "../views/heart_picture.h"
@@ -40,7 +40,7 @@ public:
 //    Box* temprory{nullptr};
     Game(QString name1, QString name2);
 
-    playerspictures *pPicture = new playerspictures(60, 40);
+    playersPictures *pPicture = new playersPictures(60, 40);
 
 //    bool bomb1X();
 
@@ -59,8 +59,8 @@ public slots:
     void p2Left();
     void p1Right();
     void p2Right();
-//    void gameOver1();
-//    void gameOver2();
+    void gameOver1();
+    void gameOver2();
     void bombRemove1();
     void bombRemove2();
     void Box_Remover1(Block* temp_Box);

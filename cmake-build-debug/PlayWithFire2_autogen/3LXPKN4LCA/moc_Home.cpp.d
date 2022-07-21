@@ -215,6 +215,7 @@ D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/3LXPKN4LCA/moc_Home.c
   D:/CLion\ 2022.1.3/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   D:/PlayWithFire222/src/views/HomeImage.h \
   D:/PlayWithFire222/src/views/TextField.h \
+  D:/Qt/6.2.4/mingw_64/include/QtCore/qabstractitemmodel.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qalgorithms.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qanystringview.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qarraydata.h \
@@ -249,6 +250,7 @@ D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/3LXPKN4LCA/moc_Home.c
   D:/Qt/6.2.4/mingw_64/include/QtCore/qiterator.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qline.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
+  D:/Qt/6.2.4/mingw_64/include/QtCore/qlocale.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qlogging.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qmargins.h \
@@ -266,6 +268,7 @@ D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/3LXPKN4LCA/moc_Home.c
   D:/Qt/6.2.4/mingw_64/include/QtCore/qprocessordetection.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qrect.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qrefcount.h \
+  D:/Qt/6.2.4/mingw_64/include/QtCore/qregularexpression.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qscopedpointer.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qscopeguard.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
@@ -289,10 +292,14 @@ D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/3LXPKN4LCA/moc_Home.c
   D:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qtypeinfo.h \
+  D:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qutf8stringview.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/QFont \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/QPainter \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/QTextDocument \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qbrush.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qcolor.h \
@@ -300,6 +307,7 @@ D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/3LXPKN4LCA/moc_Home.c
   D:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qicon.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qimage.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qpaintdevice.h \
@@ -313,22 +321,33 @@ D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/3LXPKN4LCA/moc_Home.c
   D:/Qt/6.2.4/mingw_64/include/QtGui/qregion.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qrgb.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qrgba64.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qtextdocument.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qtextoption.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qvalidator.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsTextItem \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsView \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/QStyleOptionGraphicsItem \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractslider.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractspinbox.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsview.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qrubberband.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qscrollarea.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qslider.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qstyle.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qstyleoption.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qtabbar.h \
+  D:/Qt/6.2.4/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   D:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h

@@ -31,7 +31,7 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
 //    players.last()=player2;
     players.append(player1);
     players.append(player2);
-//    playerspictures* pPicture=new playerspictures();
+//    playersPictures* pPicture=new playersPictures();
 
 //    auto Bomb1=new Bomb(width()/15,height()/15);
 //    scene->addItem(Bomb1);
@@ -126,19 +126,19 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
 //    scene->addItem(n2player);
 //    n2player->setPos(blockWidth * 11, blockHeight / 5);
 //    setFocus();
-    auto controller = new Controller(players, &blocks);//,BombList
+    auto controller = new Controller1(players, &blocks);//,BombList
     scene->addItem(controller);
     controller->setFocus();
-    connect(controller, &Controller::bomb1_called, this, &Game::boom1);
-    connect(controller, &Controller::bomb2_called, this, &Game::boom2);
-    connect(controller, &Controller::player1_up, this, &Game::p1Up);
-    connect(controller, &Controller::player2_up, this, &Game::p2Up);
-    connect(controller, &Controller::player1_down, this, &Game::p1Down);
-    connect(controller, &Controller::player2_down, this, &Game::p2Down);
-    connect(controller, &Controller::player1_left, this, &Game::p1Left);
-    connect(controller, &Controller::player2_left, this, &Game::p2Left);
-    connect(controller, &Controller::player1_right, this, &Game::p1Right);
-    connect(controller, &Controller::player2_right, this, &Game::p2Right);
+    connect(controller, &Controller1::bomb1_called, this, &Game::boom1);
+    connect(controller, &Controller1::bomb2_called, this, &Game::boom2);
+    connect(controller, &Controller1::player1_up, this, &Game::p1Up);
+    connect(controller, &Controller1::player2_up, this, &Game::p2Up);
+    connect(controller, &Controller1::player1_down, this, &Game::p1Down);
+    connect(controller, &Controller1::player2_down, this, &Game::p2Down);
+    connect(controller, &Controller1::player1_left, this, &Game::p1Left);
+    connect(controller, &Controller1::player2_left, this, &Game::p2Left);
+    connect(controller, &Controller1::player1_right, this, &Game::p1Right);
+    connect(controller, &Controller1::player2_right, this, &Game::p2Right);
     connect(players.at(0),&Player::check,this,&Game::lowHeart);
     connect(players.at(1),&Player::check,this,&Game::lowHeart);
     connect(players.at(0),&Player::gameOver,this,&Game::gameOver1);

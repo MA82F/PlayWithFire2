@@ -299,9 +299,9 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/PlayWithFire222/src/Controller.h",
+			"D:/PlayWithFire222/src/Controller1.h",
 			"MU",
-			"UVLADIE3JM/moc_Controller.cpp",
+			"UVLADIE3JM/moc_Controller1.cpp",
 			null
 		],
 		[
@@ -383,9 +383,9 @@
 			null
 		],
 		[
-			"D:/PlayWithFire222/src/views/playerspictures.h",
+			"D:/PlayWithFire222/src/views/playersPictures.h",
 			"MU",
-			"Z3L7HTGYLD/moc_playerspictures.cpp",
+			"Z3L7HTGYLD/moc_playersPictures.cpp",
 			null
 		],
 		[
@@ -494,7 +494,7 @@
 		[ "D:/PlayWithFire222/src/views/Wall.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/cup_image.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/heart_picture.cpp", "MU", null ],
-		[ "D:/PlayWithFire222/src/views/playerspictures.cpp", "MU", null ],
+		[ "D:/PlayWithFire222/src/views/playersPictures.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/you_win.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/windows/Game.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/windows/Home.cpp", "MU", null ],

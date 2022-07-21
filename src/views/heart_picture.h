@@ -5,7 +5,7 @@
 #ifndef PLAYWITHFIRE2_HEART_PICTURE_H
 #define PLAYWITHFIRE2_HEART_PICTURE_H
 #include <QGraphicsPixmapItem>
-#include "playerspictures.h"
+#include "playersPictures.h"
 #include "Player.h"
 #include <QObject>
 

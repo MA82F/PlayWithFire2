@@ -8,5 +8,4 @@ public:
     Wall(int width,int height);
 };
 
-
 #endif //PLAYWITHFIRE2_WALL_H
