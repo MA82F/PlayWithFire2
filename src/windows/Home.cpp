@@ -28,6 +28,8 @@ Home::Home() {
         if(name2 =="\n")
             name2 = file.readLine();
         heart = file.readLine();
+        if(heart =="\n")
+            heart = file.readLine();
         file.close();
     }
     //----------------------------------------------------
