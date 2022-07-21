@@ -1,7 +1,3 @@
-//
-// Created by Asus on 7/12/2022.
-//
-
 #ifndef PLAYWITHFIRE2_HOMEIMAGE_H
 #define PLAYWITHFIRE2_HOMEIMAGE_H
 #include <QGraphicsPixmapItem>

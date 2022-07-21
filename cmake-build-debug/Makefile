@@ -333,30 +333,6 @@ src/views/Box.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Box.cpp.s
 .PHONY : src/views/Box.cpp.s
 
-src/views/Box_Place.obj: src/views/Box_Place.cpp.obj
-.PHONY : src/views/Box_Place.obj
-
-# target to build an object file
-src/views/Box_Place.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Box_Place.cpp.obj
-.PHONY : src/views/Box_Place.cpp.obj
-
-src/views/Box_Place.i: src/views/Box_Place.cpp.i
-.PHONY : src/views/Box_Place.i
-
-# target to preprocess a source file
-src/views/Box_Place.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Box_Place.cpp.i
-.PHONY : src/views/Box_Place.cpp.i
-
-src/views/Box_Place.s: src/views/Box_Place.cpp.s
-.PHONY : src/views/Box_Place.s
-
-# target to generate assembly for a file
-src/views/Box_Place.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PlayWithFire2.dir\build.make CMakeFiles/PlayWithFire2.dir/src/views/Box_Place.cpp.s
-.PHONY : src/views/Box_Place.cpp.s
-
 src/views/Button.obj: src/views/Button.cpp.obj
 .PHONY : src/views/Button.obj
 
@@ -703,9 +679,6 @@ help:
 	@echo ... src/views/Box.obj
 	@echo ... src/views/Box.i
 	@echo ... src/views/Box.s
-	@echo ... src/views/Box_Place.obj
-	@echo ... src/views/Box_Place.i
-	@echo ... src/views/Box_Place.s
 	@echo ... src/views/Button.obj
 	@echo ... src/views/Button.i
 	@echo ... src/views/Button.s

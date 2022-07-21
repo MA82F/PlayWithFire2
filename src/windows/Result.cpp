@@ -1,10 +1,4 @@
-//
-// Created by Asus on 7/12/2022.
-//
-
 #include "Result.h"
-#include <windows.h>
-#include <iostream>
 
 Result::Result(QString name1,int score1,QString name2,int score2){
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

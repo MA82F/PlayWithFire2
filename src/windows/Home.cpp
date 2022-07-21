@@ -1,14 +1,4 @@
-//
-// Created by IHC on 7/11/2022.
-//
-
 #include "Home.h"
-#include "../views/TextField.h"
-#include "../views/Label.h"
-#include "../views/Button.h"
-#include "Game.h"
-#include <QFile>
-#include <QString>
 
 Home::Home() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

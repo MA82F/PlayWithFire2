@@ -150,7 +150,7 @@
 		<Unit filename="D:/PlayWithFire222/src/Controller.cpp">
 			<Option target="PlayWithFire2"/>
 		</Unit>
-		<Unit filename="D:/PlayWithFire222/src/Controller1.h">
+		<Unit filename="D:/PlayWithFire222/src/Controller.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="D:/PlayWithFire222/src/views/Block.cpp">
@@ -175,12 +175,6 @@
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="D:/PlayWithFire222/src/views/Box.h">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="D:/PlayWithFire222/src/views/Box_Place.cpp">
-			<Option target="PlayWithFire2"/>
-		</Unit>
-		<Unit filename="D:/PlayWithFire222/src/views/Box_Place.h">
 			<Option target="PlayWithFire2"/>
 		</Unit>
 		<Unit filename="D:/PlayWithFire222/src/views/Button.cpp">

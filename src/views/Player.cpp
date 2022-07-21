@@ -1,11 +1,8 @@
-//
-// Created by IHC on 7/12/2022.
-//
-
 #include "Player.h"
-#include "Bomb_effect.h"
+
 bool Player::checkLife{false};
 bool Player::numPlayer{false};
+
 Player::Player(QString name,int width, int height):name(name) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     setFocus();

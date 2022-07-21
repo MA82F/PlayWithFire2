@@ -1,5 +1,6 @@
-#ifndef PLAYWITHFIRE2_CONTROLLER1_H
-#define PLAYWITHFIRE2_CONTROLLER1_H
+#ifndef PLAYWITHFIRE2_CONTROLLER_H
+#define PLAYWITHFIRE2_CONTROLLER_H
+
 #include "../src/views/Player.h"
 #include <QList>
 #include <QTimer>
@@ -14,10 +15,10 @@
 #include "views/Bomb_effect.h"
 #include "windows/Game.h"
 
-class Controller1: public QObject, public QGraphicsPixmapItem{
+class Controller: public QObject, public QGraphicsPixmapItem{
 Q_OBJECT
 public:
-    Controller1(QList<Player *> players, QList <Block*> *blocks);
+    Controller(QList<Player *> players, QList <Block*> *blocks);
 
     QTimer* bombTimer1;
     QTimer* bombTimer2;
@@ -25,9 +26,9 @@ public:
     static bool bombKey1;
     static bool bombKey2;
 
-    qreal newX1, newY1, newX2, newY2;
+    qreal newX1, newY1,newX2, newY2;
 
-    int speedplayers;
+    int speedPlayers;
 
     QList <Player*> tempPlayers{};
     QList <Block*>  *tempBlocks{};
@@ -69,4 +70,4 @@ signals:
     void player2_left();
 };
 
-#endif //PLAYWITHFIRE2_CONTROLLER1_H
+#endif //PLAYWITHFIRE2_CONTROLLER_H

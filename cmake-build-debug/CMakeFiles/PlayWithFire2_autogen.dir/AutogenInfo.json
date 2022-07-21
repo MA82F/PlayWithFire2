@@ -299,9 +299,9 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/PlayWithFire222/src/Controller1.h",
+			"D:/PlayWithFire222/src/Controller.h",
 			"MU",
-			"UVLADIE3JM/moc_Controller1.cpp",
+			"UVLADIE3JM/moc_Controller.cpp",
 			null
 		],
 		[
@@ -326,12 +326,6 @@
 			"D:/PlayWithFire222/src/views/Box.h",
 			"MU",
 			"Z3L7HTGYLD/moc_Box.cpp",
-			null
-		],
-		[
-			"D:/PlayWithFire222/src/views/Box_Place.h",
-			"MU",
-			"Z3L7HTGYLD/moc_Box_Place.cpp",
 			null
 		],
 		[
@@ -485,7 +479,6 @@
 		[ "D:/PlayWithFire222/src/views/Bomb.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/Bomb_effect.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/Box.cpp", "MU", null ],
-		[ "D:/PlayWithFire222/src/views/Box_Place.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/Button.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/HomeImage.cpp", "MU", null ],
 		[ "D:/PlayWithFire222/src/views/Label.cpp", "MU", null ],

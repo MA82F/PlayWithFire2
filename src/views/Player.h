@@ -6,6 +6,7 @@
 #include <QPropertyAnimation>
 #include <QObject>
 #include <QKeyEvent>
+#include "Bomb_effect.h"
 
 class Player :public QObject,public QGraphicsPixmapItem{
     Q_OBJECT
