@@ -287,20 +287,32 @@ D:/PlayWithFire222/cmake-build-debug/PlayWithFire2_autogen/Z3L7HTGYLD/moc_Button
   D:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qtypeinfo.h \
+  D:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qutf8stringview.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/QFont \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/QPainter \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/QTextDocument \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qbrush.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qcolor.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qimage.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qpaintdevice.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qpainter.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qpainterpath.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qpen.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qpixelformat.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qpixmap.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qpolygon.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qregion.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qrgb.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qrgba64.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qtextdocument.h \
+  D:/Qt/6.2.4/mingw_64/include/QtGui/qtextoption.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
   D:/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \

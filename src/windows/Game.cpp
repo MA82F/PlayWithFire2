@@ -84,7 +84,8 @@ Game::Game(QString name1, QString name2) : QGraphicsView() {
     }
 
     playerLife1 = new Label();
-    auto life1 =new QString(QString::number(players.at(0)->lifeCount));
+    auto life1 =new QString(QString::number(players.
+            at(0)->lifeCount));
     playerLife1->setPlainText("Player1: " + *life1);
     scene->addItem(playerLife1);
     playerLife1->setPos(blockWidth * 1.5, blockHeight / 5);

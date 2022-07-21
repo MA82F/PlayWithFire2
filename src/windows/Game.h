@@ -17,6 +17,7 @@
 #include "../views/Bomb.h"
 #include "../views/Bomb_effect.h"
 #include "../views/Box.h"
+#include "../views/Box_Place.h"
 #include "../views/playersPictures.h"
 #include "../views/Label.h"
 #include "../views/heart_picture.h"
