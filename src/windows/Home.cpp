@@ -20,6 +20,7 @@ Home::Home() {
     QString name1;
     QString name2;
     QString heart;
+    QString speed;
     QFile file("Lastinput.txt");
     if(file.exists()){
         file.open(QIODevice::ReadWrite);
@@ -30,6 +31,9 @@ Home::Home() {
         heart = file.readLine();
         if(heart =="\n")
             heart = file.readLine();
+        speed = file.readLine();
+        if(speed =="\n")
+            speed = file.readLine();
         file.close();
     }
     //----------------------------------------------------
@@ -42,6 +46,16 @@ Home::Home() {
     label->setPlainText("Number of Hearts:");
     scene->addItem(label);
     label->setPos(width()/2+400,height()/2 -label->boundingRect().height());
+
+    textFieldSpeed = new TextField(150,50);
+    textFieldSpeed->setPlainText(speed);
+    scene->addItem(textFieldSpeed);
+    textFieldSpeed->setPos(width()/2+400,height()/2+85);
+
+    auto labelS = new Label();
+    labelS->setPlainText("speed:");
+    scene->addItem(labelS);
+    labelS->setPos(width()/2+400,height()/2 -labelS->boundingRect().height()+90);
 
     textField1 = new TextField(400,50);
     textField1->setPlainText(name1);
@@ -74,6 +88,7 @@ void Home::onGameStart() {
     auto name1 = textField1->toPlainText();
     auto name2=textField2->toPlainText();
     auto heart = textFieldHeart->toPlainText();
+    auto speed = textFieldSpeed->toPlainText();
     //WRITE IN FILE-----------------------------------
     QFile file("Lastinput.txt");
     file.open(QIODevice::ReadWrite);
@@ -82,9 +97,11 @@ void Home::onGameStart() {
     file.write(name2.toUtf8());
     file.write("\n");
     file.write(heart.toUtf8());
+    file.write("\n");
+    file.write(speed.toUtf8());
     file.flush();
     file.close();
     //------------------------------------------------
     close();
-    (new Game(name1,name2,heart))->show();
+    (new Game(name1,name2,heart,speed))->show();
 }

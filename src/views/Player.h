@@ -18,7 +18,7 @@ private:
     static bool numPlayer;
 
 public:
-    Player(QString name,QString heart,int width, int height);
+    Player(QString name,QString heart,QString sp,int width, int height);
 
     int lifeCount{3};
     int score{0};

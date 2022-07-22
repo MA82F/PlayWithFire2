@@ -27,7 +27,7 @@ Q_OBJECT
 
 public:
 
-    Game(QString name1, QString name2,QString heart);
+    Game(QString name1, QString name2,QString heart,QString speed);
     int numOfBoxes{50};
     QList<Player *> players{};
     QList<Block *> blocks{};

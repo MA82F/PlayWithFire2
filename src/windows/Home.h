@@ -16,7 +16,7 @@ private:
     TextField *textField1{};
     TextField *textField2{};
     TextField *textFieldHeart{};
-
+    TextField *textFieldSpeed{};
 public:
     Home();
 

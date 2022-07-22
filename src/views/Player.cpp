@@ -4,10 +4,13 @@ bool Player::checkLife{false};
 bool Player::numPlayer{false};
 bool Player::checkCountLife{false};
 
-Player::Player(QString name,QString heart,int width, int height):name(name) {
+Player::Player(QString name,QString heart,QString sp,int width, int height):name(name) {
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     setFocus();
+
     lifeCount = heart.toInt();
+    speed = sp.toDouble();
+
     QPixmap pixmap2(":/images/player2-1");
     if (!numPlayer) {
         QPixmap pixmap1(":/images/player1-1");
