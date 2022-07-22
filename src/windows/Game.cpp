@@ -413,7 +413,6 @@ void Game::checkNumOfBoxes(){
     if(players.at(1)->score > players.at(0)->score){
         close();
         (new Result(players.at(0)->name,players.at(0)->score,players.at(1)->name,players.at(1)->score))->show();
-
     }
     else if(players.at(0)->score > players.at(1)->score){
         close();
@@ -425,5 +424,22 @@ void Game::checkNumOfBoxes(){
     }
 }
 
-
-
+Game::~Game() {
+    qDeleteAll(players);
+    qDeleteAll(blocks);
+    qDeleteAll(BombList);
+    qDeleteAll(hearts);
+    delete playerLife1;
+    delete playerLife2;
+    delete playerScore1;
+    delete playerScore2;
+    delete bomb1;
+    delete bomb2;
+    delete bombTimer1;
+    delete bombTimer2;
+    delete boomTimer1;
+    delete boomTimer2;
+    delete pPicture;
+    qDeleteAll(BoomTemplate);
+    qDeleteAll(BoomTemplate2);
+}

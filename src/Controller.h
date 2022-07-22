@@ -19,6 +19,7 @@ class Controller: public QObject, public QGraphicsPixmapItem{
 Q_OBJECT
 public:
     Controller(QList<Player *> players, QList <Block*> *blocks);
+    ~Controller();
 
     QTimer* bombTimer1;
     QTimer* bombTimer2;

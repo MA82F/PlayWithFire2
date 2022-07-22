@@ -182,3 +182,11 @@ void Controller::keyPressEvent(QKeyEvent *event) {
     tempPlayers.at(1)->setPos(newX2,newY2);
     tempPlayers.at(0)->setPos(newX1,newY1);
 }
+
+Controller::~Controller() {
+delete bombTimer1;
+delete bombTimer2;
+    qDeleteAll(tempPlayers);
+    qDeleteAll(*tempBlocks);
+    qDeleteAll(tempBombList);
+}

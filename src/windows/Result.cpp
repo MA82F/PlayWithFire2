@@ -50,15 +50,15 @@ Result::Result(QString name1,int score1,QString name2,int score2){
     auto second = new Label();
     second->setPlainText("2ND: " + name2);
     scene->addItem(second);
-    second->setPos(width()/8,height()/2 - second->boundingRect().height());
+    second->setPos(width()/8,height()/2 + second->boundingRect().height());
     auto secondScore = new Label();
     secondScore->setPlainText("SCORE: " + QString::number(score2));
     scene->addItem(secondScore);
-    secondScore->setPos(width()/1.5,height()/2 - second->boundingRect().height());
+    secondScore->setPos(width()/1.5,height()/2 + second->boundingRect().height());
 
     auto winnerName = new Label();
     winnerName->font().setPixelSize(72);
-    winnerName->setPlainText("WINNER IS: \"" + name1 + "\"");
+    winnerName->setPlainText("WINNER IS: " + name1 + " ");
     scene->addItem(winnerName);
     winnerName->setPos(width()/3,height()-150);
 
