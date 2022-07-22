@@ -7,7 +7,7 @@ Home::Home() {
     showFullScreen();
 
     auto scene = new QGraphicsScene(this);
-    scene->setSceneRect(0,0,width(),height());
+//    scene->setSceneRect(0,0,width(),height());
     scene->setBackgroundBrush(QBrush("#211C16"));
     setScene(scene);
     auto ImageWidth = width() / 2;

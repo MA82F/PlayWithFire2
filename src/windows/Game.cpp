@@ -304,7 +304,9 @@ void Game::bombRemove2() {
 
 void Game::boomRemoverTest(Bomb_effect *tempBombEffect) {
     scene()->removeItem(tempBombEffect);
-    tempBombEffect = nullptr;
+    auto boomIndex = BoomTemplate.indexOf(tempBombEffect);
+    if(boomIndex != -1)
+        BoomTemplate[boomIndex] = nullptr;
 }
 
 void Game::allBoomRemover() {
@@ -334,6 +336,7 @@ void Game::Box_Remover1(Block *temp_box) {
         scene()->removeItem(temp_box);
         numOfBoxes--;
         blocks.removeOne(temp_box);
+        delete temp_box;
         players.at(0)->score += 5;
         scene()->removeItem(playerScore1);
 
@@ -353,6 +356,7 @@ void Game::Box_Remover2(Block *temp_box) {
         scene()->removeItem(temp_box);
         numOfBoxes--;
         blocks.removeOne(temp_box);
+        delete temp_box;
         players.at(1)->score += 5;
         scene()->removeItem(playerScore2);
 
