@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Button.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.0)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -14,7 +14,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'Button.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.4.0. It"
+#error "This file was generated using the moc from 6.2.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -89,9 +89,9 @@ const QMetaObject Button::staticMetaObject = { {
     qt_meta_data_Button,
     qt_static_metacall,
     nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_Button_t,
-    QtPrivate::TypeAndForceComplete<Button, std::true_type>,
-    QtPrivate::TypeAndForceComplete<void, std::false_type>
+qt_incomplete_metaTypeArray<qt_meta_stringdata_Button_t
+, QtPrivate::TypeAndForceComplete<Button, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+
 
 
 >,

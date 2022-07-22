@@ -53,7 +53,7 @@ Home::Home() {
     textFieldSpeed->setPos(width()/2+400,height()/2+85);
 
     auto labelS = new Label();
-    labelS->setPlainText("speed:");
+    labelS->setPlainText("speed like this(\"-.--- \"):");
     scene->addItem(labelS);
     labelS->setPos(width()/2+400,height()/2 -labelS->boundingRect().height()+90);
 

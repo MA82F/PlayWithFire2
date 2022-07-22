@@ -136,7 +136,7 @@ Game::Game(QString name1, QString name2,QString heart,QString speed) : QGraphics
 
 void Game::gameOver(Player* temp){
     close();
-    (new Result(temp->name,temp->score,players.at(1)->name,players.at(1)->score))->show();
+    (new Result(players.at(0)->name,players.at(0)->score,players.at(1)->name,players.at(1)->score))->show();
 }
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -307,6 +307,7 @@ void Game::boomRemoverTest(Bomb_effect *tempBombEffect) {
     auto boomIndex = BoomTemplate.indexOf(tempBombEffect);
     if(boomIndex != -1)
         BoomTemplate[boomIndex] = nullptr;
+    delete tempBombEffect;
 }
 
 void Game::allBoomRemover() {
