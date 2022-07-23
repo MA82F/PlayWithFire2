@@ -3,4 +3,5 @@ AP Project
 created by AmirMohammad Mehrzad & MohammadAmin Fahimi
 
 DEMO:
-![PlayWithFire2](https://user-images.githubusercontent.com/92620371/180594946-b59f3f2b-d11a-4270-ab4d-43d357ab7ac9.gif)
+
+![PlayWithFire2](https://user-images.githubusercontent.com/92620371/180606787-22d01e52-e701-437e-a7e7-1ff1935ff959.gif)
