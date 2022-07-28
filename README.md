@@ -1,4 +1,5 @@
 # PlayWithFire2
+Blast your enemies away in Playing With Fire 2! Battle your opponents in a Bomber Man style playing field. Place your dynamite in strategic places to blow a path to your opponent. Collect game changing power-ups that can turn the tide of the battle. Fight tactically and corner your enemies in order to secure a swift victory! Do you have what it takes to win every battle or will you only be blown away?
 AP Project
 created by AmirMohammad Mehrzad & MohammadAmin Fahimi
 
